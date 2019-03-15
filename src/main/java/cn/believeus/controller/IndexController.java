@@ -12,6 +12,7 @@ public class IndexController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/index.jsp");
 		modelView.addObject("title","Home");
+		modelView.addObject("canback",false);
 		return modelView;
 	}
 

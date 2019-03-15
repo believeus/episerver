@@ -7,37 +7,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE html>
 <html>
 	<head>
+		<base href="<%=basePath%>">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<title>Methylation technology</title>
 <!--自适应字体大小-->
-<style>
-@media screen and (min-width:300px){
-				html{font-size: 12px;}
-}
-@media screen and (min-width: 320px) {
-    html {font-size: 12px;}
-}
- 
-@media screen and (min-width: 375px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 400px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 440px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 768px) {
-    html {font-size: 22px;}
-}
- 
-@media screen and (min-width: 1024px) {
-    html {font-size: 24px;}
-}
+
 
 </style>
 		<style>
@@ -52,6 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 	<body style="padding: 0px;margin: 0px;">
 		<div id="container"style="width: 100%;height: 100%;">
+			<jsp:include page="header.jsp"/>
 			<div id="diag"style="width: 100%;height: auto;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 96%;height: auto;margin: 0 auto;">
@@ -77,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<p style="font-family: arial;font-size: 26px;font-weight: 700;"> DNA methylation </p> 
 						<p style="font-size: 24px;font-family: arial;color: #036EB8;"> Important research results </p> 
 					</div>
-					<div style="width: 100%;height: auto;"><img src="static/images/met1.jpg"style="width: 100%;height: auto;"/></div>
+					<div style="width: 100%;height: auto;"><img src="static/images/met1.jpg" style="width: 100%;height: auto;"/></div>
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-family: arial;color: #666666;line-height: 24px;">
 						 Aiming at DNA methylation technology, Professor Moshe Szyf, the chief scientist of Epidial, has conducted a large number of in-depth studies on healthy people and patients through collaboration with Beijing Youan Hospital,
@@ -117,12 +93,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
 					<div style="width: 100%;height: auto;">
-						<img src="../img/methylation/met4.png"style="width: 100%;height: auto;"/>
+						<img src="static/images/met4.png"style="width: 100%;height: auto;"/>
 					</div>
 					<div style="width: 100%;height: 40px;"></div>
 					<hr />
 					<div style="width: 100%;height: auto;">
-						<img src="../img/methylation/met3.jpg"style="width: 100%;height: auto;"/>
+						<img src="static/images/met3.jpg"style="width: 100%;height: auto;"/>
 					</div>
 					<div style="width: 100%;height: auto;font-family: arial;color: #036EB8;line-height: 24px;font-weight: 600;">
 						Accurate detection of DNA methylation in biological age
