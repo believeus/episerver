@@ -11,6 +11,7 @@ public class MethylationController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/methylation.jsp");
 		modelView.addObject("title","Methylation introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

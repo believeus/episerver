@@ -11,6 +11,7 @@ public class AgingController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/aging.jsp");
 		modelView.addObject("title","Biological introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

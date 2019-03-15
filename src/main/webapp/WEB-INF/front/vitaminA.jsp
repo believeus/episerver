@@ -1,9 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+	String basePath = request.getScheme() + "://"+ request.getServerName() + ":" + request.getServerPort()+ path + "/";
 %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -25,7 +23,7 @@
 	</head>
 	<body style="padding: 0px;margin: 0px;">
 		<div style="width: 100%;height: 100%;">
-		<jsp:include page="header.jsp"></jsp:include>
+		<jsp:include page="header.jsp"/>
 			<div style="width:100%;height: auto;">
 			
 				<img src="static/images/A-09.png"style="width: 100%;height: auto;"/>

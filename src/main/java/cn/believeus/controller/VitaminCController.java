@@ -11,6 +11,7 @@ public class VitaminCController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/vitaminC.jsp");
 		modelView.addObject("title","VitaminC introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}		
 	}

@@ -11,6 +11,7 @@ public class CompanyController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/company.jsp");
 		modelView.addObject("title","Company introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

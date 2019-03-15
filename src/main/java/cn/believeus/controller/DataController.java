@@ -11,6 +11,7 @@ public class DataController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/data.jsp");
 		modelView.addObject("title","Data Sequrity introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

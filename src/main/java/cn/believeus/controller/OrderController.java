@@ -11,6 +11,7 @@ public class OrderController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/order.jsp");
 		modelView.addObject("title","Order List");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

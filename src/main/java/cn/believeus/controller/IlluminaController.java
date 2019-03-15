@@ -11,6 +11,7 @@ public class IlluminaController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/illumina.jsp");
 		modelView.addObject("title","Illumina sequancer introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

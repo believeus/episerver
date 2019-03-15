@@ -77,12 +77,14 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">                                                                               
 							<li class="menuItem"><a href="index.jhtml">Home</a></li>
+							<li class="menuItem"><a href="cart/index.jhtml">Cart</a></li>
 							<li class="menuItem"><a href="aging/index.jhtml">Biological age Detection</a></li>
 							<li class="menuItem"><a href="vitaminA/index.jhtml">VitaminA</a></li>
 							<li class="menuItem"><a href="vitaminC/index.jhtml">VitaminC</a></li>
 							<li class="menuItem"><a href="vitaminD/index.jhtml">VitaminD</a></li>
 							<li class="menuItem"><a href="methylation/index.jhtml">About Methylation</a></li>
 							<li class="menuItem"><a href="#wordpress">MYReport</a></li>
+							<li class="menuItem"><a href="#wordpress">Scientific team</a></li>
 						</ul>
 					</div>
 				</div>

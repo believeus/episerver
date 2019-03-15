@@ -11,6 +11,7 @@ public class SameController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/same.jsp");
 		modelView.addObject("title","Same introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

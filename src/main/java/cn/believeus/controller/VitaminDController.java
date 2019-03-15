@@ -11,6 +11,7 @@ public class VitaminDController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/vitaminD.jsp");
 		modelView.addObject("title","VitaminD introduction");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 	
