@@ -5,15 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class VitaminAController {
-	@RequestMapping("/vitaminA/index")
-	public ModelAndView  vitaminA(){
+public class ProlistController {
+	@RequestMapping("/prolist/index")
+	public ModelAndView  prolist(){
 		ModelAndView modelView=new ModelAndView();
-		modelView.setViewName("/WEB-INF/front/vitaminA.jsp");
-		modelView.addObject("title","VitaminA introduction");
-		modelView.addObject("canback",true);
+		modelView.setViewName("/WEB-INF/front/prolist.jsp");
+		modelView.addObject("title","Product list");
 		return modelView;
 	}
-
 
 }

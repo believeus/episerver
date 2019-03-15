@@ -43,6 +43,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 	</head>
 	<body style="padding: 0px;margin: 0px;">
 	<div id="sam-e" style="width: 100%;height: auto;">
+		<jsp:include page="header.jsp"/>
 		<div class="same-pic"style="width: 100%;height: auto;margin: 0 auto;">
 			<img src="static/images/hm2.png" style="width: 100%;height: auto;"/>
 		</div>

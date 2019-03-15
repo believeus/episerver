@@ -300,8 +300,8 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 	</div>
 	</div>
 	<!--局部滚动页面js代码-->
-<script type="text/javascript" src="../js/zepto.min.js"></script>
-<script type="text/javascript" src="../js/swiper/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="static/js/zepto.min.js"></script>
+<script type="text/javascript" src="static/js/swiper/idangerous.swiper.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 
