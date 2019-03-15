@@ -11,7 +11,7 @@ public class ProductController {
 		return "/WEB-INF/front/pruduct.jsp";
 	}
 	@RequestMapping("/product/aging")
-	public ModelAndView   agin(){
+	public ModelAndView   aging(){
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/aging.jsp");
 		modelView.addObject("title","Standard Edition 2.0 for DNA Methylation Detection");

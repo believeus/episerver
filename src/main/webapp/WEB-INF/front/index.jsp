@@ -86,6 +86,47 @@
 					</div>
 				</div>
 			</div>
+			
+			<!--@Author: eestill ControllerPart Begin -->
+			
+				<div style="width:100%;height: auto;;display: flex;">
+					<div style="width: 3%;height: 100%;"></div>
+					<div style="width: 96%;height: 100%;">
+						<!--中心圆 begin-->
+						<div style="width: 42%;height: 0;padding-top: 42%;top : 363px;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
+							<div style="width: 42%;height: 135px;position:absolute;left:65px; right:0; top:0; bottom:0;margin:auto;border-radius:0 78px 78px 0;background-image: url(static/images/BR.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
+							<div style="width: 42%;height: 135px;position:absolute;left:0; right:65px; top:0; bottom:0;margin:auto;border-radius:78px 0 0 78px;background-image: url(static/images/BL.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
+						</div>
+						<!--中心圆 End-->
+						<div style="width: 100%;height: 10px;"></div>
+							<div style="width: 100%;height: 150px;display: flex;">
+								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<img src="static/images/L1.png" style="width: 100%;height: 100%;" />
+								</div>
+								<div style="width:5%;height: 100%;"></div>
+								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<img src="static/images/R1.png" style="width: 100%;height: 100%;" />
+								</div>
+							</div>
+							<div style="width: 100%;height: 20px;"></div>
+							<div style="width: 100%;height: 150px;display: flex;">
+								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<img src="static/images/L2.png" style="width: 100%;height: 100%;" />
+								</div>
+								<div style="width:5%;height: 100%;"></div>
+								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<img src="static/images/R2.png" style="width: 100%;height: 100%;" />
+								</div>
+							</div>
+						<div style="width: 100%;height: 10px;"></div>
+					</div>
+					<div style="width: 3%;height: 100%;"></div>
+				</div>
+			<!--ControllerPart End-->
+			
+			
+			
+			
 			<div id="bio"style="width: 100%;height: auto; background-color: #F0F0F0;position: relative;">
 				<div style="width: 100%;height: 50px;"></div>
 				<div class="bio-title"style="width: 100%;height:60px ;">
