@@ -11,6 +11,7 @@ public class ProlistController {
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/prolist.jsp");
 		modelView.addObject("title","Product list");
+		modelView.addObject("canback",true);
 		return modelView;
 	}
 

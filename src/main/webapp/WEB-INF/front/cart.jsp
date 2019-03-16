@@ -80,20 +80,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</script>
 	</head>
 	<body>
-			<jsp:include page="header.jsp"/>
+
+		<div style="width: 100%;height: 100%">
+		<jsp:include page="header.jsp"/>
+		<!--头部开始-->
+		<div class="header">
+			<h1>Health Market</h1>
+			<a href="#" class=""></a>
+		</div>
 		<!--头部结束-->
 		<div class="shopping">
 
 			<div class="shop-group-item">
-				<form action="" method="post" id="formId">
+
+				<div class="shop-name">
+					<input type="checkbox" class="check goods-check shopCheck">
+					<h4>Select All</h4>
+				</div>
+				<form action="http://localhost:8080/Form/getdata" method="get" id="formId">
 					<ul>
 						<li>
 							<div class="shop-info">
 								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
+								<a href="aging/index.jhtml">
 								<div class="shop-info-img" style="text-align: center;">
-									<a href="#">
+									
 										<img src="static/images/DNA.png" style="width: 90%;height:auto;transform: translateY(10px);"/>
-										</a>
 										</div>
 								<div class="shop-info-text">
 									<h4>Biological age detection 2.0</h4>
@@ -109,13 +121,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 								</div>
+								</a>
+							</div>
 						</li>
 						<li>
 							<div class="shop-info">
-								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
+								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="2">
 								<div class="shop-info-img" style="text-align: center;">
 									<a href="#">
 										<img src="static/images/SAM-e.png" style="width: 100%;height:auto;"/></a></div>
+								<a href="same/index.jhtml">
 								<div class="shop-info-text">
 									<h4>SAM-e</h4>
 									<div class="shop-brief"><span>S-adenosine Supplement</span></div>
@@ -130,13 +145,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 								</div>
+								</a>
+								
+							</div>
 						</li>
 						<li>
 							<div class="shop-info">
-								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
+								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="3">
+								<a href="vitaminA/index.jhtml">
 								<div class="shop-info-img" style="text-align: center;">
-									<a href="#">
-										<img src="static/images/VitaminA.png" style="width: 60%;height:auto;"/></a></div>
+										<img src="static/images/VitaminA.png" style="width: 60%;height:auto;"/></div>
 								<div class="shop-info-text">
 									<h4>VitaminA</h4>
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
@@ -152,13 +170,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 								</div>
+								</a>
+							</div>	
 						</li>
 						<li>
 							<div class="shop-info">
-								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
+								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="4">
+								<a href="vitaminC/index.jhtml">
 								<div class="shop-info-img" style="text-align: center;">
-									<a href="#">
-										<img src="static/images/VitaminC.png" style="width: 60%;height:auto;"/></a></div>
+									
+										<img src="static/images/VitaminC.png" style="width: 60%;height:auto;"/></div>
 								<div class="shop-info-text">
 									<h4>VitaminC</h4>
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
@@ -174,13 +195,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 								</div>
+								</a>
+							</div>
 						</li>
 						<li>
 							<div class="shop-info">
-								<input  type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
+								<input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="5">
+								<a href="vitaminD/index.jhtml">
 								<div class="shop-info-img" style="text-align: center;">
-									<a href="#">
-										<img src="static/images/VitaminA.png" style="width: 60%;height:auto;"/></a></div>
+									
+										<img src="static/images/VitaminA.png" style="width: 60%;height:auto;"/></div>
 								<div class="shop-info-text">
 									<h4>VitaminD</h4>
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
@@ -196,20 +220,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 								</div>
+								</a>
 						</li>
 					</ul>
-					<div class="shopPrice">本栏目总计：$<span class="shop-total-amount ShopTotal">0.00</span></div>
+					<div class="shopPrice">Total of this column:$ <span class="shop-total-amount ShopTotal">0.00</span></div>
 			</div>
 
 			<div class="payment-bar">
-				<div class="all-checkbox"><input  type="checkbox" class="check goods-check" id="AllCheck">全选</div>
+				<div class="all-checkbox"><input type="checkbox" class="check goods-check" id="AllCheck">All election</div>
 				<div class="shop-total">
-					<strong>总价：$<i class="total" id="AllTotal" name="total_price">0.00</i></strong>
+					<strong>Total price：：$<i class="total" id="AllTotal" name="total_price">0.00</i></strong>
 					<input  type="hidden" name="allPrice" />
 				</div>
 				<input type="button" class="settlement" value="next"/ >
 			</div>
 			</form>
+		</div>	
+	</div>	
 	</body>
 </html>
 <script>

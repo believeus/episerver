@@ -6,14 +6,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CheckController {
-	@RequestMapping("/product/check")
+	@RequestMapping("/check/index")
 	public ModelAndView index(){
 		ModelAndView modelView=new ModelAndView();
 		modelView.addObject("canback",true);
 		modelView.setViewName("/WEB-INF/front/check.jsp");
 		return modelView;
 	}
-	@RequestMapping("/product/order")
+	@RequestMapping("/order/check")
 	public ModelAndView   check(){
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/order.jsp");

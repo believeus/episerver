@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<body style="padding: 0px;margin: 0px;">
 		<div style="width:100%;height:auto;border:1px solid #000">
 		<jsp:include page="header.jsp"></jsp:include>
-			<h1 style="text-align: center;height: 100px;line-height: 100px;font-size: 40px;background-color: #0068B7;color: #ffffff;">订单信息</h1>
+			<h1 style="text-align: center;height: 100px;line-height: 100px;font-size: 40px;background-color: #0068B7;color: #ffffff;">Order information</h1>
 
 			<div style="clear: both;" />
 
@@ -80,17 +80,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</div>
 									<div style="width: 100%;height: 30%;border: 1px solid #000;font-size: 36px;">
 										<span style="float: left;margin-left: 20px;">$ 785.00</span>
-										<span style="float: right;margin-right: 20px;">共 0 件</span>
+										<span style="float: right;margin-right: 20px;">Total: 0 piece</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<!-- 						<li>
 							<input type="button" value="-">
-							<span>0</span>件
+							<span>0</span>piece
 							<input type="button" value="+">
-							单价：<span>68元</span>
-							小计：<span>136元</span>
+							Unit price：<span>$68</span>
+							Subtotal：<span>$136/span>
 						</li> -->
 					</ul>
 
@@ -110,18 +110,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<!--信息填写栏目-->
 						<div style="width:100%;height:85px;border:1px solid #000;display: flex;line-height: 85px;;align-items: center;">
 							<img src="img/Order/user_icon.png" style="width:60px;height: 55px;margin-left:3%;align-items: center;">
-							<div style="width: 70%;height: 100%;font-size: 40px;margin-left: 35px;font-weight: 800;">确认联系人信息</div>
+							<div style="width: 70%;height: 100%;font-size: 40px;margin-left: 35px;font-weight: 800;">Confirm contact information</div>
 						</div>
 
 						<div style="width: 100%;height:80px;border-bottom:1px solid #808080;margin-top:20px;">
-							<div style="width:27%;height: 100%;border:1px solid #000;float:left;text-align: center;font-size: 40px;line-height: 80px;">收件人:</div>
+							<div style="width:27%;height: 100%;border:1px solid #000;float:left;text-align: center;font-size: 40px;line-height: 80px;">Addressee:</div>
 							<div style="width:70%;height: 100%;border:1px solid #000;float:right;font-size: 40px;line-height: 80px;">
 								Eestill
 							</div>
 						</div>
 
 						<div style="width: 100%;height:80px;border-bottom:1px solid #808080;margin-top:20px;">
-							<div style="width:27%;height: 100%;border:1px solid #000;float:left;text-align: center;font-size: 40px;line-height: 80px;">联系方式:</div>
+							<div style="width:27%;height: 100%;border:1px solid #000;float:left;text-align: center;font-size: 40px;line-height: 80px;">Contact information:</div>
 							<div style="width:70%;height: 100%;border:1px solid #000;float:right;font-size: 40px;line-height: 80px;">
 								13213212231
 							</div>
@@ -131,7 +131,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 						<div style="width: 100%;border-bottom:1px solid #808080;margin-top:20px;">
 							<div style="width:27%;height: 80px;border:1px solid #000;float:left;text-align: center;font-size: 40px;line-height: 80px;">
-								收货地址:</div>
+								Receiving address:</div>
 							<div style="width:70%;height: auto;border:1px solid #000;float:right;font-size: 40px;margin-bottom: 20px;">
 								US MA Cambridge 3922 Fannie Street US MA Cambridge 3922 Fannie Street US MA Cambridge 3922 Fannie Street
 							</div>
@@ -151,6 +151,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					ToPay
 				</div>
 			</div>
+			<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
+						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
+					</div>
+				</div>
 		</div>
 	</body>
 </html>

@@ -184,13 +184,11 @@ div[id=box]:before {
 			</div>
 		</div>
 		<div style="clear: both;"></div>
-		<div id="all-right"
-			style="width: 100%;height: auto;font-size: 10px;font-family: arial;">
-			<div style="width: 100%;height: 30px;"></div>
-			<div
-				style="width: 100%;height: auto;text-align: center; margin: 0 auto;">@2019
-				HKG epi THERAPEUTICS Ltd. All Rights Reserved</div>
-		</div>
+		<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
+						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
+					</div>
 		<div style="width: 100%;height: 20px;"></div>
 	</div>
 	

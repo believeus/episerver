@@ -69,7 +69,9 @@
 						<div style="width: 100%;height: 10px;"></div>
 							<div style="width: 100%;height: 150px;display: flex;">
 								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<a href="aboutus/index.jhtml">
 									<img src="static/images/L1.png" style="width: 100%;height: 100%;" />
+									</a>
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
@@ -98,11 +100,11 @@
 			<div id="bio"style="width: 100%;height: auto; background-color: #F0F0F0;position: relative;">
 				<div style="width: 100%;height: 50px;"></div>
 				<div class="bio-title"style="width: 100%;height:60px ;">
-					<div style="width: 58%;height: auto;float: left; line-height: 27px;font-weight: 600; font-family: arial;">
+					<div style="width: 58%;height: auto;float: left; line-height: 27px;font-size: large; font-weight: 700; font-family: arial;">
 							Biological Age Detection of  DNA  Methylation
 					</div>
 					<div style="width: 17%;height: 61px;float: left; font-family: arial;font-size: 30px;font-weight: bold;color: #036EB7;line-height: 40px; ">
-						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 30px;">$99</div> 
+						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 55px;">$150</div> 
 					</div>
 					<div style="width: 25%;height: 61px;float: right; ">
 						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
@@ -156,11 +158,11 @@
 			<div id="sam-e"style="width: 100%;height: 800px;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div class="bio-title"style="width: 100%;height:60px ;">
-					<div style="width: 58%;height: auto;float: left; line-height: 59px;font-weight: 600; font-family: arial;">
+					<div style="width: 58%;height: auto;float: left; line-height: 59px;font-size: large; font-weight: 700; font-family: arial;">
 							What is SAM-e？
 					</div>
 					<div style="width: 17%;height: 61px;float: left; font-family: arial;font-size: 30px;font-weight: bold;color: #036EB7;line-height: 40px; ">
-						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 58px;">$99</div> 
+						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 58px;">$35</div> 
 					</div>
 					<div style="width: 25%;height: 61px;float: right; ">
 						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
@@ -220,7 +222,7 @@
 					<div class="blank"style="width: 100%height: 20px;"></div>
 					<div class="vit-con"style="width: 100%;height:auto ;">
 						<div style="width: 100%;height: 50px;"></div>
-						<div style="width: 96%;height: auto; font-family: arial; font-weight: 600;margin: 0 auto;">Vitamin</div>
+						<div style="width: 96%;height: auto; font-family: arial;font-size: large; font-weight: 700;margin: 0 auto;">Vitamin</div>
 						<div style="width: 100%;height: 20px;"></div>
 						<div style="width: 96%;height: auto;margin: 0 auto; font-size: 12px;font-family: arial;line-height: 20px;">
 						Vitamin is a natural nutritional supplement in the human body, which can affect human health
@@ -294,9 +296,9 @@
 				<div id="download"style="width: 100%;height: 60px;">
 					<div style="width: 60%;height: 60px;margin: 0 auto; background-color: #036EB7;color: white; font-size: large;font-weight: bolder;text-align: center;line-height: 60px; border-radius: 5px;">Download App</div>
 				</div>
-				<div id="all-right"style="width: 100%;height: auto;color:#666666;font-family: arial;">
-					<div style="width: 100%;height: 30px;"></div>
-					<div style="width: 86%;height: auto;margin: 0 auto;">
+				<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
 						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
 					</div>
 				</div>

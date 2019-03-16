@@ -85,6 +85,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			</div>
+			<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
+						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
+					</div>
+				</div>
 		</div>
 	</body>
 </html>

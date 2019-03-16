@@ -64,9 +64,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<p>High quality data： Updated software system for sequencing reagents and algorithms through continuous improvement, Base coverage and high accuracy.2 x 50 BP reading time, More than 90% of the bases can exceed Q30；2 x 50 BP reading time,More than 85% of the bases can exceed Q30.</p>
 				</div>
 			</div>
-			<div style="clear: both;"></div>
-			<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
-					<div style="width: 86%;height: auto;margin: 0 auto;line-height: 50px;">
+			<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
 						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
 					</div>
 				</div>

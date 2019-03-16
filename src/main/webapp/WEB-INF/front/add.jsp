@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>购物车</title>
+<title>Shopping Cart</title>
 
 <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 
@@ -22,31 +22,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <div  style="width: 100%;height: 100%;">
 <jsp:include page="header.jsp"></jsp:include>
-<!--头部开始-->
+<!--Head start-->
 <div class="header">
-	<h1>购物车</h1>
+	<h1>Shopping Cart</h1>
 	<a href="#" class=""></a>
 </div>
-<!--头部结束-->
+<!--End of head-->
 <div class="shopping">
 	
 	<div class="shop-group-item">
 		<div class="shop-name">
 			<input type="checkbox" class="check goods-check shopCheck">
-			<h4><a href="#">产品信息</a></h4>
+			<h4><a href="#">Product information</a></h4>
 		</div>
 		<ul id="test">
 		</ul>
-		<div class="shopPrice">本栏目总计：￥<span class="shop-total-amount ShopTotal">0.00</span></div>
+		<div class="shopPrice">Total of this column：$<span class="shop-total-amount ShopTotal">0.00</span></div>
 	</div>
 </div>
 <div class="payment-bar">
-	<div class="all-checkbox"><input type="checkbox" class="check goods-check" id="AllCheck">全选</div>
+	<div class="all-checkbox"><input type="checkbox" class="check goods-check" id="AllCheck">All election</div>
 	<div class="shop-total">
-		<strong>总价：<i class="total" id="AllTotal">0.00</i></strong>
+		<strong>Total price：<i class="total" id="AllTotal">0.00</i></strong>
 	</div>
-	<a href="#" class="settlement">结算</a>
+	<a href="#" class="settlement">Settlement</a>
 	</div>
+	
+	<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
+						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
+					</div>
 </div>
 </body>
 </html>
@@ -61,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			success: function(res) {
 				console.log(res);
 				var str = ''
-				// 注意：输出的i与obj分别为下标与单个的对象
+				// Note: Output I and obj are subscripts and individual objects, respectively
 				for (var i = 0; i < res.CartList.length; i++) {
 					// console.log(i);
 					// console.log(obj);
@@ -95,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script>
 	
 	$(function(){
-		// 数量减
+		// Quantity reduction
 		$(".minus").click(function() {
 			var t = $(this).parent().find('.num');
 			t.text(parseInt(t.text()) - 1);
@@ -104,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 			TotalPrice();
 		});
-		// 数量加
+		// Quantity plus
 		$(".plus").click(function() {
 			var t = $(this).parent().find('.num');
 			t.text(parseInt(t.text()) + 1);
@@ -113,77 +119,77 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 			TotalPrice();
 		});
-		/******------------分割线-----------------******/
-		  // 点击商品按钮
+		/******------------Dividing line-----------------******/
+		  //Click on the commodity button
 	  $(".goodsCheck").click(function() {
-	    var goods = $(this).closest(".shop-group-item").find(".goodsCheck"); //获取本店铺的所有商品
-	    var goodsC = $(this).closest(".shop-group-item").find(".goodsCheck:checked"); //获取本店铺所有被选中的商品
-	    var Shops = $(this).closest(".shop-group-item").find(".shopCheck"); //获取本店铺的全选按钮
-	    if (goods.length == goodsC.length) { //如果选中的商品等于所有商品
-	      Shops.prop('checked', true); //店铺全选按钮被选中
-	      if ($(".shopCheck").length == $(".shopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
-	        $("#AllCheck").prop('checked', true); //全选按钮被选中
+	    var goods = $(this).closest(".shop-group-item").find(".goodsCheck"); //Get all the goods in our shop
+	    var goodsC = $(this).closest(".shop-group-item").find(".goodsCheck:checked"); //Get all the selected goods in our shop
+	    var Shops = $(this).closest(".shop-group-item").find(".shopCheck"); //Get the full selection button for our store
+	    if (goods.length == goodsC.length) { //If the selected item equals all the items
+	      Shops.prop('checked', true); //Shop Full Selection Button Selected
+	      if ($(".shopCheck").length == $(".shopCheck:checked").length) { // If the number of shops selected equals the number of all shops
+	        $("#AllCheck").prop('checked', true); //Full-selection button selected
 	        TotalPrice();
 	      } else {
 			  
-	        $("#AllCheck").prop('checked', false); //else全选按钮不被选中 
+	        $("#AllCheck").prop('checked', false); //elseFull Selection Button Not Selected 
 	        TotalPrice();
 	      }
-	    } else { //如果选中的商品不等于所有商品
-		  console.log("计算单个商品开始")
-	      Shops.prop('checked', false); //店铺全选按钮不被选中
-	      $("#AllCheck").prop('checked', false); //全选按钮也不被选中
-	      // 计算
+	    } else { //If the selected item is not equal to all the items
+		  console.log("Calculate the start of a single commodity")
+	      Shops.prop('checked', false); //Shop Full Selection Button Not Selected
+	      $("#AllCheck").prop('checked', false); //The full selection button is not selected either.
+	      // Calculation
 	      TotalPrice();
-	      // 计算
+	      // Calculation
 	    }
 	  });
-	  // 点击店铺按钮
+	  // Click on the store button
 	  $(".shopCheck").click(function() {
-	    if ($(this).prop("checked") == true) { //如果店铺按钮被选中
-	      $(this).parents(".shop-group-item").find(".goods-check").prop('checked', true); //店铺内的所有商品按钮也被选中
-	      if ($(".shopCheck").length == $(".shopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
-	        $("#AllCheck").prop('checked', true); //全选按钮被选中
+	    if ($(this).prop("checked") == true) { //If the store button is selected
+	      $(this).parents(".shop-group-item").find(".goods-check").prop('checked', true); //All the commodity buttons in the store were also selected.
+	      if ($(".shopCheck").length == $(".shopCheck:checked").length) { //If the number of shops selected equals the number of all shops
+	        $("#AllCheck").prop('checked', true); //Full-selection button selected
 	        TotalPrice();
 	      } else {
-	        $("#AllCheck").prop('checked', false); //else全选按钮不被选中
+	        $("#AllCheck").prop('checked', false); //elseFull Selection Button Not Selected
 	        TotalPrice();
 	      }
-	    } else { //如果店铺按钮不被选中
-	      $(this).parents(".shop-group-item").find(".goods-check").prop('checked', false); //店铺内的所有商品也不被全选
-	      $("#AllCheck").prop('checked', false); //全选按钮也不被选中
+	    } else { //If the store button is not selected
+	      $(this).parents(".shop-group-item").find(".goods-check").prop('checked', false); //All goods in the shop are not selected.
+	      $("#AllCheck").prop('checked', false); //The full selection button is not selected either.
 	      TotalPrice();
 	    }
 	  });
-	  // 点击全选按钮
+	  // Click on the all-select button
 	  $("#AllCheck").click(function() {
-	    if ($(this).prop("checked") == true) { //如果全选按钮被选中
-	      $(".goods-check").prop('checked', true); //所有按钮都被选中
+	    if ($(this).prop("checked") == true) { //If the full selection button is selected
+	      $(".goods-check").prop('checked', true); //All buttons are selected
 	      TotalPrice();
 	    } else {
-	      $(".goods-check").prop('checked', false); //else所有按钮不全选
+	      $(".goods-check").prop('checked', false); //else Not all buttons are selected
 	      TotalPrice();
 	    }
-	    $(".shopCheck").change(); //执行店铺全选的操作
+	    $(".shopCheck").change(); //Perform shop selection
 	  });
-		//计算
+		//Calculation
 	  function TotalPrice() {
-	    var allprice = 0; //总价
-	    $(".shop-group-item").each(function() { //循环每个店铺
-	      var oprice = 0; //店铺总价
-	      $(this).find(".goodsCheck").each(function() { //循环店铺里面的商品
-	        if ($(this).is(":checked")) { //如果该商品被选中
-	          var num = parseInt($(this).parents(".shop-info").find(".num").text()); //得到商品的数量
-	          var price = parseFloat($(this).parents(".shop-info").find(".price").text()); //得到商品的单价
-	          var total = price * num; //计算单个商品的总价
-	          oprice += total; //计算该店铺的总价
+	    var allprice = 0; //Total price
+	    $(".shop-group-item").each(function() { //Cycle each store
+	      var oprice = 0; //Total store price
+	      $(this).find(".goodsCheck").each(function() { //Goods in a recycling shop
+	        if ($(this).is(":checked")) { //If the item is selected
+	          var num = parseInt($(this).parents(".shop-info").find(".num").text()); //Quantity of Goods Obtained
+	          var price = parseFloat($(this).parents(".shop-info").find(".price").text()); //Unit Price of Goods Obtained
+	          var total = price * num; //Calculate the total price of a single commodity
+	          oprice += total; //Calculate the total price of the store
 	        }
-	        $(this).closest(".shop-group-item").find(".ShopTotal").text(oprice.toFixed(2)); //显示被选中商品的店铺总价
+	        $(this).closest(".shop-group-item").find(".ShopTotal").text(oprice.toFixed(2)); //Shop prices showing selected items
 	      });
-	      var oneprice = parseFloat($(this).find(".ShopTotal").text()); //得到每个店铺的总价
-	      allprice += oneprice; //计算所有店铺的总价
+	      var oneprice = parseFloat($(this).find(".ShopTotal").text()); //Get the total price of each store
+	      allprice += oneprice; //Calculate the total price of all stores
 	    });
-	    $("#AllTotal").text(allprice.toFixed(2)); //输出全部总价
+	    $("#AllTotal").text(allprice.toFixed(2)); //Total Output Price
 	  }
 	});
 	
