@@ -143,7 +143,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #337ab7;
+  background-color: #2DB4A5;
   background-image: -webkit-linear-gradient(top, #149bdf 0%, #0480be 100%);
   background-image: -o-linear-gradient(top, #149bdf 0%, #0480be 100%);
   background-image: linear-gradient(to bottom, #149bdf 0%, #0480be 100%);
@@ -167,5 +167,5 @@
   line-height: 20px;
   font-size: 20px;
   content: '\2605';
-  color: #726204;
+  color: #2DB4A5;
 }

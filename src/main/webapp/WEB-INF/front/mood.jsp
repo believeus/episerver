@@ -7,9 +7,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
+		<base href="<%=basePath%>">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-		<link rel="stylesheet" href="css/stylesheet.css" />
+		<link rel="stylesheet" href="/static/css/stylesheet.css" />
 		<!--
 	作者：julie
 	时间：2019-03-11
@@ -420,7 +421,8 @@ slider.on("slide", function(slideEvt) {
 	<body style="padding: 0px;margin: 0px;">
 
 		
-		<div id="container"style="width: 100%;height: 100%;background-color: #FC6F68;">
+		<div id="container"style="width: 100%;height: 100%;background-color: #99CCFF;">
+		<jsp:include page="header.jsp"></jsp:include>
 			<div id="title"style="width: 100%;height: auto; ">
 				<div style="width: 100%;height: auto; text-align: center;color: #FFFFFF; font-size: 24px;font-weight: 700; font-family: arial; ">
 					Mood self-assesment
@@ -434,7 +436,7 @@ slider.on("slide", function(slideEvt) {
 					</div>
 				</div>
 			</div>
-			<div id="content"style="width: 100%;height: auto;background-color: #FF7373;">
+			<div id="content"style="width: 100%;height: auto;background-color: #99CCFF;">
 				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						1. How often have you had little interest or pleasure in doing things?

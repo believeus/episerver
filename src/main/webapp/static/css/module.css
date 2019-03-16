@@ -21,10 +21,10 @@
 .shop-info .shop-info-text h4{font-size:14px;color: #428bca;font-weight: 600; display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow: hidden;}
 .shop-info .shop-info-text .shop-brief{height:25px;line-height:25px;font-size:12px;color:#81838e;white-space:nowrap;}
 .shop-info .shop-info-text .shop-brief span{display:inline-block;margin-right:8px;}
-.shop-info .shop-info-text .shop-price{height:24px;line-height:24px;position:relative;}
+.shop-info .shop-info-text .shop-price{height:24px;line-height:20px;position:relative;}
 .shop-info .shop-info-text .shop-price .shop-pices {color:red;font-size:16px;}
 .shop-info .shop-info-text .shop-arithmetic{position:absolute;right:0px;top:0;width:84px;box-sizing:border-box;white-space:nowrap;height:100%;border:1px solid #e0e0e0;}
-.shop-info .shop-info-text .shop-arithmetic a{display:inline-block;width:23px;height:22px;line-height:22px;text-align:center;background:#fff;font-size:16px;}
+.shop-info .shop-info-text .shop-arithmetic a{display:inline-block;width:19px;height:22px;line-height:34px;text-align:center;background:#fff;font-size:16px;}
 .shop-info .shop-info-text .shop-arithmetic .minus{border-right:1px solid #e0e0e0;}
 .shop-info .shop-info-text .shop-arithmetic .failed{color:#d1d1d1;}
 .shop-info .shop-info-text .shop-arithmetic .plus{border-left:1px solid #e0e0e0;}
