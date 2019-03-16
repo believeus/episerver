@@ -13,8 +13,8 @@ public class CheckController {
 		modelView.setViewName("/WEB-INF/front/check.jsp");
 		return modelView;
 	}
-	@RequestMapping("/order/check")
-	public ModelAndView   check(){
+	@RequestMapping("/order/check") 
+	public ModelAndView check(){
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/order.jsp");
 		modelView.addObject("title","Check your order");

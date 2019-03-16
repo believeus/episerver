@@ -409,38 +409,6 @@ slider.on("slide", function(slideEvt) {
 	});
 </script>
 
-<!--自适应字体大小-->
-<style>
-@media screen and (min-width:300px){
-				html{font-size: 12px;}
-}
-@media screen and (min-width: 320px) {
-    html {font-size: 12px;}
-}
- 
-@media screen and (min-width: 375px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 400px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 440px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 768px) {
-    html {font-size: 22px;}
-}
- 
-@media screen and (min-width: 1024px) {
-    html {font-size: 24px;}
-}
-
-</style>
-	
-
 
 <!--slide-bar css-->
 <style>
@@ -452,7 +420,7 @@ slider.on("slide", function(slideEvt) {
 	<body style="padding: 0px;margin: 0px;">
 
 		
-		<div id="container"style="width: 100%;height: 100%;background-color: #FF7373;">
+		<div id="container"style="width: 100%;height: 100%;background-color: #FC6F68;">
 			<div id="title"style="width: 100%;height: auto; ">
 				<div style="width: 100%;height: auto; text-align: center;color: #FFFFFF; font-size: 24px;font-weight: 700; font-family: arial; ">
 					Mood self-assesment

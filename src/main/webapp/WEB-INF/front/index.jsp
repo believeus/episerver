@@ -81,11 +81,15 @@
 							<div style="width: 100%;height: 20px;"></div>
 							<div style="width: 100%;height: 150px;display: flex;">
 								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="cart/index.jhtml"><img src="static/images/L2.png" style="width: 100%;height: 100%;" /></a>
+									<a href="cart/index.jhtml">
+									<img src="static/images/L2.png" style="width: 100%;height: 100%;" />
+									</a>
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<a href="queslist/index.jhtml">
 									<img src="static/images/R2.png" style="width: 100%;height: 100%;" />
+									</a>
 								</div>
 							</div>
 						<div style="width: 100%;height: 10px;"></div>

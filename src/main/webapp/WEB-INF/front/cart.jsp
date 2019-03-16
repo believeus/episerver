@@ -83,6 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		<div style="width: 100%;height: 100%">
 		<jsp:include page="header.jsp"/>
+		<div style="width: 98%;height: auto;margin: 0 auto;">
 		<!--头部开始-->
 		<div class="header">
 			<h1>Health Market</h1>
@@ -111,7 +112,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<h4>Biological age detection 2.0</h4>
 									<div class="shop-brief"><span>Saliva DNA Collection Kit</span></div>
 									<div class="shop-price">
-										<div class="shop-pices">$<input name="dnaprice" disabled="disabled"  class="price" value="150"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
+										<div class="shop-pi	ces">$<input name="dnaprice" disabled="disabled"  class="price" value="150"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
 											<input class="num" name="dnacount"  value="0" disabled="disabled"/>
@@ -235,7 +236,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<input type="button" class="settlement" value="next"/ >
 			</div>
 			</form>
-		</div>	
+			</div>	
+		</div>
 	</div>	
 	</body>
 </html>
