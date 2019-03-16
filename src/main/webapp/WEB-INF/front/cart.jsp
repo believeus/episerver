@@ -19,18 +19,73 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link type="text/css" rel="stylesheet" href="static/css/module.css" />
 		<script>
 			$(function(){
-				
+				$("input[type=button]").click(function(){
+					/*
+					* {
+					*   "wares" : [ //用户选择提交的商品列表
+					*           {"wares_id" : 1 , "wares_count" : 1},
+					*           {"wares_id" : 2 , "wares_count" : 1}
+					*   ],
+					*   "addr" : {
+					*               "recipient" : //收件人,
+					*               "phone" : //收件人联系方式,
+					*               "postalcode" : //收件人邮编,
+					*               "country" : //国家,
+					*               "address" : //地址
+					*            },
+					*   "total_price" : //总价[BigDecimal类型，如果需要传入则以String传入即可]
+					*
+					* }
+					* */
+					var wares="{wares:[";
+					if($("input[name=dnacount]").val()!=0){
+						var data={};
+						data.wares_id=$("input[name=dnaid]").val();
+						data.wares_count=$("input[name=dnacount]").val();
+						wares.push(data);
+					}
+					if($("input[name=samecount]").val()!=0){
+						var data={};
+						data.wares_id=$("input[name=sameid]").val();
+						data.wares_count=$("input[name=samecount]").val();
+						wares.push(data);
+					}
+					if($("input[name=vacount]").val()!=0){
+						var data={};
+						data.wares_id=$("input[name=vaid]").val();
+						data.wares_count=$("input[name=vacount]").val();
+						wares.push(data);
+					}
+					if($("input[name=vccount]").val()!=0){
+						var data={};
+						data.wares_id=$("input[name=vcid]").val();
+						data.wares_count=$("input[name=vccount]").val();
+						wares.push(data);
+					}
+					if($("input[name=vdcount]").val()!=0){
+						var data={};
+						data.wares_id=$("input[name=vdid]").val();
+						data.wares_count=$("input[name=vdcount]").val();
+						wares.push(data);
+					}
+					//data.allprice=$("input[name=allPrice]").val();
+					
+					console.info(JSON.stringify( wares ));
+					
+					/* $.post("http://192.168.1.103:8080/paypal/payment.jhtml",data,function(url){
+						window.location.href= url;
+					}); */
+				});
 			});
 		</script>
 	</head>
 	<body>
-	
 			<jsp:include page="header.jsp"/>
 		<!--头部结束-->
 		<div class="shopping">
 
 			<div class="shop-group-item">
-				<form action="product/check.jhtml" method="post" id="formId">
+				<form action="" method="post" id="formId">
 					<ul>
 						<li>
 							<div class="shop-info">
@@ -44,10 +99,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<h4>Biological age detection 2.0</h4>
 									<div class="shop-brief"><span>Saliva DNA Collection Kit</span></div>
 									<div class="shop-price">
-										<div class="shop-pices">$<b class="price">150</b></div>
+										<div class="shop-pices">$<input name="dnaprice" disabled="disabled"  class="price" value="150"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
-											<span class="num" name="count">0</span>
+											<input class="num" name="dnacount"  value="0" disabled="disabled"/>
+											<input type="hidden" name='dnaid' value="1001"/>
+											<!-- <span class="num" name="count">0</span> -->
 											<a href="javascript:;" class="plus">+</a>
 										</div>
 									</div>
@@ -63,10 +120,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<h4>SAM-e</h4>
 									<div class="shop-brief"><span>S-adenosine Supplement</span></div>
 									<div class="shop-price">
-										<div class="shop-pices">$<b class="price">35</b></div>
+										<div class="shop-pices">$<input name="sameprice" disabled="disabled"  class="price" value="35"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
-											<span class="num" name="count">0</span>
+											<input class="num" name="samecount"  value="0" disabled="disabled"/>
+												<input type="hidden" name='sameid' value="2001"/>
+											<!-- <span class="num" name="count">0</span> -->
 											<a href="javascript:;" class="plus">+</a>
 										</div>
 									</div>
@@ -83,10 +142,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
 										100 Tablets</div>
 									<div class="shop-price">
-										<div class="shop-pices">$<b class="price">30</b></div>
+										<div class="shop-pices">$<input name="vaprice" disabled="disabled"  class="price" value="30"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
-											<span class="num" name="count">0</span>
+											<input class="num" name="vacount"  value="0" disabled="disabled"/>
+											<input type="hidden" name='vaid' value="3001"/>
+											<!-- <span class="num" name="count">0</span> -->
 											<a href="javascript:;" class="plus">+</a>
 										</div>
 									</div>
@@ -103,10 +164,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
 										100 Tablets</div>
 									<div class="shop-price">
-										<div class="shop-pices">$<b class="price">30</b></div>
+										<div class="shop-pices">$<input name="vcprice" disabled="disabled"  class="price" value="30"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
-											<span class="num" name="count">0</span>
+												<input class="num" name="vccount"  value="0" disabled="disabled"/>
+												<input type="hidden" name='vcid' value="2002"/>
+											<!-- <span class="num" name="count">0</span> -->
 											<a href="javascript:;" class="plus">+</a>
 										</div>
 									</div>
@@ -123,25 +186,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum Strength,<br>Strawberry,5000 mcg ,
 										100 Tablets</div>
 									<div class="shop-price">
-										<div class="shop-pices">$<b class="price">30</b></div>
+										<div class="shop-pices">$<input name="vdprice" disabled="disabled"  class="price" value="30"  style="background-color: #f5f5f5;border: none;color: #ff0000;font-weight: bold;"/></div>
 										<div class="shop-arithmetic">
 											<a href="javascript:;" class="minus">-</a>
-											<span class="num" name="count">0</span>
+											<input type="hidden" name='vdid' value="2003"/>
+												<input class="num" name="vdcount"  value="0" disabled="disabled"/>
+											<!-- <span class="num" name="count">0</span> -->
 											<a href="javascript:;" class="plus">+</a>
 										</div>
 									</div>
 								</div>
 						</li>
 					</ul>
-					<div class="shopPrice">本栏目总计：￥<span class="shop-total-amount ShopTotal">0.00</span></div>
+					<div class="shopPrice">本栏目总计：$<span class="shop-total-amount ShopTotal">0.00</span></div>
 			</div>
 
 			<div class="payment-bar">
 				<div class="all-checkbox"><input  type="checkbox" class="check goods-check" id="AllCheck">全选</div>
 				<div class="shop-total">
 					<strong>总价：$<i class="total" id="AllTotal" name="total_price">0.00</i></strong>
+					<input  type="hidden" name="allPrice" />
 				</div>
-				<input type="submit" class="settlement" value="next"/ >
+				<input type="button" class="settlement" value="next"/ >
 			</div>
 			</form>
 	</body>
@@ -151,18 +217,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		// 数量减
 		$(".minus").click(function() {
 			var t = $(this).parent().find('.num');
-			t.text(parseInt(t.text()) - 1);
-			if (t.text() <= 1) {
-				t.text(1);
+			t.val(parseInt(t.val()) - 1);
+			if (t.val() <= 1) {
+				t.val(1);
 			}
 			TotalPrice();
 		});
 		// 数量加
 		$(".plus").click(function() {
 			var t = $(this).parent().find('.num');
-			t.text(parseInt(t.text()) + 1);
-			if (t.text() <= 1) {
-				t.text(1);
+			t.val(parseInt(t.val()) + 1);
+			if (t.val() <= 1) {
+				t.val(1);
 			}
 			TotalPrice();
 		});
@@ -183,7 +249,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					TotalPrice();
 				}
 			} else { //如果选中的商品不等于所有商品
-				console.log("计算单个商品开始")
 				Shops.prop('checked', false); //店铺全选按钮不被选中
 				$("#AllCheck").prop('checked', false); //全选按钮也不被选中
 				// 计算
@@ -226,8 +291,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				var oprice = 0; //店铺总价
 				$(this).find(".goodsCheck").each(function() { //循环店铺里面的商品
 					if ($(this).is(":checked")) { //如果该商品被选中
-						var num = parseInt($(this).parents(".shop-info").find(".num").text()); //得到商品的数量
-						var price = parseFloat($(this).parents(".shop-info").find(".price").text()); //得到商品的单价
+						var num = parseInt($(this).parents(".shop-info").find(".num").val()); //得到商品的数量
+						var price = parseFloat($(this).parents(".shop-info").find(".price").val()); //得到商品的单价
 						var total = price * num; //计算单个商品的总价
 						oprice += total; //计算该店铺的总价
 					}
@@ -237,6 +302,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				allprice += oneprice; //计算所有店铺的总价
 			});
 			$("#AllTotal").text(allprice.toFixed(2)); //输出全部总价
+			$("input[name=allPrice]").val(allprice.toFixed(2));
 		}
 	});
 </script>

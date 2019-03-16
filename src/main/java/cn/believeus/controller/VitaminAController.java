@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class VitaminAController {
 	@RequestMapping("/vitaminA/index")
-	public ModelAndView  vitaminA(){
+	public ModelAndView   vitaminA(){
 		ModelAndView modelView=new ModelAndView();
 		modelView.setViewName("/WEB-INF/front/vitaminA.jsp");
-		modelView.addObject("title","VitaminA introduction");
+		ModelAndView addObject = modelView.addObject("title","VitaminA introduction");
 		modelView.addObject("canback",true);
 		return modelView;
 	}
