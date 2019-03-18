@@ -71,7 +71,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				
 				<div style="width: 10%;height: auto;float: left;line-height: 30px;">
 					<div style="width: 100%;height: 28px;"></div>
-					<div style="width: 50%;height: 23px;"><img src="static/images/arr.png"style="width: 100%;height: auto;"/></div> 	
+					<div style="width: 50%;height: 23px;">
+					<a href="pain/index.jhtml">
+					<img src="static/images/arr.png"style="width: 100%;height: auto;"/>
+					</a>
+					</div> 	
 				</div>
 				<div style="width: 100%;height: 77px;"></div>
 				</div>
