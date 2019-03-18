@@ -40,10 +40,10 @@
                     <div class="shop-info">
                         <input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="1">
                         <div class="shop-info-img" style="text-align: center;">
-                            <img src="static/images/DNA.png" style="width: 90%;height:auto;transform: translateY(10px);" /></div>
+                            <a href="aging/index.jhtml"><img src="static/images/DNA.png" style="width: 90%;height:auto;transform: translateY(10px);" /></a></div>
                         <div class="shop-info-text">
-                            <h4>Biological age detection 2.0</h4>
-                            <div class="shop-brief"><span>Saliva DNA Collection Kit</span></div>
+                            <h4> <a href="aging/index.jhtml">Biological age detection 2.0</a></h4>
+                            <div class="shop-brief"><span> <a href="aging/index.jhtml">Saliva DNA Collection Kit</a></span></div>
                             <div class="shop-price">
                                 <div class="shop-pices">$<b class="price">150</b></div>
                                 <div class="shop-arithmetic">
@@ -60,10 +60,10 @@
                     <div class="shop-info">
                         <input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="2">
                         <div class="shop-info-img" style="text-align: center;">
-                            <img src="static/images/SAM-e.png" style="width: 100%;height:auto;" /></div>
+                           <a href="same/index.jhtml"> <img src="static/images/SAM-e.png" style="width: 100%;height:auto;" /></a></div>
                         <div class="shop-info-text">
-                            <h4>SAM-e</h4>
-                            <div class="shop-brief"><span>S-adenosine Supplement</span></div>
+                            <h4><a href="same/index.jhtml">SAM-e</a></h4>
+                            <div class="shop-brief"><span><a href="same/index.jhtml">S-adenosine Supplement</a></span></div>
                             <div class="shop-price">
                                 <div class="shop-pices">$<b class="price">35</b></div>
                                 <div class="shop-arithmetic">
@@ -81,12 +81,10 @@
                     <div class="shop-info">
                         <input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="3">
                         <div class="shop-info-img" style="text-align: center;">
-                            <img src="static/images/VitaminA.png" style="width: 60%;height:auto;" /></div>
+                            <a href="vitaminA/index.jhtml"><img src="static/images/VitaminA.png" style="width: 60%;height:auto;" /></a></div>
                         <div class="shop-info-text">
-                            <h4>VitaminA</h4>
-                            <div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum
-                                Strength,<br>Strawberry,5000 mcg ,
-                                100 Tablets</div>
+                            <h4><a href="vitaminA/index.jhtml">VitaminA</a></h4>
+                            <div class="shop-brief" style="line-height: 12px;"><a href="vitaminA/index.jhtml">Fast Dissolve , MaximumStrength,<br>Strawberry,5000 mcg ,100 Tablets</a></div>
                             <div class="shop-price">
                                 <div class="shop-pices">$<b class="price">30</b></div>
                                 <div class="shop-arithmetic">
@@ -104,12 +102,11 @@
                         <input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="4">
                         <div class="shop-info-img" style="text-align: center;">
 
-                            <img src="static/images/VitaminC.png" style="width: 60%;height:auto;" /></div>
+                           <a href="vitaminC/index.jhtml"><img src="static/images/VitaminC.png" style="width: 60%;height:auto;" /></a></div>
                         <div class="shop-info-text">
-                            <h4>VitaminC</h4>
-                            <div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum
-                                Strength,<br>Strawberry,5000 mcg ,
-                                100 Tablets</div>
+                            <h4><a href="vitaminC/index.jhtml">VitaminC</a></h4>
+                            <div class="shop-brief" style="line-height: 12px;"><a href="vitaminC/index.jhtml">Fast Dissolve , Maximum
+                                Strength,<br>Strawberry,5000 mcg ,100 Tablets</a></div>
                             <div class="shop-price">
                                 <div class="shop-pices">$<b class="price">30</b></div>
                                 <div class="shop-arithmetic">
@@ -126,12 +123,12 @@
                     <div class="shop-info">
                         <input type="checkbox" name="checkbox" class="check goods-check goodsCheck" value="5">
                         <div class="shop-info-img" style="text-align: center;">
-                            <img src="static/images/VitaminD.png" style="width: 60%;height:auto;" /></div>
+                           <a href="vitaminD/index.jhtml"><img src="static/images/VitaminD.png" style="width: 60%;height:auto;" /></a>
+                           </div>
                         <div class="shop-info-text">
-                            <h4>VitaminD</h4>
-                            <div class="shop-brief" style="line-height: 12px;">Fast Dissolve , Maximum
-                                Strength,<br>Strawberry,5000 mcg ,
-                                100 Tablets</div>
+                            <h4><a href="vitaminD/index.jhtml">VitaminD</a></h4>
+                            <div class="shop-brief" style="line-height: 12px;"><a href="vitaminD/index.jhtml">Fast Dissolve , Maximum
+                                Strength,<br>Strawberry,5000 mcg ,100 Tablets</a></div>
                             <div class="shop-price">
                                 <div class="shop-pices">$<b class="price">30</b></div>
                                 <div class="shop-arithmetic">
