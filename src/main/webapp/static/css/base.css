@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 .header h1{font-size:16px;color:#333;height:44px;line-height:44px;display:block;text-align:center;}
 .header a{position: absolute;top:0;display:block;height:44px;line-height:44px;}
 .header a.back{left:0px;}
-.header a.back span{display:inline-block;width:25px;height:25px;margin:10px 5px;background: url("../images/icon-back.png") no-repeat;background-size:100%;}
+.header a.back span{display:inline-block;width:25px;height:25px;margin:10px 5px;background: url("../images/icon/icon-back.png") no-repeat;background-size:100%;}
 .header .home{}
 /*头部结束*/
 
