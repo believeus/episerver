@@ -26,343 +26,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex3");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex3SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex4");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex4SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex5");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex5SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex6");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex6SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex7");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex7SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex8");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex8SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex9");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex9SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex10");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex10SliderVal").text(value);
-	});
-	});
-</script>
 
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex11");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex11SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex12");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex12SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex13");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex13SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex14");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex14SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex15");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex15SliderVal").text(value);
-	});
-	});
-</script>
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex16");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex16SliderVal").text(value);
-	});
-	});
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--slide-bar css-->
@@ -486,6 +164,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex3");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex3SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques3"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -500,6 +203,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex4");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex4SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques4"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -514,6 +242,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex5");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex5SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques5"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -528,6 +281,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex6");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex6SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques6"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -542,6 +320,30 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex7");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex7SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques7"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -556,6 +358,30 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex8");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex8SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques8"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -570,6 +396,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex9");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex9SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques9"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -586,6 +437,31 @@ slider.on("slide", function(slideEvt) {
 				<div style="width: 100%;height: 20px;"></div>
 				<div class="ques10"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
+					
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex10");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex10SliderVal").text(value);
+	});
+	});
+</script>					
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						10.How often have you been bothered by feeling nervous, anxious or on edge?
 					</div>
@@ -598,6 +474,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex11");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex11SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques11"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -612,6 +513,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex12");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex12SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques12"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -626,6 +552,30 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex13");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex13SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques13"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -640,6 +590,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+		
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex14");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex14SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques14"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -654,6 +629,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex15");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex15SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques15"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -668,6 +668,31 @@ slider.on("slide", function(slideEvt) {
   			</div>
 				
 				<div style="width: 100%;height: 20px;"></div>
+			
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex16");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex16SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques16"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -683,6 +708,7 @@ slider.on("slide", function(slideEvt) {
 				
 				<div style="width: 100%;height: 15px;"></div>
 				<div class="ques17"style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
+				<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						17. Have you been bothered by worrying about any of the following?
 					</div>
@@ -701,9 +727,11 @@ slider.on("slide", function(slideEvt) {
 					</div>
 					</form>
 					<div class="scroll-bar"style="width: 100%;height: auto;"></div>
+					<div style="width: 100%;height: 20px;"></div>
 				</div>
 				<div style="width: 100%;height: 15px;"></div>
 				<div class="ques18"style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
+				<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						18. If this questionnaire has highlighted any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?
 					</div>
@@ -722,7 +750,7 @@ slider.on("slide", function(slideEvt) {
 			
 			<div style="width: 100%;height: 30px;">
   			<div style="width: 90%;height: auto;margin: 0 auto;border-radius: 10px; background-color: #F77A78;">
-  				<button type="button">Submit</button>
+  				<button type="button"style="text-align: center;vertical-align:middle;">Submit</button>
   			</div>
   		</div>
 			

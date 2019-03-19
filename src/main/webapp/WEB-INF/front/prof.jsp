@@ -218,46 +218,50 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
         			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2944040/">
-        				<div style="width: 80%;height: auto;float: left;">Epigenetic regulation of the glucocorticoid receptor in human brain associates with childhood abuse.Nat Neurosci. 2009 Mar; 12(3): 342–348.</div>
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Epigenetic regulation of the glucocorticoid receptor in human brain associates with childhood abuse.Nat Neurosci. 2009 Mar; 12(3): 342–348.</div>
         			</a>
         				<div style="width: 20%;height: auto;float: right;">2892 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://www.nature.com/articles/17533">
-        				<div style="width: 80%;height: auto;float: left;">A mammalian protein with specific demethylase activity for mCpG DNA Nature. 1999 Feb 18</div>
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">A mammalian protein with specific demethylase activity for mCpG DNA Nature. 1999 Feb 18</div>
         				</a>
         				<div style="width: 20%;height: auto;float: right;">528 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0002085">
-        				<div style="width: 80%;height: auto;float: left;">Promoter-wide hypermethylation of the ribosomal RNA gene promoter in the suicide brain. PLoS One. 2008 May 7</div>
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Promoter-wide hypermethylation of the ribosomal RNA gene promoter in the suicide brain. PLoS One. 2008 May 7</div>
         				</a>
         				<div style="width: 20%;height: auto;float: right;">351 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0014739">
-        				<div style="width: 80%;height: auto;float: left;">Broad epigenetic signature of maternal care in the brain of adult rats. PLoS One. 2011 Feb 28</div>
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Broad epigenetic signature of maternal care in the brain of adult rats. PLoS One. 2011 Feb 28</div>
         				</a>
         				<div style="width: 20%;height: auto;float: right;">347 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				
-        				<div style="width: 80%;height: auto;float: left;">Expression of antisense to DNA demethylation and inhibits tumorigenesis .J Biol Chem. 1995 Apr 7</div>
-        				
+        				<a href="https://www.sciencedirect.com/science/article/pii/S0304383504003155">
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Expression of antisense to DNA demethylation and inhibits tumorigenesis .J Biol Chem. 1995 Apr 7</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: right;">256 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<div style="width: 80%;height: auto;float: left;">Epigenetics, DDNA methylation, and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</div>
+        				<a href="certifyweb.alipay.com/certify/org/flow/entrance/org_certify#/">
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Epigenetics, DDNA methylation, and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: left;">432 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<div style="width: 80%;height: auto;float: left;">Maternal care effects on the hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl</div>
+        				<a href="https://certifyweb.alipay.com/certify/org/flow/entrance/org_certify#/">
+        				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Maternal care effects on the hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: left;">786 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
