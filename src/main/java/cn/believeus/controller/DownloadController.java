@@ -26,6 +26,7 @@ public class DownloadController {
             fis.read(buf);  
             response.setCharacterEncoding("utf-8");  
             response.setHeader("Content-Disposition","attachment; filename="+filename+"");  
+            response.addHeader("Content-Length", "" + buf.length);
             //获取响应报文输出流对象  
             ServletOutputStream  out =response.getOutputStream();  
             //输出  
