@@ -88,7 +88,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div style="width: 100%;height: auto; background-color: #F4F4F6;">
 							<div style="width: 88%;height:auto;margin: 0 auto;border-top: 9px; align-content: center;color: #666666; background-color: #C1E1E8; border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
 								In March of 2003, the AHRQ (Agency for Healthcare Research and Quality) a division of the United States Health and Human Services, released the findings of a major study on SAM-e. <br />
-							<i style="color: #4A9ACA;">https://www.ncbi.nlm.nih.gov/books/NBK11886/</i>
+							<i style="color: #4A9ACA;"><a href="https://www.ncbi.nlm.nih.gov/books/NBK11886"  target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK11886/</a></i>
 							</div>
 							<div style="width:0;height:0;border-width:13px 16px 0;border-style:solid;border-color:#C1E1E8 transparent transparent;margin:0 auto;position:relative;"></div>
 							<div style="width: 100%;height: auto;">
@@ -128,20 +128,20 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		<div style="width: 10%;height: auto;float: left;">2010</div>
 		<div class="vertical-circle"style="width: 4%;float: left;"></div>
 		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">The study from Massachusetts General Hospital demonstrated that SAM-e combined with antidepressants significantly increased remission rates in patients with major depression who failed conventional therapy.
-						<i style="color: #2E86C3;"> https://ajp.psychiatryonline.org/doi/full/10.1176/<br /> appi.ajp.2009.09081198</i>
+						<i style="color: #2E86C3;"><a href="https://ajp.psychiatryonline.org/doi/full/10.1176/"  target="_blank"> https://ajp.psychiatryonline.org/doi/full/10.1176/</a><br /> appi.ajp.2009.09081198</i>
 		</div>
 		<div class="vertical-line"style="height: 220px;"></div>
 		<div style="width: 10%;height: auto;float: left;">2009</div>
 		<div class="vertical-circle"style="width: 4%;float: left;"></div>
 		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">A Korean study found that SAM-e is as effective as the NSAID Nabumetone. 
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/20110025 </i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/20110025"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/20110025 </a></i>
 		</div>
 		
 		<div class="vertical-line"></div>
 		<div style="width: 10%;height: auto;float: left;">2004</div>
 		<div class="vertical-circle"style="width: 4%;float: left;"></div>
 		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;"> The study done by University of California showed that SAM-e is as effective as Celecoxib, a prescription drug for Arthritis.
-			<i>https://www.ncbi.nlm.nih.gov/pubmed/15102339 </i> 
+			<i><a href="https://www.ncbi.nlm.nih.gov/pubmed/15102339"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/15102339</a> </i> 
 		</div>
 		<div class="vertical-line"style="height: 100px;"></div>
 		</div>
@@ -161,8 +161,8 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div id="dot" style="color: #666666;font-family: arial;">
 							SAM-e was shown to block breast cancer growth and metastasis in experiments on breast cancer cel lines and animals.
 						</div>
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/29435170</i>
-					    <i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/15150277</i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/29435170"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/29435170</a></i>
+					    <i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/15150277"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/15150277</a></i>
 						<p></p>
 				</div>
 			</div>
@@ -172,7 +172,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div id="dot"  style="color: #666666;font-family: arial;">
 							SAM-e was shown to block growth of liver cancer cells.
 						</div>
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/29340097</i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/29340097"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/29340097</a></i>
 						<p></p>
 				</div>
 			</div>
@@ -182,8 +182,8 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div id="dot"  style="color: #666666;font-family: arial;">
 							SAM-e was shown to  block growth of prostate cancer cells.
 						</div>
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/25631332</i>
-					    <i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/16982764</i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/25631332"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/25631332</a></i>
+					    <i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/16982764"  target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/16982764</a></i>
 						<p></p>
 				</div>
 			</div>
@@ -193,9 +193,9 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div  id="dot" style="color: #666666;font-family: arial;">
 							SAM-e was shown to inhibit formation of liver cancer in rats and colorectal cancer in mice.
 						</div>
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/23073625</i>
-					    <i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/19444874</i>
-					    <i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/22159228</i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/23073625" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/23073625</a></i>
+					    <i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/19444874" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/19444874</a></i>
+					    <i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/22159228" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/22159228</a></i>
 						<p></p>
 				</div>
 			</div>
@@ -205,8 +205,8 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 						<div id="dot"  style="color: #666666;font-family: arial;">
 							SAM-e was shown to improve memory in a mouse model of Alzheimer disease when taken before onset of symptoms.
 						</div>
-						<i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/27681803</i>
-					    <i style="color: #2E86C3;">https://www.ncbi.nlm.nih.gov/pubmed/22221883</i>
+						<i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/27681803" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/27681803</a></i>
+					    <i style="color: #2E86C3;"><a href="https://www.ncbi.nlm.nih.gov/pubmed/22221883" target="_blank">https://www.ncbi.nlm.nih.gov/pubmed/22221883</a></i>
 					    <p></p>
 					</ul>
 				</div>
@@ -214,7 +214,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		</div>
 		</div>
 		<div style="width: 100%;height: auto;">
-			<img src="/static/images.sam3.png“style="width: 100%;height: auto;" />
+			<img src="static/images/sam3.png" style="width: 100%;height: auto;" />
 		</div>
 		<div class="why-sam"style="width: 100%;height: auto;">
 			<div style="width: 100%;height: auto;ont-family: arial;line-height: 77px; margin: 0 auto;font-weight: 600;">

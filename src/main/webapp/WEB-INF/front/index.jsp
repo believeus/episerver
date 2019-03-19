@@ -79,7 +79,7 @@
 							<div style="width: 100%;height: 20px;"></div>
 							<div style="width: 100%;height: auto;display: flex;">
 								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<img src="static/images/L2.png" style="width: 100%;height: 100%;" />
+									<a href="http://www.beijingepidial.com/payserver/cart/index.jhtml"><img src="static/images/L2.png" style="width: 100%;height: 100%;" /></a>
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
@@ -161,9 +161,8 @@
 						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 58px;">$35</div> 
 					</div>
 					<div style="width: 25%;height: 61px;float: right; ">
-						<a href="cart/index.jhtml">
-						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-							Buy
+						<a href="same/index.jhtml"><div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+							More
 						</div>
 						 </a>
 					</div>
@@ -199,7 +198,7 @@
 						<div style="width: 100%;height: auto;background-color: #F4F4F6; ">
 							<div style="width: 95%;height:auto;margin: 0 auto;border-top: 9px; align-content: center;background-color: #C1E1E8;border-radius: 10px;">
 								<br/>In March of 2003, the AHRQ (Agency for Healthcare Research and Quality) a division of the United States Health and Human Services, released the findings of a major study on SAM-e. <br />
-							<i style="color: #4A9ACA;">https://www.ncbi.nlm.nih.gov/books/NBK11886/</i>
+							<i style="color: #4A9ACA;"><a href="https://www.ncbi.nlm.nih.gov/books/NBK11886/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK11886/</a></i>
 							</div>
 							<div style="width: 100%;height: auto;">
 								<div style="width: 96%;height: auto;margin: 0 auto;font-family: arial; color: #666666;">
