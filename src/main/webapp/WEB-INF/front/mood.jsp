@@ -23,26 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<title>Mood self Assesment</title>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--slide-bar css-->
 <style>
 	#ex1Slider .slider-selection {
@@ -60,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<div style="width: 100%;height: 20px;"></div>
 			<div id="title"style="width: 100%;height: auto;">
-					<div><img src="static/images/mood.png"style="width: 20%;height: 16%;float: right;"/></div> 
+					<div><img src="static/images/mood.png"style="width: 20%;height: 17%;float: right;"/></div> 
 				<div style="width: 100%;height: auto;">
 					
 					<div style="width: 100%;height: 58px;text-align: center;font-size: 20px;font-family: arial;line-height: 46px; background-color: #FFFFFF; font-weight: 700;">
@@ -748,11 +728,11 @@ slider.on("slide", function(slideEvt) {
 				</div>
 			</div>
 			
-			<div style="width: 100%;height: 30px;">
-  			<div style="width: 90%;height: auto;margin: 0 auto;border-radius: 10px; background-color: #F77A78;">
-  				<button type="button"style="text-align: center;vertical-align:middle;">Submit</button>
-  			</div>
-  		</div>
+			
+  			<div class="submit" style="width: 100%;height: 30px;">
+  				<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>
+  				</div>
+  		
 			
 			<div style="width: 100%;height: 60px;"></div>
 				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">

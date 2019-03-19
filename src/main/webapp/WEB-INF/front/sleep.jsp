@@ -18,14 +18,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<title>Sleep Self Assessment</title>
 		
 
-
-
-
-	
-		
-		
-
-
 	</head>
 	<body>
 		<div id="container"style="width: 100%;height: 100%;background-color: #FFFFFF;">
@@ -384,11 +376,10 @@ slider.on("slide", function(slideEvt) {
   		
   		</div>	
   		
-  		<div style="width: 100%;height: 30px;">
-  			<div style="width: 90%;height: auto;margin: 0 auto;border-radius: 10px; background-color: #F77A78;">
-  				<button type="button">Submit</button>
-  			</div>
-  		</div>
+  		<div class="submit" style="width: 100%;height: 30px;">
+  				<button type="button" style="width: 90%;height: 40px;margin-left: 18px;display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#F77A78; color:#FFFFFF ;">Submit</button>
+  				</div>
+  				
   		<div style="width: 100%;height: 60px;"></div>
 				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
 					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
