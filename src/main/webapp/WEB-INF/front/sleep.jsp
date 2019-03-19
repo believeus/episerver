@@ -17,195 +17,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type='text/javascript' src="static/js/bootstrap-slider.js"></script>
 		<title>Sleep Self Assessment</title>
 		
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex1");
-slider.on("slide", function(slideEvt) {
-	var value="0-15 min";
-	switch (slideEvt.value){
-		case 1:
-			value="0-15 min";
-		break;
-		case 2:
-			value="16-30 min";
-		break;
-		case 3:
-			value="31-45 min";
-		break;
-		case 4:
-			value="46-60 min";
-		break;
-		case 5:
-		value="more than 61 min ";
-		break;
-	}
-	$(".ex1SliderVal").text(value);
-	});
-	});
-</script>
-				<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex2");
-slider.on("slide", function(slideEvt) {
-	var value="0-15 min";
-	switch (slideEvt.value){
-		case 1:
-			value="0-15 min";
-		break;
-		case 2:
-			value="16-30 min";
-		break;
-		case 3:
-			value="31-45 min";
-		break;
-		case 4:
-			value="46-60 min";
-		break;
-		case 5:
-		value="more than 61 min ";
-		break;
-	}
-	$(".ex2SliderVal").text(value);
-	});
-	});
-</script>
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex3");
-slider.on("slide", function(slideEvt) {
-	var value="0-1 night";
-	switch (slideEvt.value){
-		case 1:
-			value="0-1 night";
-		break;
-		case 2:
-			value="2 nights";
-		break;
-		case 3:
-			value="3 nights";
-		break;
-		case 4:
-			value="4 nights";
-		break;
-		case 5:
-		value="5-7 nights";
-		break;
-	}
-	$(".ex3SliderVal").text(value);
-	});
-	});
-</script>
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex4");
-slider.on("slide", function(slideEvt) {
-	var value="Very good";
-	switch (slideEvt.value){
-		case 1:
-			value="Very good";
-		break;
-		case 2:
-			value="Good";
-		break;
-		case 3:
-			value="Average";
-		break;
-		case 4:
-			value="Poor";
-		break;
-		case 5:
-		value="Very poor ";
-		break;
-	}
-	$(".ex1SliderVal").text(value);
-	});
-	});
-</script>
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex5");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-				value="Not at all";
-		break;
-		case 2:
-			value="A little";
-		break;
-		case 3:
-			value="Somewhat";
-		break;
-		case 4:
-			value="Much";
-		break;
-		case 5:
-		value="Very much ";
-		break;
-	}
-	$(".ex5SliderVal").text(value);
-	});
-	});
-</script>
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex6");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Little";
-		break;
-		case 3:
-			value="Somewhat";
-		break;
-		case 4:
-			value="Much";
-		break;
-		case 5:
-		value="Very much ";
-		break;
-	}
-	$(".ex6SliderVal").text(value);
-	});
-	});
-</script>
-		<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex7");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Little";
-		break;
-		case 3:
-			value="Somewhat";
-		break;
-		case 4:
-			value="Much";
-		break;
-		case 5:
-		value="Very much";
-		break;
-	}
-	$(".ex7SliderVal").text(value);
-	});
-	});
-</script>
+
+
+
+
+	
+		
+		
 
 
 	</head>
@@ -235,6 +53,34 @@ slider.on("slide", function(slideEvt) {
 			
 			<div id="content"style="width: 100%;height: auto;background-color: #EDEDED">
 				<div style="width: 100%;height: 20px;"></div>
+				
+		<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex1");
+slider.on("slide", function(slideEvt) {
+	var value="0-15 min";
+	switch (slideEvt.value){
+		case 1:
+			value="0-15 min";
+		break;
+		case 2:
+			value="16-30 min";
+		break;
+		case 3:
+			value="31-45 min";
+		break;
+		case 4:
+			value="46-60 min";
+		break;
+		case 5:
+		value="more than 61 min ";
+		break;
+	}
+	$(".ex1SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -248,6 +94,35 @@ slider.on("slide", function(slideEvt) {
 					</div>
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
+  			
+  			
+  	<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex2");
+slider.on("slide", function(slideEvt) {
+	var value="0-15 min";
+	switch (slideEvt.value){
+		case 1:
+			value="0-15 min";
+		break;
+		case 2:
+			value="16-30 min";
+		break;
+		case 3:
+			value="31-45 min";
+		break;
+		case 4:
+			value="46-60 min";
+		break;
+		case 5:
+		value="more than 61 min ";
+		break;
+	}
+	$(".ex2SliderVal").text(value);
+	});
+	});
+</script>
   			<div class="ques2"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -262,6 +137,33 @@ slider.on("slide", function(slideEvt) {
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
   			
+  		<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex3");
+slider.on("slide", function(slideEvt) {
+	var value="0-1 night";
+	switch (slideEvt.value){
+		case 1:
+			value="0-1 night";
+		break;
+		case 2:
+			value="2 nights";
+		break;
+		case 3:
+			value="3 nights";
+		break;
+		case 4:
+			value="4 nights";
+		break;
+		case 5:
+		value="5-7 nights";
+		break;
+	}
+	$(".ex3SliderVal").text(value);
+	});
+	});
+</script>			
   		<div class="ques3"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -276,6 +178,33 @@ slider.on("slide", function(slideEvt) {
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
   			
+  	<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex4");
+slider.on("slide", function(slideEvt) {
+	var value="Very good";
+	switch (slideEvt.value){
+		case 1:
+			value="Very good";
+		break;
+		case 2:
+			value="Good";
+		break;
+		case 3:
+			value="Average";
+		break;
+		case 4:
+			value="Poor";
+		break;
+		case 5:
+		value="Very poor ";
+		break;
+	}
+	$(".ex1SliderVal").text(value);
+	});
+	});
+</script>
   			<div class="ques4"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -290,6 +219,33 @@ slider.on("slide", function(slideEvt) {
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
   			
+  			<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex5");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+				value="Not at all";
+		break;
+		case 2:
+			value="A little";
+		break;
+		case 3:
+			value="Somewhat";
+		break;
+		case 4:
+			value="Much";
+		break;
+		case 5:
+		value="Very much ";
+		break;
+	}
+	$(".ex5SliderVal").text(value);
+	});
+	});
+</script>
   		<div class="ques5"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -304,6 +260,33 @@ slider.on("slide", function(slideEvt) {
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
   			
+  		<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex6");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Little";
+		break;
+		case 3:
+			value="Somewhat";
+		break;
+		case 4:
+			value="Much";
+		break;
+		case 5:
+		value="Very much ";
+		break;
+	}
+	$(".ex6SliderVal").text(value);
+	});
+	});
+</script>	
   			<div class="ques6"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -318,6 +301,33 @@ slider.on("slide", function(slideEvt) {
   			</div>
   			<div style="width: 100%;height: 20px;"></div>
   			
+  			<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex7");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Little";
+		break;
+		case 3:
+			value="Somewhat";
+		break;
+		case 4:
+			value="Much";
+		break;
+		case 5:
+		value="Very much";
+		break;
+	}
+	$(".ex7SliderVal").text(value);
+	});
+	});
+</script>
   		<div class="ques7"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">

@@ -11,8 +11,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/stylesheet.css" />
-		<link href="static/css/bootstrap-slider.min.css" rel="stylesheet">
-		<link href="static/css/bootstrap-slider.css" rel="stylesheet">
+		<!-- <link href="static/css/bootstrap-slider.min.css" rel="stylesheet"> -->
+		<link href="/static/css/pain-bootstrap-slider.css" rel="stylesheet">
 		<script type='text/javascript' src="static/js/jquery-3.3.1.min.js"></script>
 		<script type='text/javascript' src="static/js/bootstrap-slider.js"></script>
 		<title>McGill Pain Questionnaire</title>
@@ -761,24 +761,7 @@ slider.on("slide", function(slideEvt) {
 			<div id="content"style="width: 100%;height: auto;background-color: #DEDEDE">
 			
 			
-				<!-- <div style="width: 100%;height: 20px;"></div>
-				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-					<div style="width: 100%;height: auto;font-family: arial;font-size: 20px; font-weight: 700;">What Does Your Pain Feel Like?</div>
-				<div style="width: 100%;height: auto;color:#666666">
-					Statement: Some of the following words below describe your present pain.
-					 Circle ONLY those words that best describe it. Leave out any category that is not suitable. 
-					 Use only a single word in each appropriate category - the one that applies best.
-				</div>
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
-						1.temporal?
-					</div>
-					<div class="scroll-bar"style="width: 100%;height: auto;margin: 0 auto;">
-						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex1SliderVal"style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
-						<div><input  class="ex1" type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="0"></div>
-						<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
-					</div>
-  			</div> -->
+				
   			
   			<div style="width: 100%;height: 20px;"></div>
 				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
@@ -789,14 +772,15 @@ slider.on("slide", function(slideEvt) {
 					 Use only a single word in each appropriate category - the one that applies best.
 				</div>
 					<div style="width: 100%;height: 20px;"></div>
-					<div style="width: 96%;height: auto;font-size: 16px;margin:0 auto; font-family: airal;color: #666666;">
-						1.How often have you had little interest or pleasure in doing things?
+					<div style="width: 96%;height: auto;font-size: 16px;margin:0 auto; font-family: airal;font-weight: 600; color: #666666;">
+						1.temporal?
 					</div>
-					<div class="scroll-bar"style="width: 98%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
 						<div class="ex1SliderVal"style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
 						<div><input  class="ex1" type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+						<div style="width: 100%;height: 20px;"></div>
 					</div>
   			</div>
   			
@@ -805,216 +789,217 @@ slider.on("slide", function(slideEvt) {
   			
   			<div style="width: 100%;height: 20px;"></div>
   			<div class="ques2"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						2.spatial
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex2SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex2SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
 						<div><input  class="ex2" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+						<div style="width: 100%;height: 20px;"></div>
 					</div>
   			</div>
   			
   			<div class="ques3"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						3.punctate pressure
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex3SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex3SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex3" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
-  			<div class="ques4"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
+  			<div class="ques4"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;font-weight: 600;">
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						4.incisive pressure
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex4SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex4SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex4" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
   			<div class="ques5"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						5.constrictive pressure
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex5SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex5SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex5" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
   			<div class="ques6"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						6.traction pressure
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex6SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex6SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex6" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
   			<div class="ques7"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						7.thermal
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex7SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex7SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex7" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
   			<div class="ques8"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						8.brightness
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex8SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex8SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex8" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques9"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						9.dullness
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex9SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex9SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex9" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques10"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						10.sensory miscellaneous
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex10SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex10SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex10" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques11"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						11.tension
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex11SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex11SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex11" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques12"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						12.autonomic
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex12SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex12SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex12" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques13"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						13.fear
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex13SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex13SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex13" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques14"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						14.pinishment
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex14SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex14SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex14" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques15"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						15.affective-evaluative-sensory:miscellaneous
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex15SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex15SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex15" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques16"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						16.evaluative
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex16SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex16SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex16" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex16CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques17"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						17.sensory: miscellaneous
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex17SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex17SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex17" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex17CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques18"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						18.sensory: miscellaneous
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex18SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex18SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex18" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex18CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques19"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						19.sensory
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex19SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex19SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex19" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex19CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques20"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						20.affective-evaluative:miscellaneous
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex20SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex20SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex20" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex20CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
@@ -1025,7 +1010,7 @@ slider.on("slide", function(slideEvt) {
 
   			<div style="width: 100%;height: 15px;"></div>
 				<div style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						Do the following items increase or decrease your pain?
 					</div>
 					<form action=""method="get">
@@ -1056,7 +1041,7 @@ slider.on("slide", function(slideEvt) {
 					</div>
 					</form>
 					</div>
-					<div style="width: 100%;height: auto;margin: 0 auto;line-height: 60px; font-weight: 700; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;margin: 0 auto;line-height: 60px; font-weight: 700; font-family: airal;color: #666666;font-weight: 600;">
   					How Strong is Your Pain?
   					</div>
   					<div style="width: 100%;height: auto;">
@@ -1066,67 +1051,67 @@ slider.on("slide", function(slideEvt) {
   					</div>
   					
   			<div class="ques21"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						21. Which word describes your pain right now? 
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex21SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex21SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex21" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex21CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques22"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						22.Which word describes it at its worst?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex22SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex22SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex22" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex22CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques23"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						23.Which word describes it when it is least?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex23SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex23SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex23" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex23CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques24"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						24.Which word describes the worst toothache you ever had?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex24SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex24SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex24" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex24CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques25"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						25.Which word describes the worst headache you ever had?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex25SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex25SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex25" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex25CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			<div class="ques26"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
+					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">
 						26.Which word describes the worst stomach-ache you ever had?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 96%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex26SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex26SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
 						<div><input  class="ex26" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex26CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
@@ -1144,6 +1129,13 @@ slider.on("slide", function(slideEvt) {
   					<p>Melzack R. The McGill Pain Questionnaire: Major properties and scoring methods. Pain. 1975;1: 277-299.
 Stein C Mendl G. The German counterpart to McGill Pain Questionnaire. Pain. 1988; 32: 251-255.</p>
   				</div>
+  				
+  				<div style="width: 100%;height: 30px;">
+  			<div style="width: 90%;height: auto;margin: 0 auto;border-radius: 10px; background-color: #F77A78;">
+  				<button type="button">Submit</button>
+  			</div>
+  		</div>
+  				
   		<div style="width: 100%;height: 60px;"></div>
 				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
 					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">

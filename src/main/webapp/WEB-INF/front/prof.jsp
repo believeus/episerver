@@ -210,32 +210,44 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         		<div style="width: 90%;height: auto;font-family: arial;font-weight: 500;color: #FFFFFF; line-height: 20px; margin: 0 auto;">
         		
         			<div style="width: 100%;height: auto;">
-        				<div style="width: 80%;height: auto;float: left;">Epigenetic programming by maternal behavior.Aug 1st 2004 Nature Neuroscience volume 7 issue 8 pp 847-854</div>
+        				<a href="https://www.ncbi.nlm.nih.gov/pubmed/15220929">
+        				 <div style="width: 80%;height: auto;float: left;color:#FFFFFF">Epigenetic programming by maternal behavior.Aug 1st 2004 Nature Neuroscience volume 7 issue 8 pp 847-854</div>
+        				</a> 
         				<div style="width: 20%;height: auto;float: right;">5530 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
+        			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2944040/">
         				<div style="width: 80%;height: auto;float: left;">Epigenetic regulation of the glucocorticoid receptor in human brain associates with childhood abuse.Nat Neurosci. 2009 Mar; 12(3): 342–348.</div>
+        			</a>
         				<div style="width: 20%;height: auto;float: right;">2892 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
+        				<a href="https://www.nature.com/articles/17533">
         				<div style="width: 80%;height: auto;float: left;">A mammalian protein with specific demethylase activity for mCpG DNA Nature. 1999 Feb 18</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: right;">528 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
+        				<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0002085">
         				<div style="width: 80%;height: auto;float: left;">Promoter-wide hypermethylation of the ribosomal RNA gene promoter in the suicide brain. PLoS One. 2008 May 7</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: right;">351 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
+        				<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0014739">
         				<div style="width: 80%;height: auto;float: left;">Broad epigenetic signature of maternal care in the brain of adult rats. PLoS One. 2011 Feb 28</div>
+        				</a>
         				<div style="width: 20%;height: auto;float: right;">347 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
+        				
         				<div style="width: 80%;height: auto;float: left;">Expression of antisense to DNA demethylation and inhibits tumorigenesis .J Biol Chem. 1995 Apr 7</div>
+        				
         				<div style="width: 20%;height: auto;float: right;">256 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>

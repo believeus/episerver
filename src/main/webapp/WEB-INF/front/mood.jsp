@@ -23,55 +23,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 		<title>Mood self Assesment</title>
 
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex1");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex1SliderVal").text(value);
-	});
-	});
-</script>
 
-<script>
-	$(function(){
-// Without JQuery
-var slider = new Slider(".ex2");
-slider.on("slide", function(slideEvt) {
-	var value="Not at all";
-	switch (slideEvt.value){
-		case 1:
-			value="Not at all";
-		break;
-		case 2:
-			value="Several days";
-		break;
-		case 3:
-			value="More than half the days";
-		break;
-		case 4:
-			value="Nearly every day";
-		break;
-	}
-	$(".ex2SliderVal").text(value);
-	});
-	});
-</script>
+
+
 <script>
 	$(function(){
 // Without JQuery
@@ -454,6 +408,31 @@ slider.on("slide", function(slideEvt) {
 			<div id="content"style="width: 100%;height: auto;background-color: #EDEDED;">
 			
 				<div style="width: 100%;height: 20px;"></div>
+				
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex1");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex1SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
@@ -469,6 +448,30 @@ slider.on("slide", function(slideEvt) {
 				
 				
 				<div style="width: 100%;height: 20px;"></div>
+<script>
+	$(function(){
+// Without JQuery
+var slider = new Slider(".ex2");
+slider.on("slide", function(slideEvt) {
+	var value="Not at all";
+	switch (slideEvt.value){
+		case 1:
+			value="Not at all";
+		break;
+		case 2:
+			value="Several days";
+		break;
+		case 3:
+			value="More than half the days";
+		break;
+		case 4:
+			value="Nearly every day";
+		break;
+	}
+	$(".ex2SliderVal").text(value);
+	});
+	});
+</script>				
 				<div class="ques2"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
