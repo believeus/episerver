@@ -69,11 +69,11 @@
 						<div style="width: 100%;height: 10px;"></div>
 							<div style="width: 100%;height: auto;display: flex;">
 								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<img src="static/images/L1.png" style="width: 100%;height: 100%;" />
+									<a href="aboutus/index.jhtml"><img src="static/images/L1.png" style="width: 100%;height: 100%;" /></a>
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<img src="static/images/R1.png" style="width: 100%;height: 100%;" />
+									<a href="testprocess/index.jhtml"><img src="static/images/R1.png" style="width: 100%;height: 100%;" /></a>
 								</div>
 							</div>
 							<div style="width: 100%;height: 20px;"></div>
@@ -83,7 +83,7 @@
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<img src="static/images/R2.png" style="width: 100%;height: 100%;" />
+									<a href="queslist/index.jhtml"><img src="static/images/R2.png" style="width: 100%;height: 100%;" /></a>
 								</div>
 							</div>
 						<div style="width: 100%;height: 10px;"></div>
@@ -102,9 +102,9 @@
 					</div>
 					<div style="width: 23%;height: 61px;float: right; ">
 						<a href="cart/index.jhtml">
-						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-							Buy
-						</div>
+						<a href="aging/index.jhtml"><div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+							More
+						</div></a>
 						</a>
 					</div>
 				</div>
@@ -233,19 +233,19 @@
 					<div class="vit-list"style="width: 100%;height: auto;">
 						<div style="width: 100%;height: auto;">
 							<div style="width: 92%;height: auto;margin: 0 auto;">
-								<a href="cart/index.jhtml"><img src="static/images/hm11.png"style="width: 100%;height: auto;"/></a>
+								<a href="vitaminA/index.jhtml"><img src="static/images/hm11.png"style="width: 100%;height: auto;"/></a>
 							</div>
 						</div>
 						<div style="width: 100%;height: 30px;"></div>
 							<div style="width: 100%;height: auto;">
 							<div style="width: 92%;height: auto;margin: 0 auto;">
-								 <img src="static/images/hm9.png"style="width: 100%;height: auto;" />
+								<a href="vitaminC/index.jhtml"> <img src="static/images/hm9.png"style="width: 100%;height: auto;" /></a>
 							</div>
 						</div>
 						<div style="width: 100%;height: 30px;"></div>
 							<div style="width: 100%;height: auto;">
 							<div style="width: 92%;height: auto;margin: 0 auto;">
-								<img src="static/images/hm10.png"style="width: 100%;height: auto;" />
+								<a href="vitaminD/index.jhtml"><img src="static/images/hm10.png"style="width: 100%;height: auto;" /></a>
 							</div>
 						</div>
 					</div>
@@ -268,7 +268,7 @@
 					<div style="width: 100%;height: 30px;"></div>
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
-							<img src="static/images/hm16.png"style="width: 100%;height: auto;" />
+							<a href="testprocess/index.jhtml"><img src="static/images/hm16.png"style="width: 100%;height: auto;" /></a>
 						</div>
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
@@ -291,8 +291,8 @@
 					
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
-							<a href="data/index/jhtml">
-							<img src="static/images/hm19.png"style="width: 100%;height: auto;" />
+							<a href="data/index.jhtml">
+								<img src="static/images/hm19.png"style="width: 100%;height: auto;" />
 							</a>
 						</div>
 					</div>
