@@ -18,16 +18,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="ill-pic"style="width: 100%;height: auto;">
 				<img src="static/images/ill-2.jpeg" style="width: 100%;height: auto;"/>
 			</div>
-			<div id="intro" style="width: 100%;height: auto;border:  ">
-				<div style="width: 100%;height: auto;font-family: arial;text-align: center; font-weight: 700; border:  ">
+			<div id="intro" style="width: 100%;height: auto;  ">
+			<div style="width: 100%;height:20px;"> </div>
+				<div style="width: 100%;height: auto;font-family: arial;text-align: left; font-weight: 700;">
 					Illumina sequencing introduce
 				</div>
-				<div style="width: 100%;height: auto;border:  ">
+				<div style="width: 100%;height:40px;"> </div>
+				<div style="width: 100%;height: auto;  ">
 					<div style="width: 78%;height: auto; float:left; text-align: center;line-height: 53px;font-weight: 600; font-family: arial; color: #1566B9;border:  ">
 						Technical principle&nbsp;&nbsp;
 					</div>
 					<div style="width: 20%;height: auto; float: left;">
-						<img src="static/images/ill-1.png"style="width: 100%;height: auto;"/>
+						<img src="static/images/ill-3.png"style="width: 100%;height: auto;"/>
 					</div>
 					
 					<div style="width: 96%;height: auto;line-height: 18px;margin: 0 auto; font-family: arial; color: #666666; border:  ">
@@ -45,15 +47,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				Data analysis
 			</div>
 				<div style="width: 100%;height: auto;">
-				<img src="static/images/ill-3.png"style="width: 100%;height: auto;"/>
+				<img src="static/images/ill-1.png"style="width: 100%;height: auto;"/>
 				</div>
+				<div style="width: 100%;height:40px;"> </div>
 			<div style="width: 96%;height: auto;margin: 0 auto;font-family: arial;color: #666666;  ">
 				<p >Combining Illumina's open source data with third-party software, Capturing from image can be realized、 Visualization to the Analysis of Biological Significance.</p>
 				<p>Preliminary Analysis of Data by Special Illumina Gene Software Package,Conversion from Image Capture to Intensity Signal Value, The sequence is converted to base sequence by calculation.</p>
 				<p>In addition,Joint use with other third-party software, Complete and flexible bioinformatics analysis,For example, sequence splicing、structural variation、ration、functional annotation、Functional classification、Prediction of new genes and regulatory regions, etc. Biological Significance of Deeply Mining Sequencing Data.</p>
 			</div>
+			<div style="width: 100%;height:20px;"> </div>
 			</div>
 			<div id="super"style="width: 100%;height: auto;">
+			<div style="width: 100%;height:20px;"> </div>
 				<div style="width: 100%;height: auto;font-family: arial;font-weight: 600; text-align: center;line-height: 54px; color: #1566B9; border:  ">
 					Technological superiority
 				</div>

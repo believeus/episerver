@@ -18,9 +18,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<jsp:include page="header.jsp"></jsp:include>
 			<div style="width: 100%;height: auto;">
 				<div style="width: 100%;height: 30px;"></div>
+				<a href="prof/index.jhtml">
 				<div style="width: 98%;height: auto;margin: 0 auto;overflow: hidden;">
 				<div style="width: 34%;height: auto;float: left;">
-					<a href="prof/index.jhtml"><img src="static/images/prof.png"  style="width: 100%;height: auto;" /></a>
+					<img src="static/images/prof.png"  style="width: 100%;height: auto;" />
 				</div>
 				<div style="width: 6%;;height: 20px;float: left;"></div>
 				<div style="width: 48%;height: auto;float: left;font-family: arial;">
@@ -34,6 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="width: 50%;height: 20px;"><img src="static/images/arr.png"style="width: 100%;height: auto;"/></div> 	
 				</div>
 				</div>
+				</a>
 				
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 98%;height: auto;margin: 0 auto;overflow: hidden;">

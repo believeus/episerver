@@ -728,32 +728,42 @@ slider.on("slide", function(slideEvt) {
 </script>
 	</head>
 	<body>
-		<div id="container"style="width: 100%;height: 100%;background-color: #DE2A2D;">
+		<div id="container"style="width: 100%;height: 100%;background-color: #DEDEDE;">
 		<jsp:include page="header.jsp"></jsp:include>
-			<div id="title"style="width: 100%;height: auto; ">
-				<div style="width: 100%;height: auto; text-align: center;color: #FFFFFF; font-size: 24px;font-weight: 700; font-family: arial; ">
-					McGill Pain Questionnaire
-				</div>
-				<div style="widows: 100%;height: auto;">
-					<div style="width: 96%;height: auto;margin: 0 auto;color: #FFFFFF; font-family: arial;">
-					Overview: The McGill Pain Questionnaire can be used to evaluate a person experiencing significant pain.
-					 It can be used to monitor the pain over time and to determine the effectiveness of any intervention.
-					  It was developed at by Dr. Melzack at McGill University in Montreal Canada and has been translated into several languages
+		
+			<div style="width: 100%;height: 20px;background-color:#FFFFFF;"></div>
+			<div id="title"style="width: 100%;height: auto;">
+					<div><img src="static/images/pain.png"style="width: 20%;height: 16%;float: right;"/></div> 
+				<div style="width: 100%;height: auto;">
+					
+					<div style="width: 100%;height: 58px;text-align: center;font-size: 20px;font-family: arial;line-height: 46px; background-color: #FFFFFF; font-weight: 700;">
+					 The McGill Pain Questionnaire
+					 </div>
+					<div style="accelerator: 100%;height: auto;background-color: #C1272D;">
+					<div style="width: 90%;height: auto;margin: 0 auto;color: #FFFFFF; font-family: arial;font-size: 14px;">
+						<div style="width: 100%;height: 20px;"></div>
+						Overview: The McGill Pain Questionnaire can be used to evaluate a person experiencing significant pain.
+						 It can be used to monitor the pain over time and to determine the effectiveness of any intervention. 
+						It was developed at by Dr. Melzack at McGill University in Montreal Canada and has been translated into several languages.
+						<div style="width: 100%;height: 20px;"></div>
+						<p> Sections:</p>
+						<p> 1) What Does Your Pain Feel Like? </p>
+						<p> 2) How Does Your Pain Change with Time?</p>
+						<p> 3)How Strong is Your Pain?</p>
+					 
+					 <div style="width: 100%;height: 20px;"></div>
 					</div>
-					<div style="width: 100%;height: auto;color: #FFFFFF; font-family: arial;">
-							<strong>Sections:</strong>
-							<ul style="list-style: none;">
-								<li>(1) What Does Your Pain Feel Like?</li>
-								<li>(2) How Does Your Pain Change with Time?</li>
-								<li>(3) How Strong is Your Pain?</li>
-							</ul>
 					</div>
 				</div>
 			</div>
-			<div id="content"style="width: 100%;height: auto;background-color: #DE2A2D">
-				
-				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-					<div style="width: 100%;height: auto;font-weight: 700;">What Does Your Pain Feel Like?</div>
+			
+			
+			<div id="content"style="width: 100%;height: auto;background-color: #DEDEDE">
+			
+			
+				<!-- <div style="width: 100%;height: 20px;"></div>
+				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
+					<div style="width: 100%;height: auto;font-family: arial;font-size: 20px; font-weight: 700;">What Does Your Pain Feel Like?</div>
 				<div style="width: 100%;height: auto;color:#666666">
 					Statement: Some of the following words below describe your present pain.
 					 Circle ONLY those words that best describe it. Leave out any category that is not suitable. 
@@ -762,14 +772,38 @@ slider.on("slide", function(slideEvt) {
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						1.temporal?
 					</div>
-					<div class="scroll-bar"style="width: 90%;height: auto;margin: 0 auto;">
+					<div class="scroll-bar"style="width: 100%;height: auto;margin: 0 auto;">
 						<div style="width: 100%;height: 20px;"></div>
-						<div class="ex1SliderVal"style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;">0</div>
+						<div class="ex1SliderVal"style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
+						<div><input  class="ex1" type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="0"></div>
+						<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					</div>
+  			</div> -->
+  			
+  			<div style="width: 100%;height: 20px;"></div>
+				<div class="ques1"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
+				<div style="width: 100%;height: auto;font-family: arial;font-size: 20px;line-height:66px;text-align:center; font-weight: 700;">What Does Your Pain Feel Like?</div>
+				<div style="width: 96%;height: auto;margin:0 auto; color:#666666">
+					Statement: Some of the following words below describe your present pain.
+					 Circle ONLY those words that best describe it. Leave out any category that is not suitable. 
+					 Use only a single word in each appropriate category - the one that applies best.
+				</div>
+					<div style="width: 100%;height: 20px;"></div>
+					<div style="width: 96%;height: auto;font-size: 16px;margin:0 auto; font-family: airal;color: #666666;">
+						1.How often have you had little interest or pleasure in doing things?
+					</div>
+					<div class="scroll-bar"style="width: 98%;height: auto;margin: 0 auto;">
+						<div style="width: 100%;height: 20px;"></div>
+						<div class="ex1SliderVal"style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
 						<div><input  class="ex1" type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="0"></div>
 						<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
   			</div>
   			
+  			
+  			
+  			
+  			<div style="width: 100%;height: 20px;"></div>
   			<div class="ques2"style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
 						2.spatial

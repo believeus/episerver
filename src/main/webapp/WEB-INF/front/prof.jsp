@@ -100,7 +100,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 }
 </style>
 	</head>
-	<body style="padding: 0px;margin: 0px;">
+	<body style="padding: 0;margin: 0;">
 		<div id="container" style="width: 100%;height: 100%;">
 		<jsp:include page="header.jsp"></jsp:include>
 			<div id="header"style="width: 100%;height: 100%;">
@@ -159,60 +159,20 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		<!--header end-->
 		<div class="wrap">
 			<div class="tabs">
-				<span class="part active"><a href="#" hidefocus="true" >Careers</a></span>
+				<span class="part active"><a href="#career" hidefocus="true" >Careers</a></span>
 				<span class="part" style="border-right: 1px solid #666666">
 					<a href="#" hidefocus="true">Honors</a>
 				</span>
-				<span class="part"><a href="#" hidefocus="true">Contributions</a></span>
+				<span class="part"><a href="#" hidefocus="true">Sponsored</a></span>
 			</div>
 
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
 						<div class="content-slide">
-							<div class="notice"style="width: 100%; height: auto;margin: 10px; border:1px solid #7c7c7c; overflow: hidden;">
-         <div class="notice-con" id="notice-con">
-            <div style="display: block">
-            	<div style="width: 100%;height: 20px;"></div>
-         <div class="vertical-line"style="height: 70px;"></div>	
-		<div style="width: 16%;height: auto;float: left;">2007-present</div>
-		<div class="vertical-circle"style="width: 4%;float: left;" ></div>
-		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">
-			Pharmacology of GlaxoSmithKline-Canadian Institute of Health
-			<div style="font-weight: 600;color: #0071BC;">Chairman</div>
-		</div>
-		<div class="vertical-line"></div>
-		<div style="width: 16%;height: auto;float: left;">2003-present</div>
-		<div class="vertical-circle"style="width: 4%;float: left;"></div>
-		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">
-			James McGill Professor
-		</div>
-		<div style="font-weight: 600;color: #0071BC);"></div>
-		<div class="vertical-line"></div>
-		<div style="width: 16%;height: auto;float: left;">2000-present</div>
-		<div class="vertical-circle"style="width: 4%;float: left;"></div>
-		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">
-			Glaxo Smith-Kline-CIHR chair in Pharmacology
-		</div>
-		<div class="vertical-line"style="height: 220px;"></div>
-		<div style="width: 16%;height: auto;float: left;">1993-2000</div>
-		<div class="vertical-circle"style="width: 4%;float: left;"></div>
-		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;">
-			Associate Professor, Department of Pharmacology, McGill Medical School.
-		</div>
-		
-		<div class="vertical-line"></div>
-		<div style="width: 16%;height: auto;float: left;">2004</div>
-		<div class="vertical-circle"style="width: 4%;float: left;"></div>
-		<div class="vertical-text"style="width: 78%;height: auto;float: left; margin: 0 auto;"> 
-			Assistant Professor, Department of Pharmacology, McGill Medical School.
-		</div>
-		<div class="vertical-line"style="height: 100px;"></div>
-            	
-            </div>
-        	</div>
-        </div>
-						<div></div>
+							
+       							 <div id="career" ><img src="static/images/careers.png" style="width: 100%; height: auto;"></div>
+       						 
 						</div>
 					</div>
 					<div class="swiper-slide">
@@ -222,6 +182,10 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
+						<div>
+								From 1985 to 2013, Academician Schiff's research projects were funded by organizations such as Canada and the United States. Listed below
+								Representational funding projects:
+						</div>
 							<p>一场雨把我困在这里</p>
 						</div>
 					</div>
@@ -231,10 +195,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 
 	</div>
 </div>
-        
-        
-        
-        
+
         <div style="font-size: 10px;color: #E8E8E8;" >
         	<hr style="height: 10px; font-size: 30px;color: #000000;"/>
         </div>
@@ -300,7 +261,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 	</div>
 	<!--局部滚动页面js代码-->
 <script type="text/javascript" src="static/js/zepto.min.js"></script>
-<script type="text/javascript" src="static/js/swiper/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="static/js/idangerous.swiper.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 

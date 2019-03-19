@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 96%;height: auto;margin: 0 auto;font-size: 16px;font-family: arial;color: #666666;line-height: 24px;">
 					<div style="width: 100%;height: auto;">
-						Beijing epidial medical diagnosis technology co., LTD. is a professional engaged in epigenetic diagnosis and research and development of new advanced technology enterprise.</div>
+						Hong Kong Precision Medicine is a professional engaged in epigenetic diagnosis and research and development of new advanced technology enterprise.</div>
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="width: 100%;height: auto;">
 						Company focused on tumor, biological age assessment, a variety of diseases such as autoimmune diseases, mental illness, the methylation of the development of diagnostic technology, has successfully developed for a wide variety of tumor methylation diagnostic technology,

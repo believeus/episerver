@@ -46,7 +46,9 @@
 						<ul>
 							<li><img id="img1" src="static/images/home1.jpg" ></li>
 							<li><img id="img1" src="static/images/home2.jpg"></li>
-							<li><img id="img1" src="/static/images/home3.jpg"></li>
+							<li><img id="img1" src="static/images/home3.jpg"></li>
+							<li><img id="img1" src="static/images/home4.jpg"></li>
+							<li><img id="img1" src="static/images/home5.jpg"></li>
 						</ul>
 					<div>
 					<span class="prev_btn"> < </span>
@@ -61,7 +63,7 @@
 					<div style="width: 3%;height: 100%;"></div>
 					<div style="width: 96%;height: 100%;">
 						<!--中心圆 begin-->
-						<div style="width: 42%;height: 0;padding-top: 42%;top : 363px;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
+						<div style="width: 42%;height: 0;padding-top: 42%;top : 483px;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
 							<div style="width: 42%;height: 135px;position:absolute;left:65px; right:0; top:0; bottom:0;margin:auto;border-radius:0 78px 78px 0;background-image: url(static/images/BR.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
 							<div style="width: 42%;height: 135px;position:absolute;left:0; right:65px; top:0; bottom:0;margin:auto;border-radius:78px 0 0 78px;background-image: url(static/images/BL.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
 						</div>
@@ -75,7 +77,9 @@
 								</div>
 								<div style="width:5%;height: 100%;"></div>
 								<div style="width:47%;height: 100%;border-radius: 16px;">
+									<a href="testprocess/index.jhtml">
 									<img src="static/images/R1.png" style="width: 100%;height: 100%;" />
+									</a>
 								</div>
 							</div>
 							<div style="width: 100%;height: 20px;"></div>
@@ -104,16 +108,18 @@
 			<div id="bio"style="width: 100%;height: auto; background-color: #F0F0F0;position: relative;">
 				<div style="width: 100%;height: 50px;"></div>
 				<div class="bio-title"style="width: 100%;height:60px ;">
-					<div style="width: 58%;height: auto;float: left; line-height: 27px;font-size: large; font-weight: 700; font-family: arial;">
+					<div style="width: 57%;height: auto;float: left; line-height: 27px;font-size: large; font-weight: 700; font-family: arial;">
 							Biological Age Detection of  DNA  Methylation
 					</div>
-					<div style="width: 17%;height: 61px;float: left; font-family: arial;font-size: 30px;font-weight: bold;color: #036EB7;line-height: 40px; ">
+					<div style="width: 20%;height: 61px;float: left; font-family: arial;font-size: 30px;font-weight: bold;color: #036EB7;line-height: 40px; ">
 						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 55px;">$150</div> 
 					</div>
-					<div style="width: 25%;height: 61px;float: right; ">
+					<div style="width: 23%;height: 61px;float: right; ">
+						<a href="cart/index.jhtml">
 						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
 							Buy
 						</div>
+						</a>
 					</div>
 				</div>
 				<div class="bio-con"style="width: 100%;height:auto ;background-color: #F0F0F0;">
@@ -169,9 +175,11 @@
 						<div style="width: 80%;height: auto;margin: 0 auto;line-height: 58px;">$35</div> 
 					</div>
 					<div style="width: 25%;height: 61px;float: right; ">
+						<a href="cart/index.jhtml">
 						<div style="width: 78%;height: 40px;color: white; background-color: #93278F;margin: 0 auto ;margin-top: 9px;text-align: center; line-height: 40px; font-size: large; border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
 							Buy
 						</div>
+						 </a>
 					</div>
 				</div>
 				<div id="sam-e-pic"style="width: 100%;height: auto;margin: 0 auto; ">
@@ -226,7 +234,9 @@
 					<div class="blank"style="width: 100%height: 20px;"></div>
 					<div class="vit-con"style="width: 100%;height:auto ;">
 						<div style="width: 100%;height: 50px;"></div>
-						<div style="width: 96%;height: auto; font-family: arial;font-size: large; font-weight: 700;margin: 0 auto;">Vitamin</div>
+						<div style="width: 96%;height: auto; font-family: arial;font-size: large; font-weight: 700;margin: 0 auto;">
+						Vitamin
+						</div>
 						<div style="width: 100%;height: 20px;"></div>
 						<div style="width: 96%;height: auto;margin: 0 auto; font-size: 12px;font-family: arial;line-height: 20px;">
 						Vitamin is a natural nutritional supplement in the human body, which can affect human health
@@ -237,19 +247,19 @@
 					<div class="vit-list"style="width: 100%;height: auto;">
 						<div style="width: 100%;height: auto;">
 							<div style="width: 92%;height: auto;margin: 0 auto;">
-								<a href="cart/index.jhtml"><img src="static/images/hm9.png"style="width: 100%;height: auto;"/></a>
+								<a href="cart/index.jhtml"><img src="static/images/hm11.png"style="width: 100%;height: auto;"/></a>
+							</div>
+						</div>
+						<div style="width: 100%;height: 30px;"></div>
+							<div style="width: 100%;height: auto;">
+							<div style="width: 92%;height: auto;margin: 0 auto;">
+								 <img src="static/images/hm9.png"style="width: 100%;height: auto;" />
 							</div>
 						</div>
 						<div style="width: 100%;height: 30px;"></div>
 							<div style="width: 100%;height: auto;">
 							<div style="width: 92%;height: auto;margin: 0 auto;">
 								<img src="static/images/hm10.png"style="width: 100%;height: auto;" />
-							</div>
-						</div>
-						<div style="width: 100%;height: 30px;"></div>
-							<div style="width: 100%;height: auto;">
-							<div style="width: 92%;height: auto;margin: 0 auto;">
-								<img src="static/images/hm11.png"style="width: 100%;height: auto;" />
 							</div>
 						</div>
 					</div>
@@ -264,7 +274,9 @@
 					<div style="width: 100%;height: 30px;"></div>
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
+							<a href="queslist/index.jhtml">
 							<img src="static/images/hm15.png"style="width: 100%;height: auto;" />
+							 </a>
 						</div>
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
@@ -284,14 +296,18 @@
 					
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
+							<a href="illumina/index.jhtml">
 							<img src="static/images/hm18.png"style="width: 100%;height: auto;" />
+							</a>
 						</div>
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
 					
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
+							<a href="data/index/jhtml">
 							<img src="static/images/hm19.png"style="width: 100%;height: auto;" />
+							</a>
 						</div>
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
