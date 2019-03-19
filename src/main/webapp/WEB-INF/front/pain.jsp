@@ -17,47 +17,26 @@
 <link href="/static/css/pain-bootstrap-slider.css" rel="stylesheet">
 <script type='text/javascript' src="static/js/jquery-3.3.1.min.js"></script>
 <script type='text/javascript' src="static/js/bootstrap-slider.js"></script>
+<script src="static/js/build/dist/echarts.js"></script>
+<script type="text/javascript">
+	// 路径配置
+	require.config({
+		paths : {
+			echarts : 'static/js/build/dist'
+		}
+	});
+</script>
 <title>McGill Pain Questionnaire</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 	<div id="container" style="width: 100%;height: 100%;background-color: #DEDEDE;">
-		<jsp:include page="header.jsp"></jsp:include>
-
+		<jsp:include page="header.jsp" />
 		<div style="width: 100%;height: 20px;background-color:#FFFFFF;"></div>
 		<div id="title" style="width: 100%;height: auto;">
 			<div>
 				<img src="static/images/pain.png" style="width: 20%;height: 16%;float: right;" />
 			</div>
 			<div style="width: 100%;height: auto;">
-
 				<div style="width: 100%;height: 58px;text-align: center;font-size: 20px;font-family: arial;line-height: 46px; background-color: #FFFFFF; font-weight: 700;">The McGill Pain Questionnaire</div>
 				<div style="accelerator: 100%;height: auto;background-color: #C1272D;">
 					<div style="width: 90%;height: auto;margin: 0 auto;color: #FFFFFF; font-family: arial;font-size: 14px;">
@@ -68,21 +47,13 @@
 						<p>1) What Does Your Pain Feel Like?</p>
 						<p>2) How Does Your Pain Change with Time?</p>
 						<p>3)How Strong is Your Pain?</p>
-
 						<div style="width: 100%;height: 20px;"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 		<div id="content" style="width: 100%;height: auto;background-color: #DEDEDE">
-
-
-
-
 			<div style="width: 100%;height: 20px;"></div>
-
 			<script>
 				$(function() {
 					// Without JQuery
@@ -131,12 +102,62 @@
 					<div style="width: 100%;height: 20px;"></div>
 				</div>
 			</div>
-
-
-
-
+			<div style="width: 100%;height: 350px;" id='report-1'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-1'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 			<div style="width: 100%;height: 20px;"></div>
-
 			<script>
 				$(function() {
 					// Without JQuery
@@ -173,6 +194,61 @@
 					<div style="width: 100%;height: 20px;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-2'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-2'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -215,6 +291,61 @@
 					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-3'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-3'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -251,6 +382,61 @@
 					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-4'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-4'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -293,6 +479,61 @@
 					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-5'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-5'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -329,6 +570,61 @@
 					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-6'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-6'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -368,6 +664,61 @@
 					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-7'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-7'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -407,6 +758,61 @@
 					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-8'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-8'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -449,6 +855,61 @@
 					<div class="ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-9'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-9'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -488,6 +949,61 @@
 					<div class="ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-10'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-10'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -521,6 +1037,61 @@
 					<div class="ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-11'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-11'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -554,6 +1125,61 @@
 					<div class="ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-12'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-12'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -590,6 +1216,61 @@
 					<div class="ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-13'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-13'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -632,6 +1313,61 @@
 					<div class="ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-14'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-14'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -665,6 +1401,61 @@
 					<div class="ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-15'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-15'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -707,6 +1498,61 @@
 					<div class="ex16CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-16'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-16'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -746,6 +1592,61 @@
 					<div class="ex17CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-17'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-17'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -788,6 +1689,61 @@
 					<div class="ex18CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-18'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-18'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -824,6 +1780,61 @@
 					<div class="ex19CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-19'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-19'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -866,6 +1877,62 @@
 					<div class="ex20CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-20'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-20'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
+
 			<div style="width: 100%;height: auto;margin: 0 auto;line-height: 60px; font-weight: 700; font-family: airal;color: #666666;">How Does Your Pain Change with Time?</div>
 
 			<div style="width: 100%;height: 15px;"></div>
@@ -987,6 +2054,61 @@
 					<div class="ex21CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+			<div style="width: 100%;height: 350px;" id='report-21'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-21'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -1029,7 +2151,62 @@
 					<div class="ex22CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
-
+				<div style="width: 100%;height: 350px;" id='report-22'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-22'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
+			
 			<script>
 				$(function() {
 					// Without JQuery
@@ -1071,6 +2248,61 @@
 					<div class="ex23CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+	<div style="width: 100%;height: 350px;" id='report-23'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-23'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -1110,6 +2342,61 @@
 					<div class="ex24CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+	<div style="width: 100%;height: 350px;" id='report-24'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-24'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -1152,6 +2439,61 @@
 					<div class="ex25CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+	<div style="width: 100%;height: 350px;" id='report-25'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-25'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
 
 			<script>
 				$(function() {
@@ -1191,6 +2533,62 @@
 					<div class="ex26CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
 			</div>
+				<div style="width: 100%;height: 350px;" id='report-26'></div>
+			<script type="text/javascript">
+				// 使用
+				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+				], function(ec) {
+					// 基于准备好的dom，初始化echarts图表
+					var chart1 = ec.init(document.getElementById('report-26'));
+					option = {
+						title : {},
+						tooltip : {
+							trigger : 'axis'
+						},
+						legend : {
+							data : [ 'mood status' ]
+						},
+						toolbox : {
+							show : true,
+							feature : {}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : 'category',
+							boundaryGap : false,
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
+									'2019/1/6', '2019/1/7', '2019/1/8',
+									'2019/1/9' ]
+						} ],
+						yAxis : [ {
+							type : 'value',
+							axisLabel : {
+								formatter : '{value} level'
+							}
+						} ],
+						series : [ {
+							name : 'mood status',
+							type : 'line',
+							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
+							markPoint : {
+								data : [ {
+									type : 'max',
+									name : '最大值'
+								}, ]
+							},
+							markLine : {
+								data : [ {
+									type : 'average',
+									name : '平均值'
+								} ]
+							}
+						}, ]
+					};
+					// 为echarts对象加载数据 
+					chart1.setOption(option);
+				});
+			</script>
+			
 			<div style="width: 100%;height: auto;font-family: arial;">
 				<div>Interpretation:</div>
 				<ul>
