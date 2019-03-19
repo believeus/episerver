@@ -44,11 +44,11 @@
 			<div id="header" >
 			<div id="slide" class="slide"style="width: 100%;height:auto;">
 						<ul>
+							<li><img id="img1" src="static/images/home4.jpg"></li>
+							<li><img id="img1" src="static/images/home5.jpg"></li>
 							<li><img id="img1" src="static/images/home1.jpg" ></li>
 							<li><img id="img1" src="static/images/home2.jpg"></li>
 							<li><img id="img1" src="static/images/home3.jpg"></li>
-							<li><img id="img1" src="static/images/home4.jpg"></li>
-							<li><img id="img1" src="static/images/home5.jpg"></li>
 						</ul>
 					<div>
 					<span class="prev_btn"> < </span>
@@ -57,51 +57,43 @@
 				</div>
 			</div>
 			
-			<!--@Author: eestill ControllerPart Begin -->
-			
-				<div style="width:100%;height: auto;;display: flex;">
-					<div style="width: 3%;height: 100%;"></div>
-					<div style="width: 96%;height: 100%;">
-						<!--中心圆 begin-->
-						<div style="width: 42%;height: 0;padding-top: 42%;top : 483px;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
-							<div style="width: 42%;height: 135px;position:absolute;left:65px; right:0; top:0; bottom:0;margin:auto;border-radius:0 78px 78px 0;background-image: url(static/images/BR.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
-							<div style="width: 42%;height: 135px;position:absolute;left:0; right:65px; top:0; bottom:0;margin:auto;border-radius:78px 0 0 78px;background-image: url(static/images/BL.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
-						</div>
-						<!--中心圆 End-->
+            <!--@Author: eestill ControllerPart Begin -->
+                <div style="width:100%;height: auto;;display: flex;">
+                    <div style="width: 3%;height: 100%;"></div>
+                    <div style="width: 96%;height: 100%;">
+                        <!--中心圆 begin-->
+                        <div style="width: 42%;height: 0;padding-top: 42%;top : 44%;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
+                            <div style="width: 42%;height: 90%;position:absolute;left:42%; right:0; top:0; bottom:0;margin:auto;border-radius:0 50% 50% 0;background-image: url(static/images/BR.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
+                            <div style="width: 42%;height: 90%;position:absolute;left:0; right:42%; top:0; bottom:0;margin:auto;border-radius:50% 0 0 50%;background-image: url(static/images/BL.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
+                        </div>
+                        <!--中心圆 End-->
 						<div style="width: 100%;height: 10px;"></div>
-							<div style="width: 100%;height: 150px;display: flex;">
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="aboutus/index.jhtml">
-									<img src="static/images/L1.png" style="width: 100%;height: 100%;" />
-									</a>
-								</div>
-								<div style="width:5%;height: 100%;"></div>
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="testprocess/index.jhtml">
-									<img src="static/images/R1.png" style="width: 100%;height: 100%;" />
-									</a>
-								</div>
-							</div>
-							<div style="width: 100%;height: 20px;"></div>
-							<div style="width: 100%;height: 150px;display: flex;">
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="cart/index.jhtml">
-									<img src="static/images/L2.png" style="width: 100%;height: 100%;" />
-									</a>
-								</div>
-								<div style="width:5%;height: 100%;"></div>
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="queslist/index.jhtml">
-									<img src="static/images/R2.png" style="width: 100%;height: 100%;" />
-									</a>
-								</div>
-							</div>
-						<div style="width: 100%;height: 10px;"></div>
-					</div>
-					<div style="width: 3%;height: 100%;"></div>
-				</div>
-			<!--ControllerPart End-->
-			
+                            <div style="width: 100%;height: auto;display: flex;">
+                                <div style="width:47%;height: 100%;border-radius: 16px;">
+                                    <img src="static/images/L1.png" style="width: 100%;height: 100%;" />
+                                </div>
+                                <div style="width:5%;height: 100%;"></div>
+                                <div style="width:47%;height: 100%;border-radius: 16px;">
+                                    <img src="static/images/R1.png" style="width: 100%;height: 100%;" />
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 20px;"></div>
+                            <div style="width: 100%;height: auto;display: flex;">
+                                <div style="width:47%;height: 100%;border-radius: 16px;">
+                                    <img src="static/images/L2.png" style="width: 100%;height: 100%;" />
+                                </div>
+                                <div style="width:5%;height: 100%;"></div>
+                                <div style="width:47%;height: 100%;border-radius: 16px;">
+                                    <img src="static/images/R2.png" style="width: 100%;height: 100%;" />
+                                </div>
+                            </div>
+                        <div style="width: 100%;height: 10px;"></div>
+                    </div>
+                    <div style="width: 3%;height: 100%;"></div>
+                </div>
+            <!--ControllerPart End-->
+
+
 			
 			
 			
@@ -314,7 +306,7 @@
 					
 				</div>
 				<div id="download"style="width: 100%;height: 60px;">
-					<div style="width: 60%;height: 60px;margin: 0 auto; background-color: #036EB7;color: white; font-size: large;font-weight: bolder;text-align: center;line-height: 60px; border-radius: 5px;">Download App</div>
+					<a href="download/EPIAging-apk.jhtml"><div style="width: 60%;height: 60px;margin: 0 auto; background-color: #036EB7;color: white; font-size: large;font-weight: bolder;text-align: center;line-height: 60px; border-radius: 5px;">Download App</div></a>
 				</div>
 				<div style="width: 100%;height: 60px;"></div>
 				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
