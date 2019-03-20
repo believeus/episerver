@@ -60,20 +60,20 @@
 		<div style="width: 100%;height: auto;">
 		<div style="width: 96%;height: 339px;margin: 0 auto; background-image: url(static/images/home-bg.png);background-position: fixed center; background-size: 100% 100%; background-repeat: no-repeat; ">
 			<div class="left" style="width: 30%;height: 100%;float: left; ">
-				<a href="/static/aboutus/index.jhtml"> <div style="width: 100%;height: 50%;"></div></a>
-				<div style="width: 100%;height: 50%;"></div>
+				<a href="aboutus/index.jhtml"> <div style="width: 100%;height: 50%;"></div></a>
+				 <a href="cart/index.jhtml"> <div style="width: 100%;height: 50%;"></div></a>
 			</div>
 			<div class="mid" style="width: 38%;height: 100%;float: left; ">
 				<div style="width: 100%;height: 26%;"></div>
 				<div style="width: 100%;height: 45%;">
-					<div style="width: 50%;height: 100%;float: left; "></div>
-					<div style="width: 48%;height: 100%;float: left; "></div>
+					<a href="javascript:;"> <div style="width: 50%;height: 100%;float: left; "></div></a>
+					<a href="javascript:;"><div style="width: 50%;height: 100%;float: left; "></div></a>
 				</div>
 				<div style="width: 100%;height: 28%;"></div>
 			</div>
 			<div class="right" style="width: 31%;height: 100%;float: left; ">
-				<div style="width: 100%;height: 50%;"></div>
-				<div style="width: 100%;height: 50%;"></div>
+				<a href="testprocess/index.jhtml"> <div style="width: 100%;height: 50%;"></div></a>
+				<a href="queslist/index.jhtml"><div style="width: 100%;height: 50%;"></div></a> 
 			</div>
 		</div>
 	</div>          				
