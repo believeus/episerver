@@ -45,10 +45,11 @@
 			<div id="slide" class="slide"style="width: 100%;height:auto;">
 						<ul>
 							<li><img id="img1" src="static/images/home1.jpg" ></li>
-							<li><img id="img1" src="static/images/home4.jpg"></li>
-							<li><img id="img1" src="static/images/home5.jpg"></li>
 							<li><img id="img1" src="static/images/home2.jpg"></li>
 							<li><img id="img1" src="static/images/home3.jpg"></li>
+							<li><img id="img1" src="static/images/home4.jpg"></li>
+							<li><img id="img1" src="static/images/home5.jpg"></li>
+							
 						</ul>
 					<div>
 					<span class="prev_btn"> &lt; </span>

@@ -113,72 +113,102 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		<div style="width: 100%;height: auto;background-color:#EDEEF0 ;overflow: hidden;">
 		<div style="width: 96%;height: auto;margin: 0 auto;">
 			<p style="line-height: 60px;font-weight: 600;">Related Video</p>
-			<div class="v1" style="width: 100%;height: auto;">
-				<div style="width: 40%;height: auto;float: left;">
-					<img src="static/images/vid-1.png"style="width: 100%;height: auto;"/>
-				</div>
-				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
-					<div style="width: 100%;height: auto;">
+				<div style="width: 100%;height: auto; font-size: 14px;font-family: arial;line-height: 20px ;color: #666666;">
 						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
-					</div>
-					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
 				</div>
 			</div>
+			</div>
+			<div style="width: 100%; height: auto; background-color: :#EDEEF0; ">
+			<div style="width: 100%;height: 10px;"></div>
+		<div style="width: 100%;height: 200px;">
+			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+					<source src="https://app.beijingepidial.com/Healthtech_O2O_Summit_Dr_Moshe_Szyf_HKG_Epitherapeutics.mp4" type="video/mp4"></source>
+				</video>
 			</div>
 		</div>
+		<div style="width: 100%;height: 10px;"></div>
+		</div>
+		
+		
+		
+		
+		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
+			<div style="width: 100%;height: 30px;"></div>
+		<div style="width: 96%;height: auto;margin: 0 auto;">	
+				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
+						Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4	
+				</div>
+			</div>
+			<div style="width: 100%;height: 10px;"></div>
+		</div>
+		
+		<div style="width: 100%; height: auto; background-color: :#EDEEF0; ">
+			<div style="width: 100%;height: 10px;"></div>
+		<div style="width: 100%;height: 200px;">
+			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+					<source src="https://app.beijingepidial.com/Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4" type="video/mp4"></source>
+				</video>
+			</div>
+		</div>
+		<div style="width: 100%;height: 10px;"></div>
+		</div>
+		
 		
 		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
 			<div style="width: 100%;height: 30px;"></div>
 		<div style="width: 96%;height: auto;margin: 0 auto;">
-			<div class="v1" style="width: 100%;height: auto;">
-				<div style="width: 40%;height: auto;float: left;">
-					<img src="static/images/vid-2.png"style="width: 100%;height: auto;"/>
-				</div>
-				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
-					<div style="width: 100%;height: auto;">
-						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
-					</div>
-					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
+			
+				
+				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
+					
+						What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4
+				
+					
 				</div>
 			</div>
+		</div>
+		<div style="width: 100%; height: auto; background-color: :#EDEEF0; ">
+			<div style="width: 100%;height: 10px;"></div>
+		<div style="width: 100%;height: 200px;">
+			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+					<source src="https://app.beijingepidial.com/What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4" type="video/mp4"></source>
+				</video>
+			</div>
+		</div>
+		<div style="width: 100%;height: 10px;"></div>
+		</div>
+		
+		
+		
+		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
+			<div style="width: 100%;height: 30px;"></div>
+		<div style="width: 96%;height: auto;margin: 0 auto;">
+
+
+				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
+					
+						Moshe_Szyf_Behavioral_Epigenetics.mp4
+				
+				</div>
+
 			</div>
 			
 		</div>
-		
-		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
-			<div style="width: 100%;height: 30px;"></div>
-		<div style="width: 96%;height: auto;margin: 0 auto;">
-			<div class="v1" style="width: 100%;height: auto;">
-				<div style="width: 40%;height: auto;float: left;">
-					<img src="static/images/vid-3.png"style="width: 100%;height: auto;"/>
-				</div>
-				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
-					<div style="width: 100%;height: auto;">
-						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
-					</div>
-					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
-				</div>
-			</div>
+		<div style="width: 100%; height: auto; background-color: :#EDEEF0; ">
+			<div style="width: 100%;height: 10px;"></div>
+		<div style="width: 100%;height: 200px;">
+			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+					<source src="https://app.beijingepidial.com/Moshe_Szyf_Behavioral_Epigenetics.mp4" type="video/mp4"></source>
+				</video>
 			</div>
 		</div>
-		
-		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
-			<div style="width: 100%;height: 30px;"></div>
-		<div style="width: 96%;height: auto;margin: 0 auto;">
-			<div class="v1" style="width: 100%;height: auto;">
-				<div style="width: 40%;height: auto;float: left;">
-					<img src="static/images/vid-4.png"style="width: 100%;height: auto;"/>
-				</div>
-				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
-					<div style="width: 100%;height: auto;">
-						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
-					</div>
-					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
-				</div>
-			</div>
-			</div>
-			
+		<div style="width: 100%;height: 10px;"></div>
 		</div>
+		
 		<div style="width: 100%;height: 50px;background-color:#EDEEF0 ;"></div>
 	</div>
 
@@ -209,16 +239,46 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-						<p>Honors</p>
+						<div style="width: 100%;height: 30px;"></div>
+						<ul style="font-family: arial;font-size: 14px;color: #666666;line-height: 30px; margin-left: 30px;list-style: none;">
+							<li><strong> 2013--</strong>Member of the Royal Society of Canada</li>
+							<li><strong> 2011--</strong>CCNP Neuropsychopharmacology Innovation Award</li>
+							<li><strong> 2009--</strong>Radio Canada Annual Scientist Award</li>
+							<li><strong> 2009--</strong>Carolinska Speech at the Nobel Forum</li>
+							<li><strong> 2007--</strong>GlaxoSmithKline Pharmacology</li>
+							<li><strong>2003--</strong> Honorary Professor James McGill</li>
+							<li><strong> 2001--</strong>Medical College Teaching Honors List</li>
+							<li><strong>1999--</strong>Carrie Derek Graduate Teaching Guidance Award</li>
+							<li><strong>1999--</strong>Israel Cancer Research Foundation "Eliot Osseman Outstanding Contribution Award"</li>
+							<li><strong>1989-1995--</strong>Canadian National Cancer Institute "Outstanding Young Professor Award"</li>
+							<li><strong>1987--</strong>American Cancer Society Scholarship</li>
+							<li><strong>1984--</strong>Rothschild Scholarship</li>
+							<li><strong>1980--</strong>Medical Scholarship of Hebrew University</li>
+							<li><strong>1980--</strong>Distinguished master</li>
+							<li></li>
+						</ul>
+						
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-						<div>
-								From 1985 to 2013, Academician Szyf's research projects were funded by organizations such as Canada and the United States.
-								 Listed below Representational funding projects:
+						<div style="width:100%;height: auto;font-family: arial;font-size: 14px;color: #666666; ">
+						<p style="font-weight: 600;">Subsidies received over the years</p>
+						<ul style="list-style: none">
+							<li style="font-weight: 600;">From 1985 to 2013, Academician Szyf's research projects were funded by organizations such as Canada and the United States.</li>
+							<li style="font-weight: 600;">Listed below Representational funding projects :</li>
+							<li>1989-1992 Canadian National Cancer Institute Management Fund (C$74,592/year)</li>
+							<li>  1997-2000 Canadian Council for Natural Science and Engineering Research (C$145,500)</li>
+							<li>2005-2010 Canadian Institute of Health-DNA Methyltransferase I Inhibitor and Its Therapeutic Prospect (C$168158)	</li>
+							<li>2007-2012 Canadian National Cancer Institute-Demethylase Analysis C$141,000</li>
+							<li>2010-2013 Canadian Health Research Institute - Canadian Health Research Cooperative Team in China (C$166,666 )</li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div></div>
+						<div> </div>
 						</div>
-							<p>Sponsored</p>
+						
 						</div>
 					</div>
 				</div>
