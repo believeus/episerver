@@ -106,26 +106,87 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					</div>
 				</div>
 			</div>
-		
 		<hr style="font-size: 14px;color: #E7E7E7;" />
-
 		
+		
+			<div class="video"; style="width: 100%;height: auto;">
+		<div style="width: 100%;height: auto;background-color:#EDEEF0 ;overflow: hidden;">
+		<div style="width: 96%;height: auto;margin: 0 auto;">
+			<p style="line-height: 60px;font-weight: 600;">Related Video</p>
+			<div class="v1" style="width: 100%;height: auto;">
+				<div style="width: 40%;height: auto;float: left;">
+					<img src="static/images/vid-1.png"style="width: 100%;height: auto;"/>
+				</div>
+				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
+					<div style="width: 100%;height: auto;">
+						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
+					</div>
+					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
+			<div style="width: 100%;height: 30px;"></div>
+		<div style="width: 96%;height: auto;margin: 0 auto;">
+			<div class="v1" style="width: 100%;height: auto;">
+				<div style="width: 40%;height: auto;float: left;">
+					<img src="static/images/vid-2.png"style="width: 100%;height: auto;"/>
+				</div>
+				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
+					<div style="width: 100%;height: auto;">
+						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
+					</div>
+					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
+				</div>
+			</div>
+			</div>
 			
-        <!-- <div style=" height: 56px; background-color: #eaeaea; position: relative;">
-            
-                <div class="select"style="float: left; width: 28%;height: 26px; line-height: 26px;text-align: center;border-bottom: 1px solid #7c7c7c; background-color: #F4F4F4;color: #808080;border-right: 1px solid #7c7c7c;border-left: 1px solid #7c7c7c;border-bottom: 1px solid white;padding: 0;">
-                	<a href="#" style=";display: block;color: #808080;">Careers</a>
-                </div>
-                <div style="float: left; width: 28%; height: 26px; line-height: 26px; text-align: center; border-bottom: 1px solid #7c7c7c;">
-                	<a href="#"style="display: block;color: #808080;">Honors</a>
-                </div>
-                <div style="width: 40%;float: left;width: 28%;height: 26px;line-height: 26px;text-align: center;border-bottom: 1px solid #7c7c7c;">
-                	<a href="#"style="display: block;color: #808080;">Contributions</a>
-                </div>
-        </div>-->
-        
-        <div class="pg-main">
+		</div>
+		
+		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
+			<div style="width: 100%;height: 30px;"></div>
+		<div style="width: 96%;height: auto;margin: 0 auto;">
+			<div class="v1" style="width: 100%;height: auto;">
+				<div style="width: 40%;height: auto;float: left;">
+					<img src="static/images/vid-3.png"style="width: 100%;height: auto;"/>
+				</div>
+				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
+					<div style="width: 100%;height: auto;">
+						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
+					</div>
+					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div style="width: 100%;height: auto;overflow: hidden;background-color:#EDEEF0 ;">
+			<div style="width: 100%;height: 30px;"></div>
+		<div style="width: 96%;height: auto;margin: 0 auto;">
+			<div class="v1" style="width: 100%;height: auto;">
+				<div style="width: 40%;height: auto;float: left;">
+					<img src="static/images/vid-4.png"style="width: 100%;height: auto;"/>
+				</div>
+				<div style="width: 50%;height: auto;float: left;margin-left: 5%; font-size: 16px;font-family: arial;color: #666666;">
+					<div style="width: 100%;height: auto;">
+						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
+					</div>
+					<div style="width: 100%;height: auto;margin-top: 20px;">Try it, 15 min</div>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+		<div style="width: 100%;height: 50px;background-color:#EDEEF0 ;"></div>
+	</div>
 
+
+
+
+
+        <div class="pg-main">
 	<div id="wrapper">
 		<!--header end-->
 		<div class="wrap">
@@ -148,16 +209,16 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-						<p>已经消失在风雨里</p>
+						<p>Honors</p>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
 						<div>
-								From 1985 to 2013, Academician Schiff's research projects were funded by organizations such as Canada and the United States. Listed below
-								Representational funding projects:
+								From 1985 to 2013, Academician Szyf's research projects were funded by organizations such as Canada and the United States.
+								 Listed below Representational funding projects:
 						</div>
-							<p>一场雨把我困在这里</p>
+							<p>Sponsored</p>
 						</div>
 					</div>
 				</div>
@@ -186,14 +247,15 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         				</a> 
         				<div style="width: 20%;height: auto;float: right;">5530 Citations</div>
         			</div>
-        			<div style="width: 100%;height: 80px;"></div>
+        			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
         			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2944040/">
         				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Epigenetic regulation of the glucocorticoid receptor in human brain associates with childhood abuse.Nat Neurosci. 2009 Mar; 12(3): 342–348.</div>
         			</a>
         				<div style="width: 20%;height: auto;float: right;">2892 Citations</div>
         			</div>
-        			<div style="width: 100%;height: 80px;"></div>
+        			
+        			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://www.nature.com/articles/17533">
         				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">A mammalian protein with specific demethylase activity for mCpG DNA Nature. 1999 Feb 18</div>
@@ -216,21 +278,21 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="https://www.sciencedirect.com/science/article/pii/S0304383504003155">
+        				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2365485/">
         				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Expression of antisense to DNA demethylation and inhibits tumorigenesis .J Biol Chem. 1995 Apr 7</div>
         				</a>
         				<div style="width: 20%;height: auto;float: right;">256 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="certifyweb.alipay.com/certify/org/flow/entrance/org_certify#/">
+        				<a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-pharmtox-061008-103102">
         				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Epigenetics, DDNA methylation, and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</div>
         				</a>
         				<div style="width: 20%;height: auto;float: left;">432 Citations</div>
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="https://certifyweb.alipay.com/certify/org/flow/entrance/org_certify#/">
+        				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1413873/">
         				<div style="width: 80%;height: auto;float: left;color:#FFFFFF">Maternal care effects on the hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl</div>
         				</a>
         				<div style="width: 20%;height: auto;float: left;">786 Citations</div>
