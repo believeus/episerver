@@ -1,7 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"+ request.getServerName() + ":" + request.getServerPort()+ path + "/";
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -27,7 +29,7 @@
 		}
 	});
 </script>
-<title>Mood self Assesment</title> 
+<title>Mood self Assesment</title>
 <!--slide-bar css-->
 <style>
 #ex1Slider .slider-selection {
@@ -64,33 +66,40 @@
 				$(function() {
 					// Without JQuery
 					var slider = new Slider(".ex1");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						//{"type" : "Mood","data" : {"id" : 1,"value" : "123"}}
-						var data ="{\"type\" : \"Mood\",\"data\" : {\"id\" : \"1\",\"value\" :\"" + slideEvt.value+"\"}}";
-						console.info(data);
-						$(".ex1SliderVal").text(value);
-						$.ajax('http://192.168.1.126:8080/Questionnaire/Input',{
-			                 data:data,
-			                contentType:"application/json",
-			                datatype:"json",
-			                type:"post"
-			            })
-					});
+					slider
+							.on(
+									"slide",
+									function(slideEvt) {
+										var value = "Not at all";
+										switch (slideEvt.value) {
+										case 1:
+											value = "Not at all";
+											break;
+										case 2:
+											value = "Several days";
+											break;
+										case 3:
+											value = "More than half the days";
+											break;
+										case 4:
+											value = "Nearly every day";
+											break;
+										}
+										//{"type" : "Mood","data" : {"id" : 1,"value" : "123"}}
+										var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"1\",\"value\" :\""
+												+ slideEvt.value + "\"}}";
+										console.info(data);
+										$(".ex1SliderVal").text(value);
+										$
+												.ajax(
+														'http://192.168.1.126:8080/Questionnaire/Input',
+														{
+															data : data,
+															contentType : "application/json",
+															datatype : "json",
+															type : "post"
+														})
+									});
 				});
 			</script>
 			<div class="ques1" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
@@ -1633,29 +1642,14 @@
 			</div>
 		</div>
 
-		<div style="width: 100%;height: 30px;">
-			<div style="width: 90%;height: auto;margin: 0 auto;border-radius: 10px; background-color: #F77A78;">
-				<button type="button" style="text-align: center;vertical-align:middle;">Submit</button>
-			</div>
-			<<<<<<< Updated upstream
-
-
-			<div class="submit" style="width: 100%;height: 30px;">
-				<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>
-			</div>
-
-
-			<div style="width: 100%;height: 60px;"></div>
-			<div id="all-right" style="width: 100%;height: auto;font-family: arial;">
-				<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</div>
-			</div>
-			======= >>>>>>> Stashed changes
+		<div class="submit" style="width: 100%;height: 30px;">
+			<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>
 		</div>
-
 		<div style="width: 100%;height: 60px;"></div>
 		<div id="all-right" style="width: 100%;height: auto;font-family: arial;">
 			<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</div>
 		</div>
+
 	</div>
 </body>
 
