@@ -58,28 +58,124 @@
 
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex1");
-					slider.on("slide", function(slideEvt) {
-						var value = "0-15 min";
-						switch (slideEvt.value) {
-						case 1:
-							value = "0-15 min";
-							break;
-						case 2:
-							value = "16-30 min";
-							break;
-						case 3:
-							value = "31-45 min";
-							break;
-						case 4:
-							value = "46-60 min";
-							break;
-						case 5:
-							value = "more than 61 min ";
-							break;
-						}
-						$(".ex1SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						// 基于准备好的dom，初始化echarts图表
+						var chart = ec.init(document.getElementById('report-1'));
+						//初始化报表数据
+						var data = "{\"type\" :\"Sleep\",\"number\" : \"1\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex1");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "0-15 min(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "0-15 min(1 level)";
+								break;
+							case 2:
+								value = "16-30 min(2 level)";
+								break;
+							case 3:
+								value = "31-45 min(3 level)";
+								break;
+							case 4:
+								value = "46-60 min(4 level)";
+								break;
+							case 5:
+								value = "more than 61 min(5 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"1\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex1SliderVal").text(value);
+									var data = "{\"type\" :\"Sleep\",\"number\" : \"1\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'sleep status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -96,60 +192,7 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-1'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var chart1 = ec.init(document.getElementById('report-1'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					chart1.setOption(option);
-				});
-			</script>
+
 			<div style="width: 100%;height: 20px;"></div>
 
 
@@ -215,9 +258,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -352,9 +393,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -448,9 +487,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -544,9 +581,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -640,9 +675,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -735,9 +768,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',

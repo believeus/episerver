@@ -64,42 +64,122 @@
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex1");
-					slider
-							.on(
-									"slide",
-									function(slideEvt) {
-										var value = "Not at all";
-										switch (slideEvt.value) {
-										case 1:
-											value = "Not at all";
-											break;
-										case 2:
-											value = "Several days";
-											break;
-										case 3:
-											value = "More than half the days";
-											break;
-										case 4:
-											value = "Nearly every day";
-											break;
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						// 基于准备好的dom，初始化echarts图表
+						var chart1 = ec.init(document.getElementById('report-1'));
+						//初始化报表数据
+						var data = "{\"type\" :\"Mood\",\"number\" : \"1\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
 										}
-										//{"type" : "Mood","data" : {"id" : 1,"value" : "123"}}
-										var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"1\",\"value\" :\""
-												+ slideEvt.value + "\"}}";
-										console.info(data);
-										$(".ex1SliderVal").text(value);
-										$
-												.ajax(
-														'http://192.168.1.126:8080/Questionnaire/Input',
-														{
-															data : data,
-															contentType : "application/json",
-															datatype : "json",
-															type : "post"
-														})
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart1.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex1");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"1\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex1SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"1\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart1.setOption(option);
+										}
 									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
+					});
 				});
 			</script>
 			<div class="ques1" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
@@ -107,7 +187,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">1.How often have you had little interest or pleasure in doing things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex1" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -115,83 +195,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-1'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var chart1 = ec.init(document.getElementById('report-1'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					chart1.setOption(option);
-				});
-			</script>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex2");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex2SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-2'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex2");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"2\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex2SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -208,84 +328,124 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-2'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var chart2 = ec.init(document.getElementById('report-2'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 2, 4, 3, 1, 2 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					chart2.setOption(option);
-				});
-			</script>
 
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex3");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex3SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-3'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"3\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex3");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"3\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex3SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -302,84 +462,122 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-3'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var chart3 = ec.init(document.getElementById('report-3'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					chart3.setOption(option);
-				});
-			</script>
-
 			<div style="width: 100%;height: 20px;"></div>
-
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex4");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex4SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-4'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"4\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex4");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"4\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex4SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"4\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -396,84 +594,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-4'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-4'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
-				});
-			</script>
-
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex5");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex5SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-5'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"5\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex5");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"5\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex5SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"5\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -512,9 +749,7 @@
 						xAxis : [ {
 							type : 'category',
 							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
+							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
 						} ],
 						yAxis : [ {
 							type : 'value',
@@ -548,25 +783,119 @@
 
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex6");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex6SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-6'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"6\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex6");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"6\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex6SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"6\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -583,82 +912,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-6'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-6'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
-				});
-			</script>
+
 			<div style="width: 100%;height: 20px;"></div>
-			<script>
+		<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex7");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex7SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-7'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"7\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex7");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"7\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex7SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"7\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -675,82 +1045,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-7'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-7'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
-				});
-			</script>
+			
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex8");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex8SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-8'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"8\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex8");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"8\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex8SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"8\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -767,83 +1178,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-8'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-8'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
-				});
-			</script>
 			<div style="width: 100%;height: 20px;"></div>
 
-			<script>
+		<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex9");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex9SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-9'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"9\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex9");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"9\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex9SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"9\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -860,88 +1311,126 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-9'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-9'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5',
-									'2019/1/6', '2019/1/7', '2019/1/8',
-									'2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
+			<script>
+				$(function() {
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-10'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"10\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
 							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
+						});
+
+						var slider = new Slider(".ex10");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
 							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"10\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex10SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"10\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
+					});
 				});
 			</script>
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques10" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-				<div style="width: 100%;height: 20px;"></div>
-
-				<script>
-					$(function() {
-						// Without JQuery
-						var slider = new Slider(".ex10");
-						slider.on("slide", function(slideEvt) {
-							var value = "Not at all";
-							switch (slideEvt.value) {
-							case 1:
-								value = "Not at all";
-								break;
-							case 2:
-								value = "Several days";
-								break;
-							case 3:
-								value = "More than half the days";
-								break;
-							case 4:
-								value = "Nearly every day";
-								break;
-							}
-							$(".ex10SliderVal").text(value);
-						});
-					});
-				</script>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">10.How often have you been bothered by feeling nervous, anxious or on edge?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
@@ -953,85 +1442,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-10'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-10'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
+			
 			<div style="width: 100%;height: 20px;"></div>
-
-			<script>
+<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex11");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex11SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-11'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"11\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex11");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"11\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex11SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"11\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -1048,85 +1575,124 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-11'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-11'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
+		
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex12");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex12SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-12'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"12\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex12");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"12\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex12SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"12\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -1143,87 +1709,125 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-12'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-12'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
-			<div style="width: 100%;height: 20px;"></div>
-			<script>
+		<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex13");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex13SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-13'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"13\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex13");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"13\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex13SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"13\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
+			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques13" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">13.How often have you been bothered by having trouble relaxing?</div>
@@ -1237,88 +1841,125 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-13'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-13'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
-			<div style="width: 100%;height: 20px;"></div>
-
 			<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex14");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex14SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-14'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"14\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex14");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"14\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex14SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"14\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
+			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques14" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">14.How often have you been bothered by being so restless that it is hard to sit still?</div>
@@ -1332,85 +1973,124 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-14'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-14'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
+		
 			<div style="width: 100%;height: 20px;"></div>
 
-			<script>
+		<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex15");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex15SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-15'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"15\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex15");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"15\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex15SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"15\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -1427,85 +2107,123 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-15'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-15'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
+		
 			<div style="width: 100%;height: 20px;"></div>
-
-			<script>
+				<script>
 				$(function() {
-					// Without JQuery
-					var slider = new Slider(".ex16");
-					slider.on("slide", function(slideEvt) {
-						var value = "Not at all";
-						switch (slideEvt.value) {
-						case 1:
-							value = "Not at all";
-							break;
-						case 2:
-							value = "Several days";
-							break;
-						case 3:
-							value = "More than half the days";
-							break;
-						case 4:
-							value = "Nearly every day";
-							break;
-						}
-						$(".ex16SliderVal").text(value);
+					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
+						var chart = ec.init(document.getElementById('report-16'));
+						var data = "{\"type\" :\"Mood\",\"number\" : \"16\"" + "}";
+						$.ajax({
+							type : "post",
+							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							data : data,
+							dataType : "json",
+							contentType : "application/json",
+							success : function(data) {
+								var option = {
+									xAxis : [ {
+										type : 'category',
+										boundaryGap : false,
+										data : data[1]
+									} ],
+									yAxis : [ {
+										type : 'value',
+										axisLabel : {
+											formatter : '{value} level'
+										}
+									} ],
+									series : [ {
+										name : 'mood status',
+										type : 'line',
+										data : data[0],
+									}, ]
+								};
+								// 为echarts对象加载数据 
+								chart.setOption(option);
+							}
+						});
+
+						var slider = new Slider(".ex16");
+						//拖动发送
+						slider.on("slide", function(slideEvt) {
+							var value = "Not at all(1 level)";
+							switch (slideEvt.value) {
+							case 1:
+								value = "Not at all(1 level)";
+								break;
+							case 2:
+								value = "Several days(2 level)";
+								break;
+							case 3:
+								value = "More than half the days(3 level)";
+								break;
+							case 4:
+								value = "Nearly every day(4 level)";
+								break;
+							}
+							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"16\",\"value\" :\"" + slideEvt.value + "\"}}";
+							$.ajax({
+								type : "post",
+								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								dataType : "json",
+								contentType : "application/json",
+								data : data,
+								success : function(data) {
+									$(".ex16SliderVal").text(value);
+									var data = "{\"type\" :\"Mood\",\"number\" : \"16\"" + "}";
+									$.ajax({
+										type : "post",
+										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										data : data,
+										dataType : "json",
+										contentType : "application/json",
+										success : function(data) {
+											var option = {
+												legend : {
+													data : [ 'mood status' ]
+												},
+												calculable : true,
+												xAxis : [ {
+													type : 'category',
+													boundaryGap : false,
+													data : data[1]
+												} ],
+												yAxis : [ {
+													type : 'value',
+													axisLabel : {
+														formatter : '{value} level'
+													}
+												} ],
+												series : [ {
+													name : 'mood status',
+													type : 'line',
+													data : data[0],
+													markPoint : {
+														data : [ {
+															type : 'max',
+															name : '最大值'
+														}, ]
+													},
+													markLine : {
+														data : [ {
+															type : 'average',
+															name : '平均值'
+														} ]
+													}
+												}, ]
+											};
+											// 为echarts对象加载数据 
+											chart.setOption(option);
+										}
+									});
+
+								},
+								error : function(jqXHR) {
+									console.info("发生错误：" + jqXHR.status);
+								}
+							});
+						});
 					});
 				});
 			</script>
@@ -1522,62 +2240,7 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-16'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				],
-						function(ec) {
-							// 基于准备好的dom，初始化echarts图表
-							var myChart = ec.init(document
-									.getElementById('report-16'));
-							option = {
-								title : {},
-								tooltip : {
-									trigger : 'axis'
-								},
-								legend : {
-									data : [ 'mood status' ]
-								},
-								toolbox : {
-									show : true,
-									feature : {}
-								},
-								calculable : true,
-								xAxis : [ {
-									type : 'category',
-									boundaryGap : false,
-									data : [ '2019/1/3', '2019/1/4',
-											'2019/1/5', '2019/1/6', '2019/1/7',
-											'2019/1/8', '2019/1/9' ]
-								} ],
-								yAxis : [ {
-									type : 'value',
-									axisLabel : {
-										formatter : '{value} level'
-									}
-								} ],
-								series : [ {
-									name : 'mood status',
-									type : 'line',
-									data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-									markPoint : {
-										data : [ {
-											type : 'max',
-											name : '最大值'
-										}, ]
-									},
-									markLine : {
-										data : [ {
-											type : 'average',
-											name : '平均值'
-										} ]
-									}
-								}, ]
-							};
-							// 为echarts对象加载数据 
-							myChart.setOption(option);
-						});
-			</script>
+		
 			<div style="width: 100%;height: 15px;"></div>
 			<div class="ques17" style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
 				<div style="width: 100%;height: 20px;"></div>

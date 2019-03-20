@@ -81,7 +81,7 @@
 		<div style="width: 100%;height: 200px">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;">
 				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
-					<source src="https://app.beijingepidial.com/DNA.mp4" type="video/mp4">
+					<source src="https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
