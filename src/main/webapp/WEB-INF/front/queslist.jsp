@@ -20,13 +20,13 @@
 		<div style="width: 100%;height: 20px;"></div>
 		<div style="width: 100%;height: auto">
 			<div style="width: 95%;height: auto;margin: 0 auto;">
-				<a href=""><img src="static/images/iQ1.png" style="width: 100%;height: auto;"></a>
+				<a href="lifestyle/index.jhtml"><img src="static/images/iQ1.png" style="width: 100%;height: auto;"></a>
 			</div>
 		</div>
 		<div style="width: 100%;height: 20px;"></div>
 		<div style="width: 100%;height: auto">
 			<div style="width: 95%;height: auto;margin: 0 auto;">
-				<a href="mood/index.jhtml"><img src="static/images/iQ2.png" style="width: 100%;height: auto;">
+				<a href="mood/index.jhtml"><img src="static/images/iQ2.png" style="width: 100%;height: auto;"></a>
 			</div>
 		</div>
 		<div style="width: 100%;height: 20px;"></div>

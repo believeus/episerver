@@ -27,36 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		p{text-align: center;}
 </style>
 
-<!--自适应字体大小-->
-<style>
-@media screen and (min-width:300px){
-				html{font-size: 12px;}
-}
-@media screen and (min-width: 320px) {
-    html {font-size: 12px;}
-}
- 
-@media screen and (min-width: 375px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 400px) {
-    html {font-size: 18px;}
-}
- 
-@media screen and (min-width: 440px) {
-    html {font-size: 14px;}
-}
- 
-@media screen and (min-width: 768px) {
-    html {font-size: 22px;}
-}
- 
-@media screen and (min-width: 1024px) {
-    html {font-size: 24px;}
-}
 
-</style>
 
 		<style>
 			div[id=dot]:before{

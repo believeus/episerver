@@ -51,46 +51,34 @@
 							<li><img id="img1" src="static/images/home3.jpg"></li>
 						</ul>
 					<div>
-					<span class="prev_btn"> < </span>
-					<span class="next_btn"> > </span>
+					<span class="prev_btn"> &lt; </span>
+					<span class="next_btn"> &gt; </span>
 					</div>
 				</div>
 			</div>
-          				<!--@Author: eestill ControllerPart Begin -->
-				<div style="width:100%;height: auto;;display: flex;">
-					<div style="width: 3%;height: 100%;"></div>
-					<div style="width: 96%;height: 100%;">
-						<!--中心圆 begin-->
-						<div style="width: 42%;height: 0;padding-top: 42%;top : 44%;left : 28%;border-radius: 100%;box-sizing: border-box;position: absolute;background-color:#ffffff;">
-							<div style="width: 42%;height: 90%;position:absolute;left:42%; right:0; top:0; bottom:0;margin:auto;border-radius:0 50% 50% 0;background-image: url(static/images/BR.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
-							<div style="width: 42%;height: 90%;position:absolute;left:0; right:42%; top:0; bottom:0;margin:auto;border-radius:50% 0 0 50%;background-image: url(static/images/BL.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"></div>
-						</div>
-						<!--中心圆 End-->
-						<div style="width: 100%;height: 10px;"></div>
-							<div style="width: 100%;height: auto;display: flex;">
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="aboutus/index.jhtml"><img src="static/images/L1.png" style="width: 100%;height: 100%;" /></a>
-								</div>
-								<div style="width:5%;height: 100%;"></div>
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="testprocess/index.jhtml"><img src="static/images/R1.png" style="width: 100%;height: 100%;" /></a>
-								</div>
-							</div>
-							<div style="width: 100%;height: 20px;"></div>
-							<div style="width: 100%;height: auto;display: flex;">
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="http://www.beijingepidial.com/payserver/cart/index.jhtml"><img src="static/images/L2.png" style="width: 100%;height: 100%;" /></a>
-								</div>
-								<div style="width:5%;height: 100%;"></div>
-								<div style="width:47%;height: 100%;border-radius: 16px;">
-									<a href="queslist/index.jhtml"><img src="static/images/R2.png" style="width: 100%;height: 100%;" /></a>
-								</div>
-							</div>
-						<div style="width: 100%;height: 10px;"></div>
-					</div>
-					<div style="width: 3%;height: 100%;"></div>
+			
+		<div style="width: 100%;height: auto;">
+		<div style="width: 96%;height: 339px;margin: 0 auto; background-image: url(static/images/home-bg.png);background-position: fixed center; background-size: 100% 100%; background-repeat: no-repeat; ">
+			<div class="left" style="width: 30%;height: 100%;float: left; ">
+				<a href="/static/aboutus/index.jhtml"> <div style="width: 100%;height: 50%;"></div></a>
+				<div style="width: 100%;height: 50%;"></div>
+			</div>
+			<div class="mid" style="width: 38%;height: 100%;float: left; ">
+				<div style="width: 100%;height: 26%;"></div>
+				<div style="width: 100%;height: 45%;">
+					<div style="width: 50%;height: 100%;float: left; "></div>
+					<div style="width: 48%;height: 100%;float: left; "></div>
 				</div>
-			<!--ControllerPart End-->
+				<div style="width: 100%;height: 28%;"></div>
+			</div>
+			<div class="right" style="width: 31%;height: 100%;float: left; ">
+				<div style="width: 100%;height: 50%;"></div>
+				<div style="width: 100%;height: 50%;"></div>
+			</div>
+		</div>
+	</div>          				
+
+
 			<div id="bio"style="width: 100%;height: auto; background-color: #F0F0F0;position: relative;">
 				<div style="width: 100%;height: 50px;"></div>
 				<div class="bio-title"style="width: 100%;height:60px ;">
