@@ -197,8 +197,8 @@
 					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					<div style="width: 100%;height: 20px;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-1'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-1'></div>
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
@@ -321,7 +321,7 @@
 				});
 			</script>
 			<div class="ques2" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">2.spatial</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">2.spatial</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0(0 level)</div>
@@ -331,8 +331,8 @@
 					<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					<div style="width: 100%;height: 20px;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-2'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-2'></div>
 			<script type="text/javascript">
 				// 使用
 				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
@@ -513,7 +513,7 @@
 				});
 			</script>
 			<div class="ques3" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">3.punctate pressure</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">3.punctate pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -522,8 +522,8 @@
 					</div>
 					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-3'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-3'></div>
 
 			<script>
 				$(function() {
@@ -646,7 +646,7 @@
 				});
 			</script>
 			<div class="ques4" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;font-weight: 600;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">4.incisive pressure</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">4.incisive pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -655,8 +655,8 @@
 					</div>
 					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-4'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-4'></div>
 
 
 			<script>
@@ -786,7 +786,7 @@
 				});
 			</script>
 			<div class="ques5" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">5.constrictive pressure</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">5.constrictive pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -795,8 +795,8 @@
 					</div>
 					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-5'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-5'></div>
 
 			<script>
 				$(function() {
@@ -919,7 +919,7 @@
 				});
 			</script>
 			<div class="ques6" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">6.traction pressure</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">6.traction pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -928,8 +928,8 @@
 					</div>
 					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-6'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-6'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1054,7 +1054,7 @@
 				});
 			</script>
 			<div class="ques7" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">7.thermal</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">7.thermal</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1063,8 +1063,8 @@
 					</div>
 					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-7'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-7'></div>
 
 			<script>
 				$(function() {
@@ -1190,7 +1190,7 @@
 				});
 			</script>
 			<div class="ques8" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">8.brightness</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">8.brightness</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1199,8 +1199,8 @@
 					</div>
 					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-8'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-8'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1328,7 +1328,7 @@
 				});
 			</script>
 			<div class="ques9" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">9.dullness</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">9.dullness</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1337,8 +1337,8 @@
 					</div>
 					<div class="ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-9'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-9'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1463,7 +1463,7 @@
 				});
 			</script>
 			<div class="ques10" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">10.sensory miscellaneous</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">10.sensory miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1472,8 +1472,8 @@
 					</div>
 					<div class="ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-10'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-10'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1592,7 +1592,7 @@
 				});
 			</script>
 			<div class="ques11" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">11.tension</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">11.tension</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1601,8 +1601,8 @@
 					</div>
 					<div class="ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-11'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-11'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1721,7 +1721,7 @@
 				});
 			</script>
 			<div class="ques12" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">12.autonomic</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">12.autonomic</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1730,8 +1730,8 @@
 					</div>
 					<div class="ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-12'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-12'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1853,7 +1853,7 @@
 				});
 			</script>
 			<div class="ques13" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">13.fear</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">13.fear</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
@@ -1862,8 +1862,8 @@
 					</div>
 					<div class="ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-13'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-13'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2000,8 +2000,8 @@
 					</div>
 					<div class="ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-14'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-14'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2129,8 +2129,8 @@
 					</div>
 					<div class="ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-15'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-15'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2267,8 +2267,8 @@
 					</div>
 					<div class="ex16CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-16'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-16'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2402,8 +2402,8 @@
 					</div>
 					<div class="ex17CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-17'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-17'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2540,8 +2540,8 @@
 					</div>
 					<div class="ex18CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-18'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-18'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2672,8 +2672,8 @@
 					</div>
 					<div class="ex19CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-19'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-19'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -2811,8 +2811,8 @@
 					</div>
 					<div class="ex20CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-20'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-20'></div>
 
 
 			<div style="width: 100%;height: auto;margin: 0 auto;line-height: 60px; font-weight: 700; font-family: airal;color: #666666;">How Does Your Pain Change with Time?</div>
@@ -3031,8 +3031,8 @@
 					</div>
 					<div class="ex21CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-21'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-21'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -3169,8 +3169,8 @@
 					</div>
 					<div class="ex22CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-22'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-22'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -3307,8 +3307,8 @@
 					</div>
 					<div class="ex23CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-23'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-23'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -3577,8 +3577,8 @@
 					</div>
 					<div class="ex25CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-25'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-25'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {

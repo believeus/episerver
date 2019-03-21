@@ -57,7 +57,7 @@
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques1" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">1.Thinking about a typical night in the last month, if you wake up, how long are you awake for in total?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">1.Thinking about a typical night in the last month, if you wake up, how long are you awake for in total?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-15 min(1 level)</div>
@@ -66,8 +66,8 @@
 					</div>
 					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-1'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-1'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -194,7 +194,7 @@
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques2" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">2.Thinking about a typical night in the last month, how long does it take you to fall asleep?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">2.Thinking about a typical night in the last month, how long does it take you to fall asleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-15 min(1 level)</div>
@@ -203,8 +203,8 @@
 					</div>
 					<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-2'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-2'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -334,7 +334,7 @@
 
 			<div class="ques3" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">3.Thinking about the last month, how many nights a week do you have a problem with your sleep?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">3.Thinking about the last month, how many nights a week do you have a problem with your sleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-1 night(1 level)</div>
@@ -343,8 +343,8 @@
 					</div>
 					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-3'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-3'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -473,7 +473,7 @@
 
 			<div class="ques4" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">4.Thinking about a typical night in the last month, how would you rate your sleep quality?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">4.Thinking about a typical night in the last month, how would you rate your sleep quality?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Very good(1 level)</div>
@@ -482,8 +482,8 @@
 					</div>
 					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-4'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-4'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -612,7 +612,7 @@
 
 			<div class="ques5" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">5.Thinking about the past month, to what extent has poor sleep affected your mood, energy, or relationships?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">5.Thinking about the past month, to what extent has poor sleep affected your mood, energy, or relationships?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
@@ -621,8 +621,8 @@
 					</div>
 					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-5'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-5'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -750,7 +750,7 @@
 
 			<div class="ques6" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">6.Thinking about the past month, to what extent has poor sleep affected your concentration, productivity, or ability to stay awake?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">6.Thinking about the past month, to what extent has poor sleep affected your concentration, productivity, or ability to stay awake?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
@@ -759,8 +759,8 @@
 					</div>
 					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-6'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-6'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -885,11 +885,9 @@
 				});
 			</script>
 			<div style="width: 100%;height: 20px;"></div>
-
-
 			<div class="ques7" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">7.Thinking about the past month, to what extent has poor sleep troubled you in general?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">7.Thinking about the past month, to what extent has poor sleep troubled you in general?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
@@ -898,8 +896,8 @@
 					</div>
 					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-7'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-7'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1027,7 +1025,7 @@
 
 			<div class="ques8" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">8.How long have you had a problem with your sleep?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">8.How long have you had a problem with your sleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">I don't have a problem(1 level)</div>
@@ -1036,8 +1034,8 @@
 					</div>
 					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-8'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-8'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {

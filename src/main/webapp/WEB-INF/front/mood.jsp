@@ -183,18 +183,18 @@
 				});
 			</script>
 			<div class="ques1" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">1.How often have you had little interest or pleasure in doing things?</div>
+				<div style="width: 100%;height: 10px;"></div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">1.How often have you had little interest or pleasure in doing things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
-					<div style="width: 100%;height: 20px;"></div>
+					<div style="width: 100%;height: 10px;"></div>
 					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex1" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
 					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-1'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-1'></div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
@@ -316,8 +316,8 @@
 				});
 			</script>
 			<div class="ques2" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">2. How often have you been bothered by feeling down, depressed or hopeless?</div>
+				<div style="width: 100%;height: 10px;"></div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">2. How often have you been bothered by feeling down, depressed or hopeless?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -326,8 +326,8 @@
 					</div>
 					<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-2'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-2'></div>
 
 			<div style="width: 100%;height: 20px;"></div>
 
@@ -450,8 +450,8 @@
 				});
 			</script>
 			<div class="ques3" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">3.How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</div>
+				<div style="width: 100%;height: 10px;"></div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">3.How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -460,8 +460,8 @@
 					</div>
 					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-3'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-3'></div>
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
@@ -583,7 +583,7 @@
 			</script>
 			<div class="ques4" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">4.How often have you been bothered by feeling tired or having little energy?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;;padding: 10px;">4.How often have you been bothered by feeling tired or having little energy?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -592,8 +592,8 @@
 					</div>
 					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-4'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-4'></div>
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
@@ -716,7 +716,7 @@
 			</script>
 			<div class="ques5" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">5.How often have you been bothered by poor appetite or overeating?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;;padding: 10px;">5.How often have you been bothered by poor appetite or overeating?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -725,8 +725,8 @@
 					</div>
 					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-5'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-5'></div>
 			<script type="text/javascript">
 				// 使用
 				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
@@ -901,7 +901,7 @@
 			</script>
 			<div class="ques6" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">6.How often have you been bothered by feeling bad about yourself, or that you are a failure, or have let yourself or your family down?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;;padding: 10px;">6.How often have you been bothered by feeling bad about yourself, or that you are a failure, or have let yourself or your family down?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -910,11 +910,11 @@
 					</div>
 					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-6'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-6'></div>
 
 			<div style="width: 100%;height: 20px;"></div>
-		<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-7'));
@@ -1034,7 +1034,7 @@
 			</script>
 			<div class="ques7" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">7.How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">7.How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1043,9 +1043,9 @@
 					</div>
 					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-7'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-7'></div>
-			
+
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
@@ -1167,7 +1167,7 @@
 			</script>
 			<div class="ques8" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">8.How often have you been bothered by moving or speaking so slowly that other people could have noticed, or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">8.How often have you been bothered by moving or speaking so slowly that other people could have noticed, or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1176,11 +1176,11 @@
 					</div>
 					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-8'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-8'></div>
 			<div style="width: 100%;height: 20px;"></div>
 
-		<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-9'));
@@ -1300,7 +1300,7 @@
 			</script>
 			<div class="ques9" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">9.Have you had an anxiety attack (suddenly feeling fear or panic)?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">9.Have you had an anxiety attack (suddenly feeling fear or panic)?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1309,8 +1309,8 @@
 					</div>
 					<div class="ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-9'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-9'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1431,7 +1431,7 @@
 			</script>
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques10" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">10.How often have you been bothered by feeling nervous, anxious or on edge?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">10.How often have you been bothered by feeling nervous, anxious or on edge?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1440,11 +1440,11 @@
 					</div>
 					<div class="ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-10'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-10'></div>
-			
+
 			<div style="width: 100%;height: 20px;"></div>
-<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-11'));
@@ -1564,7 +1564,7 @@
 			</script>
 			<div class="ques11" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">11.How often have you been bothered by not being able to stop or control worrying?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">11.How often have you been bothered by not being able to stop or control worrying?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1573,9 +1573,9 @@
 					</div>
 					<div class="ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-11'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-11'></div>
-		
+
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
@@ -1698,7 +1698,7 @@
 			</script>
 			<div class="ques12" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">12.How often have you been bothered by worrying too much about different things?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">12.How often have you been bothered by worrying too much about different things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1707,9 +1707,9 @@
 					</div>
 					<div class="ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-12'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-12'></div>
-		<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-13'));
@@ -1830,7 +1830,7 @@
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques13" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">13.How often have you been bothered by having trouble relaxing?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">13.How often have you been bothered by having trouble relaxing?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1839,8 +1839,8 @@
 					</div>
 					<div class="ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-13'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-13'></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
@@ -1962,7 +1962,7 @@
 			<div style="width: 100%;height: 20px;"></div>
 			<div class="ques14" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">14.How often have you been bothered by being so restless that it is hard to sit still?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">14.How often have you been bothered by being so restless that it is hard to sit still?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -1971,12 +1971,12 @@
 					</div>
 					<div class="ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-14'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-14'></div>
-		
+
 			<div style="width: 100%;height: 20px;"></div>
 
-		<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-15'));
@@ -2096,7 +2096,7 @@
 			</script>
 			<div class="ques15" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">15.How often have you been bothered by becoming easily annoyed or irritable?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">15.How often have you been bothered by becoming easily annoyed or irritable?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -2105,11 +2105,11 @@
 					</div>
 					<div class="ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-15'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-15'></div>
-		
+
 			<div style="width: 100%;height: 20px;"></div>
-				<script>
+			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						var chart = ec.init(document.getElementById('report-16'));
@@ -2229,7 +2229,7 @@
 			</script>
 			<div class="ques16" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
-				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">16.How often have you been bothered by feeling afraid as if something awful might happen?</div>
+				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">16.How often have you been bothered by feeling afraid as if something awful might happen?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
@@ -2238,9 +2238,9 @@
 					</div>
 					<div class="ex16CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
+				<div style="width: 100%;height: 350px;" id='report-16'></div>
 			</div>
-			<div style="width: 100%;height: 350px;" id='report-16'></div>
-		
+
 			<div style="width: 100%;height: 15px;"></div>
 			<div class="ques17" style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
 				<div style="width: 100%;height: 20px;"></div>
@@ -2307,8 +2307,8 @@
 
 		<!-- <div class="submit" style="width: 100%;height: 30px;">
 			<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>
-		</div> -->	
-	<div style="width: 100%;height: 60px;"></div>
+		</div> -->
+		<div style="width: 100%;height: 60px;"></div>
 		<div id="all-right" style="width: 100%;height: auto;font-family: arial;">
 			<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</div>
 		</div>

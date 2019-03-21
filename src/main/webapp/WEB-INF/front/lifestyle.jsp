@@ -55,7 +55,6 @@ slider.on("slide", function(slideEvt) {
 	});
 	});
 </script>
-
 			<div class="blood" style="width: 96%;margin: 0 auto;height: auto;background-color: #FFFFFF;">
 				<div style="width: 100%;height: 30px;"></div>
 					<div style="width: 100%;height: auto;font-weight: 700;color: #666666; font-size: 18px;font-family: arial; ">Lowering Blood Pressure and Cholesterol</div>
