@@ -190,7 +190,7 @@
 				<div style="width: 96%;height: auto;font-size: 16px;margin:0 auto; font-family: airal;font-weight: 600; color: #666666;">1.temporal?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
+					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0(0 level)</div>
 					<div>
 						<input class="ex1" type="text" data-slider-min="0" data-slider-max="6" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -324,7 +324,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">2.spatial</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0</div>
+					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px">0(0 level)</div>
 					<div>
 						<input class="ex2" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -516,7 +516,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">3.punctate pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex3" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -649,7 +649,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">4.incisive pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex4" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -789,7 +789,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">5.constrictive pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex5" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -922,7 +922,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">6.traction pressure</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex6" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1057,7 +1057,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">7.thermal</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex7" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1193,7 +1193,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">8.brightness</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex8" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1331,7 +1331,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">9.dullness</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex9" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1466,7 +1466,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">10.sensory miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex10" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1595,7 +1595,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">11.tension</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex11" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1724,7 +1724,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">12.autonomic</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex12" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1856,7 +1856,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">13.fear</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex13" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -1994,7 +1994,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">14.pinishment</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex14" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2123,7 +2123,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">15.affective-evaluative-sensory:miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex15" type="text" data-slider-min="0" data-slider-max="2" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2261,7 +2261,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">16.evaluative</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex16" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2396,7 +2396,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">17.sensory: miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex17SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex17SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex17" type="text" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2534,7 +2534,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">18.sensory: miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex18SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex18SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex18" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2666,7 +2666,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">19.sensory</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex19SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex19SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex19" type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -2805,7 +2805,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">20.affective-evaluative:miscellaneous</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex20SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex20SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex20" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3025,7 +3025,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">21. Which word describes your pain right now?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex21SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex21SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex21" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3163,7 +3163,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">22.Which word describes it at its worst?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex22SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex22SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex22" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3301,7 +3301,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">23.Which word describes it when it is least?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex23SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex23SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex23" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3433,7 +3433,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">24.Which word describes the worst toothache you ever had?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex24SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex24SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex24" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3571,7 +3571,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">25.Which word describes the worst headache you ever had?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex25SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex25SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex25" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3706,7 +3706,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;">26.Which word describes the worst stomach-ache you ever had?</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex26SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0</div>
+					<div class="ex26SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;">0(0 level)</div>
 					<div>
 						<input class="ex26" type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0">
 					</div>
@@ -3714,58 +3714,6 @@
 				</div>
 			</div>
 			<div style="width: 100%;height: 350px;" id='report-26'></div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var chart1 = ec.init(document.getElementById('report-26'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 2, 3, 1, 4, 1, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					chart1.setOption(option);
-				});
-			</script>
 
 			<div style="width: 100%;height: auto;font-family: arial;">
 				<div>Interpretation:</div>

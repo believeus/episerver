@@ -320,7 +320,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">2. How often have you been bothered by feeling down, depressed or hopeless?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex2" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -454,7 +454,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">3.How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex3" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -586,7 +586,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">4.How often have you been bothered by feeling tired or having little energy?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex4" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -719,7 +719,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">5.How often have you been bothered by poor appetite or overeating?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex5" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -904,7 +904,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">6.How often have you been bothered by feeling bad about yourself, or that you are a failure, or have let yourself or your family down?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex6" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1037,7 +1037,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">7.How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex7" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1170,7 +1170,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">8.How often have you been bothered by moving or speaking so slowly that other people could have noticed, or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex8" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1303,7 +1303,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">9.Have you had an anxiety attack (suddenly feeling fear or panic)?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex9" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1434,7 +1434,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">10.How often have you been bothered by feeling nervous, anxious or on edge?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex10" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1567,7 +1567,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">11.How often have you been bothered by not being able to stop or control worrying?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex11" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1701,7 +1701,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">12.How often have you been bothered by worrying too much about different things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex12" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1833,7 +1833,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">13.How often have you been bothered by having trouble relaxing?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex13" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -1965,7 +1965,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">14.How often have you been bothered by being so restless that it is hard to sit still?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex14" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -2099,7 +2099,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">15.How often have you been bothered by becoming easily annoyed or irritable?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex15" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -2232,7 +2232,7 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">16.How often have you been bothered by feeling afraid as if something awful might happen?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all</div>
+					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
 						<input class="ex16" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
@@ -2305,10 +2305,10 @@
 			</div>
 		</div>
 
-		<div class="submit" style="width: 100%;height: 30px;">
+		<!-- <div class="submit" style="width: 100%;height: 30px;">
 			<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>
-		</div>
-		<div style="width: 100%;height: 60px;"></div>
+		</div> -->	
+	<div style="width: 100%;height: 60px;"></div>
 		<div id="all-right" style="width: 100%;height: auto;font-family: arial;">
 			<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</div>
 		</div>
