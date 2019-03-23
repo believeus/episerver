@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/swiper.min.css" />
-		<title>Dr. David</title>
+		<title>Dr. Hui Li</title>
 		
 		<!--局部移动浏览-->
 		<style type="text/css">
@@ -79,34 +79,33 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				<div style="width: 100%;height: 142px;overflow: hidden;margin: 0 auto;">
 					<div style="width: 33%;height: 80px;float: left;"></div>
 					<div style="width: 33%;height: 100px;float: left; ">
-						<img src="static/images/david-1.png"style="width: 100%;height: auto;"/>
+						<img src="static/images/huili1-1.png"style="width: 100%;height: auto;"/>
 					</div>
 					<div style="width: 30%;height: auto;float: left;"></div>
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					David Cheishvili<br />
-					Senior Scientific Consultant: HKG Epitherapeutics, Hong Kong</div>
+					Hui Li<br />
+					Lab Manager : HKG Epitherapeutics, Hong Kong</div>
 				</div>
 			
 			<div id="pro-stem"style="width: 100%;height: auto;background-color: #F7F7F9;margin: 0 auto;">
 				<div style="width: 96%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: auto;line-height: 50px;font-weight: 700;">Professional Experiences</div>
 					<hr />
-					<div style="width: 100%;height: auto;line-height: 39px;">
-						<div id="dot" >Academician of the Royal Canadian Academy of Sciences and Academician of the Canadian Academy of Health Sciences</div>
-						<div id="dot">First class tenured professor, McGill university, Canada;</div>
-						<div id="dot" >The first batch of patent inventors in the field of international cancer-related DNA methylation research</div>
-						<div id="dot" >The world's most widely patented inventor of epigenetics</div>
-						<div id="dot" >Resident chief scientist of Beijing epidia medical diagnostic technology co., LTD.</div>
-						<div id="dot" >Director of epigenetic institute, Beijing yizhuang innovation institute;</div>
-						<div id="dot" >Founder of behavioral and psychological epigenetics;</div>
-						<div id="dot" >Famous leader in the field of thought communication and has published more than 280 papers;</div>
-						<div id="dot" >Cited 33,000 times, 18500 times in 5 years, and the h-index value was 90</div>
+					<div style="width: 100%;height: auto;line-height: 22px;font-weight: 500">
+						<div id="dot" >2017-present--(Lab Manager ) HKG epiTherapeutics Hong Kong SAR, China</div>
+						<div style="width: 100%;height: 20px;;"></div>
+						<div id="dot">2009-2016--Ph.D. and Research Fellow, McGill University, Canada </div>
+						<div style="width: 100%;height: 20px;"></div>
+						<div id="dot"> 2013-2014--President, McGill Chinese Graduate Student Association-- McGill University Montreal, Canada</div>
+						<div style="width: 100%;height: 20px;"></div>
+						<div id="dot" > 2012-2013--Vice President Event, McGill Chinese Graduate Student Association--McGill University Montreal, Canada</div>
+						<div style="width: 30%;height: 20px;"></div>
 					</div>
 				</div>
 			</div>
-		<hr style="font-size: 14px;color: #E7E7E7;" />
+	
 		
 		
 			
@@ -120,18 +119,17 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		<!--header end-->
 		<div class="wrap">
 			<div class="tabs">
-				<span class="part active"><a href="#career" hidefocus="true" >Careers</a></span>
+				<span class="part active"><a href="#career" hidefocus="true" >Leadership</a></span>
 				<span class="part" style="border-right: 1px solid #666666">
 					<a href="#" hidefocus="true">Honors</a>
 				</span>
-				<span class="part"><a href="#" hidefocus="true">Conference</a></span>
+				<span class="part"><a href="#" hidefocus="true">Sponsored</a></span>
 			</div>
 
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
 						<div class="content-slide">
-							
        							 <div id="career" ><img src="static/images/careers.png" style="width: 100%; height: auto;"></div>
        						 
 						</div>
@@ -139,38 +137,22 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					<div class="swiper-slide">
 						<div class="content-slide">
 						<div style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
-						<div style="width: 100%;height: 40px"></div>
-						<ul>
-						<li> 2011--Postdoctoral Fund of the Israel Cancer Research Foundation</li>
-						<div style="width: 100%;height: 20px"></div>
-						<li>2010--Toronto Alumni and Alumni Medical Excellence Award</li>
-						<div style="width: 100%;height: 20px"></div>
-						<li>2009--Toronto Alumni and Friends Medical Excellence Award</li>
-						</ul>
+						<div style="width: 100%;height: 40px;"></div>
+							<ul>
+								<li>2012 McGill Endocrinology Research Conference Presentation Award (Montreal, Canada)</li>
+								<div style="width: 100%;height: 20px;"></div>
+								<li>2007 Report Award of the Seventh Annual Meeting of Asian Association of Clinical Oncology,(Shanghai, China)</li>
+							</ul>
 						</div>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-							<div  style="width: 90%;height: auto;margin: 0 auto;line-height: 22px;">
-							<ul>
-								<li>2017 Sixth Asian Chromatin and Chromosome Forum (Hyderabad, India)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>2016 3rd Canadian Conference on Epigenetics of Development and Diseases (Canada)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>2011 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference (New York, USA)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>2010 First Scientific Conference of the Medical Research Institute of Hebrew University in Israel-Hadassah Medical College, Canada (Erat, Israel)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>Twenty-first European Union for Cancer Research Conference, 2010 (Oslo, Norway)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>The 8th European Conference on Glial Cell Health and Diseases, 2009 (Paris, France)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>2008 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference (New York, USA)</li>
-								<div style="width: 100%;height: 20px"></div>
-								<li>The 8th European Conference on Gliocyte Health and Diseases, 2007 (London, UK)</li>
-							</ul>
+						<div>
+								From 1985 to 2013, Academician Szyf's research projects were funded by organizations such as Canada and the United States.
+								 Listed below Representational funding projects:
 						</div>
+						
 						</div>
 					</div>
 				</div>
@@ -194,73 +176,50 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         		<div style="width: 90%;height: auto;font-family: arial;font-weight: 500;color: #FFFFFF; line-height: 20px; margin: 0 auto;">
         		
         			<div style="width: 100%;height: auto;">
-        				<a href="https://www.x-mol.com/paper/712300">
-        				 <div style="width: 90%;height: auto;float: left;color:#FFFFFF"> Identification of an Epigenetic Signature of Osteoporosis in Blood DNA of
-    Postmenopausal Women. JBMR. 2018;</div>
+        				<a href="https://www.sciencedirect.com/science/article/pii/S0898656817301183">
+        				 <div style="width: 100%;height: auto;float: left;color:#FFFFFF"> IRE1α links Nck1 deficiency to attenuated PTP1B expression in HepG2 cells. 
+    Cellular Signaling. 2017; 
+</div>
         				</a> 
-        			
+        				
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        			<a href="https://bmccancer.biomedcentral.com/articles/10.1186/s12885-018-4482-7">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> DNA methylation signatures of breast cancer in peripheral T-cells. BMC  Cancer. 
-    2018;</div>
+        			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4236421/">
+        				<div style="width: 1-0%;height: auto;float: left;color:#FFFFFF">Nck1 depletion induces activation of the PI3K/Akt pathway by attenuating 
+    PTP1B protein expression. Cell Communication and Signaling. 2014; 
+</div>
         			</a>
         				
         			</div>
         			
-        			<div style="width: 100%;height: 60px;"></div>
+        			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="https://clinicalepigeneticsjournal.biomedcentral.com/articles/10.1186/s13148-017-0436-1">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">The signature of liver cancer in immune cells DNA methylation. Clin Epigenetics.   
-    2018;</div>
-        				</a>
-        				
+        			
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">Hepatocellular carcinoma induced specific angiogenesis. Chinese Clinical 
+    Oncology. 2009;</div>
+        
+        		
         			</div>
         			<div style="width: 100%;height: 60px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="https://www.onlinelibrary.wiley.com/doi/full/10.1002/mnfr.201701008">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">Personalized cardio-metabolic responses to an anti-inflammatory nutrition 
-    intervention in obese adolescents: a randomized controlled crossover trial. Mol Nutr Food Res. 2018;</div>
+        				<a href="https://www.sciencedirect.com/science/article/pii/S1567576908003548">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">A novel peptide isolated from phage display peptides library recognized by 
+ 						   an antibody against connective tissue growth factor. International  Immunopharmacology. 2009;</div>
         				</a>
-        				
+        	
         			</div>
         			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
-        				<a href="https://www.sciencedirect.com/science/article/pii/S1094695016301780">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">Genetic polymorphisms in ESR1 and VDR genes do not correlate with
-    osteoporosis with familial dysautonomia. J Clin Densitom. 2018;
-</div>
-        				</a>
-        		
-        			</div>
-        			<div style="width: 100%;height: 80px;"></div>
-        			<div style="width: 100%;height: auto;">
-        				<a href="http://www.greenmedinfo.com/article/methyl-donor-s-adenosylmethionine-sam-supplementation-attenuates-breast-cancer">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Methyl donor S-adenosylmethionine (SAM) supplementation attenuates 
-							 breast cancer growth, invasion, and metastasis in vivo; therapeutic and chemopreventive applications. Oncotarget. 2017;
-							 </div>
-        				</a>
-        				
-        			</div>
-        			<div style="width: 100%;height: 120px;"></div>
-        			<div style="width: 100%;height: auto;">
-        				<a href="https://academic.oup.com/nar/article/45/22/12681/4259028">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Epigenetic mechanisms underlie the crosstalk between growth factors and a 
-   							 steroid hormone. Nucleic Acids Res. 2017;
-						</div>
-        				</a>
-        		
-        			</div>
-        			<div style="width: 100%;height: 120px;"></div>
-        			<div style="width: 100%;height: auto;">
-        				<a href="https://www.researchgate.net/publication/316689941_DNA_methylation_controls_unmethylated_transcription_start_sites_in_the_genome_in_trans">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> DNA methylation controls unmethylated transcription start sites in the genome 
-    in trans”. Epigenomics. 2017;</div>
+        				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Effects of cations and PH on antimicrobial activity of Thanatin and s-Thanatin 
+   						 against Escherichia coli ATCC25922 and B. subtilis ATCC 21332. Current Microbiology. 2008.</div>
         				</a>
         	
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
+        			
+        			
         		</div>
         	</div>
         </div>

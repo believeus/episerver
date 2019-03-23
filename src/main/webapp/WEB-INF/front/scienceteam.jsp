@@ -38,6 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</a>
 				
 				<div style="width: 100%;height: 20px;"></div>
+				<a href="david/index.jhtml">
 				<div style="width: 98%;height: auto;margin: 0 auto;overflow: hidden;">
 				<div style="width: 34%;height: auto;float: left;">
 					<img src="static/images/David.png" style="width: 100%;height: auto;" />
@@ -52,14 +53,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div style="width: 10%;height: auto;float: left;line-height: 30px;">
 					<div style="width: 100%;height: 28px;"></div>
 					<div style="width: 50%;height: 20px;">
-					<a href="david/index.jhtml">
 					<img src="static/images/arr.png"style="width: 100%;height: auto;"/>
-					</a>
 					</div> 	
 				</div>
 				</div>
-				
+				</a>
 				<div style="width: 100%;height: 20px;"></div>
+				<a href="huili/index.jhtml">
 				<div style="width: 98%;height: auto;margin: 0 auto;overflow: hidden;">
 				<div style="width: 34%;height: auto;float: left;">
 					<img src="static/images/HuiLi.png" style="width: 100%;height: auto;" />
@@ -73,10 +73,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 				<div style="width: 10%;height: auto;float: left;line-height: 30px;">
 					<div style="width: 100%;height: 28px;"></div>
-					<div style="width: 50%;height: 20px;"><img src="static/images/arr.png"style="width: 100%;height: auto;"/></div> 	
+					<div style="width: 50%;height: 20px;">
+					
+					<img src="static/images/arr.png"style="width: 100%;height: auto;"/>
+
+					</div> 	
 				</div>
 				</div>
-				
+				</a>
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 98%;height: auto;margin: 0 auto;overflow: hidden;">
 				<div style="width: 34%;height: auto;float: left;">
