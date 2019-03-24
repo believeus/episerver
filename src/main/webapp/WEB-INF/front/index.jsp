@@ -285,7 +285,9 @@
 					
 					<div class="rep-style"style="width: 100%;height: auto;">
 						<div style="width: 92%;height: auto;margin: 0 auto;">
+							<a href="orderecord/index.jhtml">
 							<img src="static/images/hm17.png"style="width: 100%;height: auto;" />
+							</a>
 						</div>
 					</div>
 					<div style="width: 100%;height: 30px;"></div>
