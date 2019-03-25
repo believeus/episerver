@@ -11,14 +11,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/swiper.min.css" />
-		<title>Dr. Hui Li</title>
+		<title>Dr. Zhiyuan Lv</title>
 		
 		<!--局部移动浏览-->
 		<style type="text/css">
 	*{margin:0;padding:0;font-family: "微软雅黑";}
 		.wrap{margin:0 auto;}
 		.tabs{height:32px;background: #F4F4F4;width: 100%;padding-top: 8px;text-align: center}
-		.tabs .part{display:block;float:left;width:33%;color:#666666;text-align:center;height: 20px;}
+		.tabs .part{display:block;float:left;width:45%;color:#666666;text-align:center;height: 20px;}
 		.tabs .part:first-child{border-right: 0px solid #000000;}
 		.tabs a{width:100px;display:block;color:#666666;text-align:center;margin:0 auto;font-size:16px;text-decoration:none;padding-bottom: 0px;}
 		.tabs span.active a{color:#666666;border-bottom: 2px solid #000000;}
@@ -79,14 +79,14 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				<div style="width: 100%;height: 142px;overflow: hidden;margin: 0 auto;">
 					<div style="width: 33%;height: 80px;float: left;"></div>
 					<div style="width: 33%;height: 100px;float: left; ">
-						<img src="static/images/huili1-1.png"style="width: 100%;height: auto;"/>
+						<img src="static/images/zhiyuan-1.png"style="width: 100%;height: auto;"/>
 					</div>
 					<div style="width: 30%;height: auto;float: left;"></div>
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					<strong>Hui Li PhD</strong><br />
-					Lab Manager <br/> HKG Epitherapeutics, Hong Kong
+					<strong>Zhiyuan Lv Postdoctoral</strong><br />
+					Lab Manager <br/> Beijing Epidial Medical Diagnostic Technology Co., Ltd.
 				</div>
 				<div style="width: 100%;height: 20px;"></div>
 				</div>
@@ -95,8 +95,9 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					<div style="width: 100%;height: auto;line-height: 50px;font-weight: 700;">Professional Experiences</div>
 			
 					<div style="width: 100%;height: auto;">
-						<img  src="static/images/huili-2.png"style="width: 100%;height: auto;">
+						 <img  src="static/images/zhiyuan-2.png"style="width: 100%;height: auto;">
 					</div>
+					<div style="width: 100%;height: 20px;"></div>
 				</div>
 			</div>
 
@@ -105,16 +106,12 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 		<!--header end-->
 		<div class="wrap">
 			<div class="tabs">
-				<span class="part active"style="border-right: 1px solid #666666">
-				<a href="#publication" hidefocus="true" >Publications</a>
+				<span class="part active" style="border-right: 1px solid #666666">
+				<a href="#career" hidefocus="true" >Honors</a>
 				</span>
 				
-				<span class="part" style="border-right: 1px solid #666666">
-					<a href="#honor" hidefocus="true">Honors</a>
-				</span>
-				
-				<span class="part">
-				<a href="#" hidefocus="true">Conferences</a>
+				<span class="part" >
+					<a href="#" hidefocus="true">Conferences</a>
 				</span>
 			</div>
 
@@ -122,48 +119,36 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
 						<div class="content-slide">
-       							 <div id="publication" style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
-						<div style="width: 100%;height: 40px;"></div>
-							<ul>
-								<li><i style="font-weight: 600;">Hui Li</i>, Bing Li and Louise Larose. IRE1α links Nck1 deficiency to attenuated PTP1B expression in HepG2 cells. <i style="font-weight: 600;">Cellular Signaling</i>. 2017, 36: 79-90.</li>
-								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i>, Julie Dusseault and Louise Larose. Nck1 depletion induces activation of the PI3K/Akt pathway by attenuating PTP1B protein expression.<i style="font-weight: 600;"> Cell Communication and Signaling</i>. 2014,12: 71.</li>
-								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i>, Qing Ye, Yunman Li. Hepatocellular carcinoma induced specific angiogenesis. <i style="font-weight: 600;">Chinese Clinical Oncology</i>. 2009, 14(4): 369-372.</li>
-								<div style="width: 100%;height: 20px;"></div>
-								<li>Naifeng Liu, Guoqiu Wu,<i style="font-weight: 600;"> Hui Li</i>, Linxian Li, Honglei Xing, Cheng Zhang, Huixia Lu. A novel peptide isolated from phage display peptides library recognized by an antibody against connective tissue growth factor.<i style="font-weight: 600;"> International Immunopharmacology</i>. 2009, 9(3): 291-297.</li>
-								<div style="width: 100%;height: 20px;"></div>
-								<li>Guoqiu Wu, Jiaxuan Ding,<i style="font-weight: 600;"> Hui Li</i>, Linxian Li, Rui Zhao, Zilong Shen. Effects of cations and PH on antimicrobial activity of Thanatin and s-Thanatin against Escherichia coli ATCC25922 and B. subtilis ATCC 21332.<i style="font-weight: 600;"> Current Microbiology</i>. 2008, 57: 552-557.</li>
-							</ul>
-						</div>
-       						 
+       							 <div id="career" >
+       							 <div style="width: 90%;height: auto;margin: 0 auto;">
+       							 <div style="width: 100%;height: 40px;"></div>
+						<div ><strong>2015.05</strong>  Excellent Topic Summary Award for the 2015 Annual Meeting of the American Society of Immunologists</div>
+							<div style="width: 100%;height: 20px;"></div>
+						<div  ><strong> 2010.09 </strong>State Overseas Studies Fund appointed joint doctoral scholarship</div>
+					</div>
+       							</div>
+       			
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-								<div style="width: 100%;height: auto">
-								<img src="static/images/huili-3.png"style="width: 100%;height: auto;">
-								</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="content-slide">
-						<div id="conference" style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
+						<div style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
 						<div style="width: 100%;height: 40px;"></div>
 							<ul>
-								<li><i style="font-weight: 600;">Hui Li</i>, Bing Li and Louise Larose. Silencing Nck1 prevents activation of the IRE1α-JNK-miR-122 pathway that controls PTP1B expression. 2015.<i style="font-weight: 600;"> McGill Endocrine Retreat</i>. Montreal, Canada.</li>
+								<li>2015 Annual Meeting of the American Society of Immunologists (<i style="font-weight: 600;">New Orleans, USA</i>)</li>
 								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i> and Louise Larose. The adaptor protein Nck1 negatively regulates the PI3K/Akt pathway through protein tyrosine phosphatase 1B. 2014. <i style="font-weight: 600;">McGill Endocrine Retreat</i>. Montreal, Canada.</li>
+								<li>Third Annual Conference of the 2014 Southeast American Symposium on Immunology (<i style="font-weight: 600;">Atlanta, USA</i>)</li>
 								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i> and Louise Larose. Identification of the adaptor protein Nck1 as a negative regulator of the PI3K/Akt pathway through PTP1B and IRE1α. 2013. <i style="font-weight: 600;">Canadian Diabetes Association Professional Conference</i>. Montreal, Canada.</li>
+								<li>2014 Georgia State University Biotechnology Seminar (<i style="font-weight: 600;">Atlanta, USA</i>)</li>
 								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i> and Louise Larose. Akt phosphorylation/activation is modulated by the adaptor protein Nck1 through its ability to regulate the Endoplasmic Reticulum (ER) stress sensor IRE1α. 2012.<i style="font-weight: 600;"> McGill Endocrine Retreat</i>. Montreal, Canada. (Poster Award)</li>
+								<li>2013 Georgia State University-Nanjing University Biotechnology Seminar (<i style="font-weight: 600;">Atlanta, USA</i>)</li>
 								<div style="width: 100%;height: 20px;"></div>
-								<li><i style="font-weight: 600;">Hui Li</i> and Louise Larose. Nck1—an adaptor protein modulating expression of the Endoplasmic Reticulum (ER) stress sensor IRE1α. 2012.<i style="font-weight: 600;"> Experimental Biology 2012</i>, San Diego, USA.</li>
+								<li>Third Asia-Pacific Diabetes Symposium 2009 (<i style="font-weight: 600;">Nanjing, China</i>)</li>
 							</ul>
 						</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -177,7 +162,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         <div id="paper"style="width: 100%;height: auto;">
         	<div style="width: 100%;height: auto;background-color: #F4F4F4;">
         		<div style="width: 90%;height: auto;margin: 0 auto; font-weight: 600;font-family: arial;">
-        			<div id="din"><span style="font-weight: 700;color: #27809D;font-size: 18px;line-height: 50px;">Published  papers</span></div> 
+        			<div id="din"><span style="font-weight: 700;color: #27809D;font-size: 18px;line-height: 50px;"> Published Papers</span></div> 
         		</div>
         	</div>
         	<div style="width: 100%;height: auto;background-color: #27809D;overflow: hidden;">
@@ -186,48 +171,76 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
         		
         			<div style="width: 100%;height: auto;">
         				<a href="https://www.sciencedirect.com/science/article/pii/S0898656817301183">
-        				 <div style="width: 100%;height: auto;float: left;color:#FFFFFF"> IRE1α links Nck1 deficiency to attenuated PTP1B expression in HepG2 cells. 
-    Cellular Signaling. 2017; 
-</div>
+        				 <div style="width: 100%;height: auto;float: left;color:#FFFFFF">Cd47-Sirpαinteraction and IL-10 constrain inflammation-induced 
+    macrophage phagocytosis of healthy self-cells. PNAS. 2016 Sep;</div>
         				</a> 
         				
         			</div>
         			<div style="width: 100%;height: 80px;"></div>
         			<div style="width: 100%;height: auto;">
         			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4236421/">
-        				<div style="width: 1-0%;height: auto;float: left;color:#FFFFFF">Nck1 depletion induces activation of the PI3K/Akt pathway by attenuating 
-    PTP1B protein expression. Cell Communication and Signaling. 2014; 
-</div>
+        				<div style="width: 1-0%;height: auto;float: left;color:#FFFFFF">Loss of Cell Surface CD47 Clustering Formation and Binding Avidity to 
+    SIRPa Facilitate Apoptotic Cell Clearance by Macrophages. The Journal of Immunology. 2015 Jul;</div>
         			</a>
         				
         			</div>
         			
-        			<div style="width: 100%;height: 80px;"></div>
+        			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
         			
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">Hepatocellular carcinoma induced specific angiogenesis. Chinese Clinical 
-    Oncology. 2009;</div>
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">CD47 deficiency ameliorates autoimmune nephritis in Faslpr mice by 
+    suppressing IgG autoantibody production. The Journal of Pathology.  2015 Jun;</div>
         
         		
         			</div>
-        			<div style="width: 100%;height: 60px;"></div>
+        			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://www.sciencedirect.com/science/article/pii/S1567576908003548">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">A novel peptide isolated from phage display peptides library recognized by 
- 						   an antibody against connective tissue growth factor. International  Immunopharmacology. 2009;</div>
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">Argonaute 2 in cell-secreted microvesicles guides the function of 
+    secreted miRNAs in recipient cells. PloS One. 2014 Jul;</div>
+        				</a>
+        	
+        			</div>
+        			<div style="width: 100%;height: 80px;"></div>
+        			<div style="width: 100%;height: auto;">
+        				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Clustering’SIRPα into the plasma membrane lipid microdomains is 
+      required for activated monocytes and macrophages to mediate effective cell surface interactions with CD47. PloS One. 2013 Oct;.</div>
+        				</a>
+        	
+        			</div>
+        			<div style="width: 100%;height: 120px;"></div>
+        			<div style="width: 100%;height: auto;">
+        				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Inflammation-induced proteolytic processing of the SIRPα 
+    cytoplasmic ITIM in neutrophils propagates a proinflammatory state. Nature Communications. 2013 Sep;</div>
         				</a>
         	
         			</div>
         			<div style="width: 100%;height: 100px;"></div>
         			<div style="width: 100%;height: auto;">
         				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
-        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Effects of cations and PH on antimicrobial activity of Thanatin and s-Thanatin 
-   						 against Escherichia coli ATCC25922 and B. subtilis ATCC 21332. Current Microbiology. 2008.</div>
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">MicroRNA-17/20a/106a modulate macrophage inflammatory responses 
+    through targeting signal-regulatory protein α. Journal of Allergy and Clinical Immunology. 2013 Aug;</div>
         				</a>
         	
         			</div>
-        			<div style="width: 100%;height: 80px;"></div>
-        			
+        			<div style="width: 100%;height: 100px;"></div>
+        			<div style="width: 100%;height: auto;">
+        				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF">The protective role of peroxisome proliferator-activated receptor γ 
+    coactivator-1α in hyperthyroid cardiac hypertrophy. Journal of Cellular Physiology. 2012 Sep;</div>
+        				</a>
+        	
+        			</div>
+        			<div style="width: 100%;height: 100px;"></div>
+        			<div style="width: 100%;height: auto;">
+        				<a href="https://link.springer.com/article/10.1007%2Fs00284-008-9241-6">
+        				<div style="width: 100%;height: auto;float: left;color:#FFFFFF"> Molecular cloning of amphioxus uncoupling protein and assessment 
+    of its uncoupling activity using a yeast heterologous expression system. Biochem Biophys Res Commun. 2010 Aug</div>
+        				</a>
+        	
+        			</div>
         			
         		</div>
         	</div>

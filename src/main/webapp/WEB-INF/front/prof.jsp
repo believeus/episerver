@@ -85,8 +85,8 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					Moshe Szyf, Prof.<br />
-					Chairman & CEO: HKG Epitherapeutics, Hong Kong</div>
+					<strong>Moshe Szyf, Prof.</strong><br />
+					Chairman & CEO<br/>  HKG Epitherapeutics, Hong Kong</div>
 				</div>
 			
 			<div id="pro-stem"style="width: 100%;height: auto;background-color: #F7F7F9;margin: 0 auto;">

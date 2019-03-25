@@ -85,46 +85,37 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					David Cheishvili<br />
-					Senior Scientific Consultant: HKG Epitherapeutics, Hong Kong</div>
+					<strong>David Cheishvili PhD</strong><br />
+					Senior Scientific Consultant<br/>  HKG Epitherapeutics, Hong Kong
+				</div>
+				<div style="width: 100%;height: 20px;"></div>
 				</div>
 			
 			<div id="pro-stem"style="width: 100%;height: auto;background-color: #F7F7F9;margin: 0 auto;">
 				<div style="width: 96%;height: auto;margin: 0 auto;">
-					<div style="width: 100%;height: auto;line-height: 50px;font-weight: 700;">Professional Experiences</div>
-					<hr />
-					<div style="width: 100%;height: auto;line-height: 39px;">
-						<div id="dot" >Academician of the Royal Canadian Academy of Sciences and Academician of the Canadian Academy of Health Sciences</div>
-						<div id="dot">First class tenured professor, McGill university, Canada;</div>
-						<div id="dot" >The first batch of patent inventors in the field of international cancer-related DNA methylation research</div>
-						<div id="dot" >The world's most widely patented inventor of epigenetics</div>
-						<div id="dot" >Resident chief scientist of Beijing epidia medical diagnostic technology co., LTD.</div>
-						<div id="dot" >Director of epigenetic institute, Beijing yizhuang innovation institute;</div>
-						<div id="dot" >Founder of behavioral and psychological epigenetics;</div>
-						<div id="dot" >Famous leader in the field of thought communication and has published more than 280 papers;</div>
-						<div id="dot" >Cited 33,000 times, 18500 times in 5 years, and the h-index value was 90</div>
-					</div>
+					<div style="width: 100%;height: auto;line-height: 60px">Professional Experiences</div>
+					<img  src="/static/images/david-2.png"style="width: 100%;height: auto;">
 				</div>
 			</div>
-		<hr style="font-size: 14px;color: #E7E7E7;" />
 		
-		
-			
-
-
-
-
 
         <div class="pg-main">
 	<div id="wrapper">
 		<!--header end-->
 		<div class="wrap">
 			<div class="tabs">
-				<span class="part active"><a href="#career" hidefocus="true" >Careers</a></span>
-				<span class="part" style="border-right: 1px solid #666666">
-					<a href="#" hidefocus="true">Honors</a>
+				<span class="part active"style="border-right: 1px solid #666666">
+				<a href="#patent" hidefocus="true" >Patents</a>
 				</span>
-				<span class="part"><a href="#" hidefocus="true">Conference</a></span>
+				
+				<span class="part" style="border-right: 1px solid #666666">
+				<a href="#" hidefocus="true">Honors</a>
+				</span>
+				
+				<span class="part">
+				<a href="#" hidefocus="true">Conference</a>
+				</span>
+				
 			</div>
 
 			<div class="swiper-container">
@@ -132,21 +123,35 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
 						<div class="content-slide">
 							
-       							 <div id="career" ><img src="static/images/careers.png" style="width: 100%; height: auto;"></div>
+       							 <div id="patent" >
+									<div  style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
+						<div style="width: 100%;height: 30px"></div>
+						<ul>
+						
+							<div style="width: 100%;height: 20px"></div>
+							<li><i style="font-weight: 600;">US patent 62/774</i>,994 DNA methylation markers for early detection of cervical cancer (Filed 04-Dec-2018)</li>
+							<div style="width: 100%;height: 20px"></div>
+							<li><i style="font-weight: 600;"> US patent 62/695</i>,429 DNA Methylation Markers for Noninvasive Detection of Cancer(Filed 07-Sept-2018)</li>
+					
+						</ul>
+						<div style="width: 100%;height: 30px"></div>
+						<ul>
+							<li> 2011--<i style="font-weight: 600;">Postdoctoral Fund </i>of the Israel Cancer Research Foundation</li>
+							<div style="width: 100%;height: 20px"></div>
+							<li>2010--Toronto Alumni and Alumni Medical <i style="font-weight: 600;">Excellence Award</i></li>
+							<div style="width: 100%;height: 20px"></div>
+							<li>2009--Toronto Alumni and Friends Medical<i style="font-weight: 600;"> Excellence Award</i></li>
+						</ul>
+						
+						</div>
+								</div>
        						 
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<div class="content-slide">
-						<div style="width: 90%;height: auto;margin: 0 auto;line-height: 22px">
-						<div style="width: 100%;height: 40px"></div>
-						<ul>
-						<li> 2011--Postdoctoral Fund of the Israel Cancer Research Foundation</li>
-						<div style="width: 100%;height: 20px"></div>
-						<li>2010--Toronto Alumni and Alumni Medical Excellence Award</li>
-						<div style="width: 100%;height: 20px"></div>
-						<li>2009--Toronto Alumni and Friends Medical Excellence Award</li>
-						</ul>
+						<div id="honor" style="width: 100%;height: auto;">
+								<img  src="static/images/david-3.png"style="width: 100%;height: auto;">
 						</div>
 						</div>
 					</div>
