@@ -27,12 +27,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="width: 100%;height: auto;">
 				<div style="width: 94%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
 					<div style="width: 70%;height: auto;margin: 0 auto;">
-					<div style="width: 100%;height: auto;line-height: 50px;">User Information</div>
+					<div style="width: 100%;height: auto;line-height: 50px;"><a href=""></a> User Information</div>
 					</div>
 					<hr size="1"/>
 					
 					<div style="width: 70%;height: auto;margin: 0 auto;">
-					<div style="width: 100%;height: auto;line-height: 50px;">Questionnaire</div>
+					<div style="width: 100%;height: auto;line-height: 50px;"><a href="queslist/index/jhtml"> Questionnaire</a></div>
 					</div>
 					<hr size="1"/>
 					
@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<hr size="1"/>
 					
 					<div style="width: 70%;height: auto;margin: 0 auto;">
-					<div style="width: 100%;height: auto;line-height: 50px;">Order List</div>
+					<div style="width: 100%;height: auto;line-height: 50px;"><a href="orderecord/index.jhtml"> Order List</a></div>
 					</div>
 					<hr size="1"/>
 					

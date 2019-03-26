@@ -100,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div style="width: 33%;height: auto;"></div>
 					</div>	
 					<div style="width: 100%;height: auto;color: #FBA32E;text-align: center;color: #FFFFFF;">
-						Epiterapia
+						<i>HKG epi THERAPEUTICS</i>
 					</div>
 					<div style="width: 96%;height: auto;margin: 0 auto; text-align: center;line-height: 20px;color: #FFFFFF;">
 						<p>It is closely related to the biological function of human body, and the acceleration of epigenetic clock is related to the risk of neurodegenerative diseases and cancer.</p>	
@@ -112,16 +112,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="epitherapia" style="width: 100%;height: auto">
 				<div style="width: 94%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: auto;color: #0071BC;font-weight: 500;font-size: 20px;">
-						Epiterapia
+						<i>HKG epi THERAPEUTICS</i>
 					</div>
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="line-height: 22px;">
-						Epiterapia is on the cutting edge of this “new age” science. It’s called Epigenetics and it uses a method called DNA methylation to determine your true age — which might, 
+						<i>HKG epi THERAPEUTICS</i> is on the cutting edge of this “new age” science. It’s called Epigenetics and it uses a method called DNA methylation to determine your true age — which might, 
 						as science is thinking at this time and age, reveal some important information on your true health, and possibly the quality and even span of your life.
 					</div>
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="line-height: 22px;">
-						Epigenetics is new, but Epiterapia already has three decades of pioneering research in this exciting area of DNA methylation. 
+						Epigenetics is new, but <i>HKG epi THERAPEUTICS</i> already has three decades of pioneering research in this exciting area of DNA methylation. 
 						With our unique method of diagnosing the DNA methylation stored in your cells in saliva, 
 						we reveal your actual age, which may encourage you to make lifestyle changes that some claim might lead to the following:
 					</div>
@@ -169,7 +169,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div style="width: 100%;height: 20px;"></div>
 					<div style="line-height: 22px;">
 						Scientists at HKG epitherapeutics have excavated a large number of age-related CG methylation sites in hundreds of published DNA methylation data,
-						 and selected a region containing 13 methylation sites from which saliva samples can accurately predict biological age.
+						and selected a region containing 13 methylation sites from which saliva samples can accurately predict biological age.
 					</div>
 					<div style="width: 100%;height: 40px;"></div>
 					<div style="width: 100%;height: auto;color: #0071BC;font-size: 20px;font-weight: 500;">
@@ -177,7 +177,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					
 					<div style="width: 100%;height: auto;margin-top: 30px;">
-							<img src="static/images/bio-9.png"style="width: 100%;height: auto;"/>
+						<img src="static/images/bio-9.png"style="width: 100%;height: auto;"/>
 					</div>
 				</div>
 			</div>
@@ -185,6 +185,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="download"style="width: 100%;height: auto;">
 				<div style="width: 90%;height: 40px;margin: 0 auto;color: #FFFFFF;background-color: #0071BC;text-align: center;line-height: 40px;border-radius: 5px;">Download APP</div>
 			</div>
+			<div style="width: 100%;height: 60px;"></div>
+				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
+					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
+						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved
+					</div>
+				</div>
 		</div>
 	</body>
 </html>
