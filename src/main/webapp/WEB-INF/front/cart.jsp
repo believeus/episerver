@@ -33,7 +33,7 @@
     <div class="shop-group-item">
         <div class="shop-name">
             <input type="checkbox" class="check goods-check shopCheck">
-            <h4><a href="javascript:;">Information</a></h4>
+            <h4><a href="javascript:;">Select all</a></h4>
         </div>
             <ul>
                 <li>
@@ -45,7 +45,7 @@
                             <h4> <a href="aging/index.jhtml">Biological age detection 2.0</a></h4>
                             <div class="shop-brief"><span> <a href="aging/index.jhtml">Saliva DNA Collection Kit</a></span></div>
                             <div class="shop-price">
-                                <div class="shop-pices">$<b class="price">150</b></div>
+                                <div class="shop-pices">$<b class="price">99</b></div>
                                 <div class="shop-arithmetic">
                                     <a href="javascript:;" class="minus">-</a>
                                     <span class="num" name="count" id="count_1">1</span>

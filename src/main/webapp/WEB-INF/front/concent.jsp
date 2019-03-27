@@ -17,10 +17,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<jsp:include page="header.jsp"></jsp:include>
 			<div style="width: 96%;height: auto;margin: 0 auto;overflow: hidden;">
 				
-				<div id="language" style="width: 100%;height: 20px;overflow: hidden;margin-top: 20px;">
+				<!-- <div id="language" style="width: 100%;height: 20px;overflow: hidden;margin-top: 20px;">
 					<div style="width: 20%;height: 20px;text-align: center; border-right:1px solid  #000000 ;float: left;">Chinese</div>
 					<div style="width: 20%;height: 20px;text-align: center; float: left;">English</div>
-				</div>
+				</div> -->
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: 40px;">
 					<div style="width: 80%;height: 40px;margin: 0 auto;border-radius: 50px;background-color: #0071BC;color: #FFFFFF;line-height: 40px; font-family: arial;text-align: center; font-size: 18px;">Epidial Customer Data Consent Form</div>
@@ -56,8 +56,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            					<div style="width: 100%;height: 10px;"></div>
 				 	
 				 </div>
+				 <div style="width: 100%;height: 30px"></div>
+				 <div style="width: 100%;height: 40px;">
+						<a href="index.jhtml">
+					<div style="width: 50%;height: 40px;border-radius: 10px;border: 1px solid grey;margin: 0 auto;text-align: center;line-height: 40px;font-size:18px ;background-color: #0071BC;font-family: arial;color: #FFFFFF;">Agree</div>
+						</a>
+				</div>
 			</div>
-			<div style="width: 100%;height: 60px;"></div>
+			
 				<div id="all-right"style="width: 100%;height: auto;font-family: arial;">
 					<div style="width: 100%;height: auto;font-size: 12px;text-align: center; margin: 0 auto;line-height: 50px;">
 						@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved

@@ -124,7 +124,7 @@
 						</div>
 						<div style="width: 5%;height: 100px;float: left;"></div>
 						<div style="width: 69%;height: auto;float: left;  font-family: arial;color: #A0A0A0;">
-							<div style="width: 100%;height: 20px;"></div>
+							<div style="width: 100%;height: 62px;"></div>
 							<strong style="font-weight: 900;">Measles. 
 							</strong>Vitamin A supplements are recommended for children with measles who are at an increased risk of vitamin A deficiency. 
 							Research suggests that supplementation might reduce death due to measles.
