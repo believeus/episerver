@@ -14,7 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="static/css/stylesheet.css" />
 
-<link href="static/css/sleep-bootstrap-slider.css" rel="stylesheet">
+<!-- <link href="static/css/sleep-bootstrap-slider.css" rel="stylesheet"> -->
+<link href="static/css/lifestyle-bootstrap-slider.css" rel="stylesheet">
 <script type='text/javascript' src="static/js/jquery-2.1.0.min.js"></script>
 <script type='text/javascript' src="static/js/bootstrap-slider.js"></script>
 <script src="static/js/build/dist/echarts.js"></script>
@@ -27,22 +28,15 @@
 	});
 </script>
 <title>Sleep Self Assessment</title>
-
-
 </head>
 <body>
 	<div id="container" style="width: 100%;height: 100%;background-color: #FFFFFF;">
-		<jsp:include page="header.jsp"></jsp:include>
-
+		<jsp:include page="header.jsp"/>
 		<div style="width: 100%;height: 20px;"></div>
 		<div id="title" style="width: 100%;height: auto;">
-			<div>
-				<img src="static/images/sleep.png" style="width: 20%;height: 100%;float: right;" />
-			</div>
 			<div style="width: 100%;height: auto;">
-
 				<div style="width: 100%;height: 58px;text-align: center;font-size: 20px;font-family: arial;line-height: 60px; background-color: #FFFFFF; font-weight: 700;">Sleep Self Assesment</div>
-				<div style="accelerator: 100%;height: auto;background-color: #f77a78;">
+				<div style="height: auto;background-color: #f77a78;">
 					<div style="width: 90%;height: auto;margin: 0 auto;color: #FFFFFF; font-family: arial;font-size: 14px;">
 						<div style="width: 100%;height: 20px;"></div>
 						Most people experience problems with sleep in their life. In fact, it’s thought that a third of Brits will have episodes of insomnia at some point.
@@ -51,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> 
 
 		<div id="content" style="width: 100%;height: auto;background-color: #EDEDED">
 			<div style="width: 100%;height: 20px;"></div>
@@ -60,38 +54,40 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">1.Thinking about a typical night in the last month, if you wake up, how long are you awake for in total?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-15 min(1 level)</div>
+					<div class="sleep-ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: bold; margin: 0 auto;color: #f77a78;line-height: 40px;">0min</div>
 					<div>
-						<input class="ex1" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex1-bar"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  type="text" data-slider-min="0" data-slider-max="300" data-slider-step="1" data-slider-value="1"/>
 					</div>
-					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-1'></div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-1'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-1'));
+						var chart = ec.init(document.getElementById('sleep-report-1'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"1\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:'data',
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:'min',
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -104,41 +100,22 @@
 								chart.setOption(option);
 							}
 						});
-
-						var slider = new Slider(".ex1");
+						var slider = new Slider(".sleep-ex1-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
-							var value = "0-15 min(1 level)";
-							switch (slideEvt.value) {
-							case 1:
-								value = "0-15 min(1 level)";
-								break;
-							case 2:
-								value = "16-30 min(2 level)";
-								break;
-							case 3:
-								value = "31-45 min(3 level)";
-								break;
-							case 4:
-								value = "46-60 min(4 level)";
-								break;
-							case 5:
-								value = "more than 61 min(5 level)";
-								break;
-							}
+							$(".sleep-ex1SliderVal").text(slideEvt.value+"min");
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"1\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex1SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"1\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -149,39 +126,28 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:'data',
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:'min',
 													type : 'value',
 													axisLabel : {
-														formatter : '{value} level'
+														formatter : '{value}'
 													}
 												} ],
 												series : [ {
 													name : 'sleep status',
 													type : 'line',
 													data : data[0],
-													markPoint : {
-														data : [ {
-															type : 'max',
-															name : '最大值'
-														}, ]
-													},
-													markLine : {
-														data : [ {
-															type : 'average',
-															name : '平均值'
-														} ]
-													}
 												}, ]
 											};
 											// 为echarts对象加载数据 
 											chart.setOption(option);
 										}
 									});
-
 								},
 								error : function(jqXHR) {
 									console.info("发生错误：" + jqXHR.status);
@@ -197,44 +163,52 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">2.Thinking about a typical night in the last month, how long does it take you to fall asleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-15 min(1 level)</div>
+					<div class="sleep-ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0min</div>
 					<div>
-						<input class="ex2" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex2-bar"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  type="text" data-slider-min="0" data-slider-max="300" data-slider-step="1" data-slider-value="1">
 					</div>
 					<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-2'></div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-2'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-2'));
+						var chart = ec.init(document.getElementById('sleep-report-2'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"2\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:'data',
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:'min',
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
 										name : 'sleep status',
 										type : 'line',
 										data : data[0],
+										markLine : {
+											data : [ {
+												type : 'average',
+												name : '平均值'
+											} ]
+										}
 									}, ]
 								};
 								// 为echarts对象加载数据 
@@ -242,40 +216,22 @@
 							}
 						});
 
-						var slider = new Slider(".ex2");
+						var slider = new Slider(".sleep-ex2-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
-							var value = "0-15 min(1 level)";
-							switch (slideEvt.value) {
-							case 1:
-								value = "0-15 min(1 level)";
-								break;
-							case 2:
-								value = "16-30 min(2 level)";
-								break;
-							case 3:
-								value = "31-45 min(3 level)";
-								break;
-							case 4:
-								value = "46-60 min(4 level)";
-								break;
-							case 5:
-								value = "more than 61 min(5 level)";
-								break;
-							}
+							$(".sleep-ex2SliderVal").text(slideEvt.value+"min");
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"2\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex2SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"2\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -286,11 +242,13 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:"min",
 													type : 'value',
 													axisLabel : {
 														formatter : '{value} level'
@@ -300,12 +258,6 @@
 													name : 'sleep status',
 													type : 'line',
 													data : data[0],
-													markPoint : {
-														data : [ {
-															type : 'max',
-															name : '最大值'
-														}, ]
-													},
 													markLine : {
 														data : [ {
 															type : 'average',
@@ -328,47 +280,46 @@
 					});
 				});
 			</script>
-
 			<div style="width: 100%;height: 20px;"></div>
-
-
 			<div class="ques3" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">3.Thinking about the last month, how many nights a week do you have a problem with your sleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0-1 night(1 level)</div>
+					<div class="sleep-ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0night</div>
 					<div>
-						<input class="ex3" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex3-bar" type="text"     style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"   data-slider-min="1" data-slider-max="7" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-3'></div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-3'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-3'));
+						var chart = ec.init(document.getElementById('sleep-report-3'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"3\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:'night',
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -382,40 +333,22 @@
 							}
 						});
 
-						var slider = new Slider(".ex3");
+						var slider = new Slider(".sleep-ex3-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
-							var value = "0-1 night(1 level)";
-							switch (slideEvt.value) {
-							case 1:
-								value = "0-1 night(1 level)";
-								break;
-							case 2:
-								value = "2 nights(2 level)";
-								break;
-							case 3:
-								value = "3 nights(3 level)";
-								break;
-							case 4:
-								value = "4 nights(4 level)";
-								break;
-							case 5:
-								value = "5-7 nights(5 level)";
-								break;
-							}
+							$(".sleep-ex3SliderVal").text(slideEvt.value+"night");
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"3\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex3SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"3\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -426,14 +359,16 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:'night',
 													type : 'value',
 													axisLabel : {
-														formatter : '{value} level'
+														formatter : '{value}'
 													}
 												} ],
 												series : [ {
@@ -469,8 +404,6 @@
 				});
 			</script>
 			<div style="width: 100%;height: 20px;"></div>
-
-
 			<div class="ques4" style="width: 96%;height: auto;margin: 0 auto; background-color: #FFFFFF;border-radius: 10px;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">4.Thinking about a typical night in the last month, how would you rate your sleep quality?</div>
@@ -478,36 +411,43 @@
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Very good(1 level)</div>
 					<div>
-						<input class="ex4" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex4-bar" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"   data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-4'></div>
+				<div style="width: 100%;height: auto;">
+					<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color:#92D050;">Very good(level 1)</span>&nbsp;&nbsp;<span style="color:#92D050;">good(level 2)</span></div>
+					<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: #FFFF00;">Average(level 3)</span>&nbsp;&nbsp;<span style="color: #FFCC00">Poor(level 4)</span></div>
+					<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: red;">very poor(level 5)</span></div>
+				</div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-4'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-4'));
+						var chart = ec.init(document.getElementById('sleep-report-4'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"4\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:'level',
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -520,32 +460,31 @@
 								chart.setOption(option);
 							}
 						});
-
-						var slider = new Slider(".ex4");
+						var slider = new Slider(".sleep-ex4-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Very good(1 level)";
 							switch (slideEvt.value) {
 							case 1:
-								value = "Very good(1 level)";
+								value = "Very good(level 1)";
 								break;
 							case 2:
-								value = "Good(2 level)";
+								value = "Good(level 2)";
 								break;
 							case 3:
-								value = "Average(3 level)";
+								value = "Average(level 3)";
 								break;
 							case 4:
-								value = "Poor(4 level)";
+								value = "Poor(level 4)";
 								break;
 							case 5:
-								value = "Very poor(5 level) ";
+								value = "Very poor(level 5) ";
 								break;
 							}
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"4\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
@@ -554,7 +493,7 @@
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"4\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -565,14 +504,16 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:'level',
 													type : 'value',
 													axisLabel : {
-														formatter : '{value} level'
+														formatter : '{value}'
 													}
 												} ],
 												series : [ {
@@ -615,35 +556,42 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">5.Thinking about the past month, to what extent has poor sleep affected your mood, energy, or relationships?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
+					<div class="sleep-ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex5" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex5-bar" type="text"    style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-5'></div>
+					<div style="width: 100%;height: auto;">
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color:#92D050;">Not at all(level 1)</span>&nbsp;&nbsp;<span style="color:#92D050;">A little(level 2)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: #FFFF00;">Somewhat(level 3)</span>&nbsp;&nbsp;<span style="color: #FFCC00">Much(level 4)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: red;">Very much(level 5)</span></div>
+					</div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-5'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-5'));
+						var chart = ec.init(document.getElementById('sleep-report-5'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"5\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:"level",
 										type : 'value',
 										axisLabel : {
 											formatter : '{value} level'
@@ -660,22 +608,22 @@
 							}
 						});
 
-						var slider = new Slider(".ex5");
+						var slider = new Slider(".sleep-ex5-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
-							var value = "Not at all(1 level)";
+							var value = "Not at all(level 1)";
 							switch (slideEvt.value) {
 							case 1:
-								value = "Not at all(1 level)";
+								value = "Not at all(level 2)";
 								break;
 							case 2:
-								value = "A little(2 level)";
+								value = "A little(level 3)";
 								break;
 							case 3:
-								value = "Somewhat(3 level)";
+								value = "Somewhat(level 4)";
 								break;
 							case 4:
-								value = "Much(4 level)";
+								value = "Much(level 5)";
 								break;
 							case 5:
 								value = "Very much(5 level)";
@@ -684,16 +632,16 @@
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"5\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex5SliderVal").text(value);
+									$(".sleep-ex5SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"5\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -753,38 +701,45 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">6.Thinking about the past month, to what extent has poor sleep affected your concentration, productivity, or ability to stay awake?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
+					<div class="sleep-ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex6" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex6-bar" type="text"    style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-6'></div>
+				<div style="width: 100%;height: auto;">
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color:#92D050;">Not at all(level 1)</span>&nbsp;&nbsp;<span style="color:#92D050;">A little(level 2)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: #FFFF00;">Somewhat(level 3)</span>&nbsp;&nbsp;<span style="color: #FFCC00">Much(level 4)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: red;">Very much(level 5)</span></div>
+				</div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-6'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-6'));
+						var chart = ec.init(document.getElementById('sleep-report-6'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"6\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:"level",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -798,7 +753,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex6");
+						var slider = new Slider(".sleep-ex6-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -822,16 +777,16 @@
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"6\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex6SliderVal").text(value);
+									$(".sleep-ex6SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"6\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -842,14 +797,16 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:"level",
 													type : 'value',
 													axisLabel : {
-														formatter : '{value} level'
+														formatter : '{value}'
 													}
 												} ],
 												series : [ {
@@ -890,38 +847,45 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">7.Thinking about the past month, to what extent has poor sleep troubled you in general?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
+					<div class="sleep-ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex7" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex7-bar"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div style="width: 100%;height: auto;">
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color:#92D050;">Not at all(level 1)</span>&nbsp;&nbsp;<span style="color:#92D050;">A little(level 2)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: #FFFF00;">Somewhat(level 3)</span>&nbsp;&nbsp;<span style="color: #FFCC00">Much(level 4)</span></div>
+						<div style="width: 80%;margin: 0 auto;text-align: center;"><span style="color: red;">Very much(level 5)</span></div>
+					</div>
+					<div class="sleep-ex7-barCurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-7'></div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-7'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-7'));
+						var chart = ec.init(document.getElementById('sleep-report-7'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"7\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:"level",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -935,7 +899,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex7");
+						var slider = new Slider(".sleep-ex7-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -959,16 +923,16 @@
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"7\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex7SliderVal").text(value);
+									$(".sleep-ex7SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"7\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -979,14 +943,16 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:"level",
 													type : 'value',
 													axisLabel : {
-														formatter : '{value} level'
+														formatter : '{value}'
 													}
 												} ],
 												series : [ {
@@ -1028,38 +994,40 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">8.How long have you had a problem with your sleep?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">I don't have a problem(1 level)</div>
+					<div class="sleep-ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #f77a78;line-height: 40px">0month</div>
 					<div>
-						<input class="ex8" type="text" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="1">
+						<input class="sleep-ex8-bar"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  type="text" data-slider-min="1" data-slider-max="30" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="sleep-ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-8'></div>
+				<div style="width: 100%;height: 350px;" id='sleep-report-8'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart = ec.init(document.getElementById('report-8'));
+						var chart = ec.init(document.getElementById('sleep-report-8'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Sleep\",\"number\" : \"8\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
 									xAxis : [ {
+										name:"data",
 										type : 'category',
 										boundaryGap : false,
 										data : data[1]
 									} ],
 									yAxis : [ {
+										name:"month",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value} '
 										}
 									} ],
 									series : [ {
@@ -1073,40 +1041,22 @@
 							}
 						});
 
-						var slider = new Slider(".ex8");
+						var slider = new Slider(".sleep-ex8-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
-							var value = "I don't have a problem(1 level)";
-							switch (slideEvt.value) {
-							case 1:
-								value = "I don't have a problem(1 level)";
-								break;
-							case 2:
-								value = "1-2 months(2 level)";
-								break;
-							case 3:
-								value = "3-6 months(3 level)";
-								break;
-							case 4:
-								value = "7-12 months(4 level)";
-								break;
-							case 5:
-								value = "Longer than a year(5 level)";
-								break;
-							}
+							$(".sleep-ex8SliderVal").text(slideEvt.value+"month");
 							var data = "{\"type\" : \"Sleep\",\"data\" : {\"id\" : \"8\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.111:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex8SliderVal").text(value);
 									var data = "{\"type\" :\"Sleep\",\"number\" : \"8\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.111:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1117,11 +1067,13 @@
 												},
 												calculable : true,
 												xAxis : [ {
+													name:"data",
 													type : 'category',
 													boundaryGap : false,
 													data : data[1]
 												} ],
 												yAxis : [ {
+													name:"month",
 													type : 'value',
 													axisLabel : {
 														formatter : '{value} level'

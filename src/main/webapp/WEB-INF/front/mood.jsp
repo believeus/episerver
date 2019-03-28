@@ -17,7 +17,7 @@
 	作者：julie
 	时间：2019-03-11
 	描述：slide-bar -->
-<link href="static/css/mood-bootstrap-slider.css" rel="stylesheet">
+<link href="static/css/lifestyle-bootstrap-slider.css" rel="stylesheet">
 <script type='text/javascript' src="static/js/jquery-2.1.0.min.js"></script>
 <script type='text/javascript' src="static/js/bootstrap-slider.js"></script>
 <script src="static/js/build/dist/echarts.js"></script>
@@ -66,17 +66,18 @@
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
 						// 基于准备好的dom，初始化echarts图表
-						var chart1 = ec.init(document.getElementById('report-1'));
+						var chart1 = ec.init(document.getElementById('mood-report-1'));
 						//初始化报表数据
 						var data = "{\"type\" :\"Mood\",\"number\" : \"1\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },	
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -99,7 +100,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex1");
+						var slider = new Slider(".mood-ex1");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -120,21 +121,22 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"1\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex1SliderVal").text(value);
+									$(".mood-ex1SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"1\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
 										success : function(data) {
 											var option = {
+												noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },
 												legend : {
 													data : [ 'mood status' ]
 												},
@@ -187,29 +189,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">1.How often have you had little interest or pleasure in doing things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 10px;"></div>
-					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex1SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex1" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex1" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"   data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-1'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-1'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-2'));
+						var chart = ec.init(document.getElementById('mood-report-2'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },		
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -232,7 +235,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex2");
+						var slider = new Slider(".mood-ex2-bar");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -253,21 +256,22 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"2\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex2SliderVal").text(value);
+									$(".mood-ex2-barSliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
 										success : function(data) {
 											var option = {
+												noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },		
 												legend : {
 													data : [ 'mood status' ]
 												},
@@ -320,13 +324,13 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">2. How often have you been bothered by feeling down, depressed or hopeless?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex2-barSliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex2" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex2-bar"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex2CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex2-barCurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-2'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-2'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
@@ -334,16 +338,17 @@
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-3'));
+						var chart = ec.init(document.getElementById('mood-report-3'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"3\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },			
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -366,7 +371,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex3");
+						var slider = new Slider(".mood-ex3");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -387,21 +392,22 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"3\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex3SliderVal").text(value);
+									$(".mood-ex3SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"2\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
 										success : function(data) {
 											var option = {
+												noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },		
 												legend : {
 													data : [ 'mood status' ]
 												},
@@ -454,28 +460,29 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">3.How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex3SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex3" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex3" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-3'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-3'></div>
 			</div>
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-4'));
+						var chart = ec.init(document.getElementById('mood-report-4'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"4\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -498,7 +505,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex4");
+						var slider = new Slider(".mood-ex4");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -519,16 +526,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"4\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex4SliderVal").text(value);
+									$(".mood-ex4SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"4\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -586,29 +593,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;;padding: 10px;">4.How often have you been bothered by feeling tired or having little energy?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex4" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex4" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-4'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-4'></div>
 			</div>
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-5'));
+						var chart = ec.init(document.getElementById('mood-report-5'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"5\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -631,7 +639,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex5");
+						var slider = new Slider(".mood-ex5");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -652,16 +660,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"5\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex5SliderVal").text(value);
+									$(".mood-ex5SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"5\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -719,81 +727,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;;padding: 10px;">5.How often have you been bothered by poor appetite or overeating?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex5SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex5" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex5" type="text"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex5CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-5'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-5'></div>
 			</div>
-			<script type="text/javascript">
-				// 使用
-				require([ 'echarts', 'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-				], function(ec) {
-					// 基于准备好的dom，初始化echarts图表
-					var myChart = ec.init(document.getElementById('report-5'));
-					option = {
-						title : {},
-						tooltip : {
-							trigger : 'axis'
-						},
-						legend : {
-							data : [ 'mood status' ]
-						},
-						toolbox : {
-							show : true,
-							feature : {}
-						},
-						calculable : true,
-						xAxis : [ {
-							type : 'category',
-							boundaryGap : false,
-							data : [ '2019/1/3', '2019/1/4', '2019/1/5', '2019/1/6', '2019/1/7', '2019/1/8', '2019/1/9' ]
-						} ],
-						yAxis : [ {
-							type : 'value',
-							axisLabel : {
-								formatter : '{value} level'
-							}
-						} ],
-						series : [ {
-							name : 'mood status',
-							type : 'line',
-							data : [ 2, 4, 3, 4, 4, 3, 1, 3 ],
-							markPoint : {
-								data : [ {
-									type : 'max',
-									name : '最大值'
-								}, ]
-							},
-							markLine : {
-								data : [ {
-									type : 'average',
-									name : '平均值'
-								} ]
-							}
-						}, ]
-					};
-					// 为echarts对象加载数据 
-					myChart.setOption(option);
-				});
-			</script>
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-6'));
+						var chart = ec.init(document.getElementById('mood-report-6'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"6\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -816,7 +773,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex6");
+						var slider = new Slider(".mood-ex6");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -837,7 +794,7 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"6\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
@@ -846,7 +803,7 @@
 									var data = "{\"type\" :\"Mood\",\"number\" : \"6\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -906,27 +863,28 @@
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex6SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex6" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex6" type="text"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex6CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-6'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-6'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-7'));
+						var chart = ec.init(document.getElementById('mood-report-7'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"7\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -949,7 +907,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex7");
+						var slider = new Slider(".mood-ex7");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -970,16 +928,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"7\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex7SliderVal").text(value);
+									$(".mood-ex7SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"7\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1037,29 +995,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">7.How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex7SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex7" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex7" type="text"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex7CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-7'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-7'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-8'));
+						var chart = ec.init(document.getElementById('mood-report-8'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"8\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1082,7 +1041,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex8");
+						var slider = new Slider(".mood-ex8");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1103,16 +1062,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"8\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex8SliderVal").text(value);
+									$(".mood-ex8SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"8\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1170,29 +1129,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">8.How often have you been bothered by moving or speaking so slowly that other people could have noticed, or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex8SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex8" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex8" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex8CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-8'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-8'></div>
 			</div>
 			<div style="width: 100%;height: 20px;"></div>
 
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-9'));
+						var chart = ec.init(document.getElementById('mood-report-9'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"9\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1215,7 +1175,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex9");
+						var slider = new Slider(".mood-ex9");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1236,16 +1196,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"9\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex9SliderVal").text(value);
+									$(".mood-ex9SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"9\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1303,27 +1263,28 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">9.Have you had an anxiety attack (suddenly feeling fear or panic)?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex9SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex9" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex9" type="text"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex9CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-9'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-9'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-10'));
+						var chart = ec.init(document.getElementById('mood-report-10'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"10\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1346,7 +1307,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex10");
+						var slider = new Slider(".mood-ex10");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1367,16 +1328,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"10\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex10SliderVal").text(value);
+									$(".mood-ex10SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"10\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1434,29 +1395,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">10.How often have you been bothered by feeling nervous, anxious or on edge?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex10SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex10" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex10" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex10CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-10'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-10'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-11'));
+						var chart = ec.init(document.getElementById('mood-report-11'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"11\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1479,7 +1441,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex11");
+						var slider = new Slider(".mood-ex11");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1500,21 +1462,22 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"11\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex11SliderVal").text(value);
+									$(".mood-ex11SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"11\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
 										success : function(data) {
 											var option = {
+												noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 												legend : {
 													data : [ 'mood status' ]
 												},
@@ -1567,13 +1530,13 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">11.How often have you been bothered by not being able to stop or control worrying?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex11SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex11" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex11" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex11CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-11'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-11'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
@@ -1581,11 +1544,11 @@
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-12'));
+						var chart = ec.init(document.getElementById('mood-report-12'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"12\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -1613,7 +1576,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex12");
+						var slider = new Slider(".mood-ex12");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1634,16 +1597,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"12\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex12SliderVal").text(value);
+									$(".mood-ex12SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"12\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1701,27 +1664,28 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">12.How often have you been bothered by worrying too much about different things?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex12SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex12" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex12" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex12CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-12'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-12'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-13'));
+						var chart = ec.init(document.getElementById('mood-report-13'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"13\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1744,7 +1708,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex13");
+						var slider = new Slider(".mood-ex13");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1765,16 +1729,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"13\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex13SliderVal").text(value);
+									$(".mood-ex13SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"13\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1833,27 +1797,28 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">13.How often have you been bothered by having trouble relaxing?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex13SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex13" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex13" type="text"  style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex13CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-13'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-13'></div>
 			</div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-14'));
+						var chart = ec.init(document.getElementById('mood-report-14'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"14\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -1876,7 +1841,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex14");
+						var slider = new Slider(".mood-ex14");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -1897,16 +1862,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"14\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex14SliderVal").text(value);
+									$(".mood-ex14SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"14\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -1965,13 +1930,13 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">14.How often have you been bothered by being so restless that it is hard to sit still?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex14SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex14" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex14" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex14CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-14'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-14'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
@@ -1979,16 +1944,17 @@
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-15'));
+						var chart = ec.init(document.getElementById('mood-report-15'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"15\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -2011,7 +1977,7 @@
 							}
 						});
 
-						var slider = new Slider(".ex15");
+						var slider = new Slider(".mood-ex15");
 						//拖动发送
 						slider.on("slide", function(slideEvt) {
 							var value = "Not at all(1 level)";
@@ -2032,16 +1998,16 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"15\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
 								success : function(data) {
-									$(".ex15SliderVal").text(value);
+									$(".mood-ex15SliderVal").text(value);
 									var data = "{\"type\" :\"Mood\",\"number\" : \"15\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -2099,29 +2065,30 @@
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">15.How often have you been bothered by becoming easily annoyed or irritable?</div>
 				<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 					<div style="width: 100%;height: 20px;"></div>
-					<div class="ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
+					<div class="mood-ex15SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex15" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="mood-ex15" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
-					<div class="ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
+					<div class="mood-ex15CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-15'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-15'></div>
 			</div>
 
 			<div style="width: 100%;height: 20px;"></div>
 			<script>
 				$(function() {
 					require([ 'echarts', 'echarts/chart/line' ], function(ec) {
-						var chart = ec.init(document.getElementById('report-16'));
+						var chart = ec.init(document.getElementById('mood-report-16'));
 						var data = "{\"type\" :\"Mood\",\"number\" : \"16\"" + "}";
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
 							success : function(data) {
 								var option = {
+									noDataLoadingOption: { text: 'You have not filled  the data yet \n Please fill in the data in app \n in order to give you a more \n accurate biological age report', effect: 'whirling', effectOption: { effect: { n: 0 } } },				
 									xAxis : [ {
 										type : 'category',
 										boundaryGap : false,
@@ -2165,7 +2132,7 @@
 							var data = "{\"type\" : \"Mood\",\"data\" : {\"id\" : \"16\",\"value\" :\"" + slideEvt.value + "\"}}";
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/Input",
+								url : "http://192.168.1.117:8080/Questionnaire/Input.jhtml",
 								dataType : "json",
 								contentType : "application/json",
 								data : data,
@@ -2174,7 +2141,7 @@
 									var data = "{\"type\" :\"Mood\",\"number\" : \"16\"" + "}";
 									$.ajax({
 										type : "post",
-										url : "http://192.168.1.126:8080/Questionnaire/GetData",
+										url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 										data : data,
 										dataType : "json",
 										contentType : "application/json",
@@ -2234,14 +2201,14 @@
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex16SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #6950F4;line-height: 40px">Not at all(1 level)</div>
 					<div>
-						<input class="ex16" type="text" data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
+						<input class="ex16" type="text"   style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFFF00 30%,#FFC000 70%, red 100%)"  data-slider-min="1" data-slider-max="4" data-slider-step="1" data-slider-value="1">
 					</div>
 					<div class="ex16CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 				</div>
-				<div style="width: 100%;height: 350px;" id='report-16'></div>
+				<div style="width: 100%;height: 350px;" id='mood-report-16'></div>
 			</div>
 
-			<div style="width: 100%;height: 15px;"></div>
+			<!-- <div style="width: 100%;height: 15px;"></div>
 			<div class="ques17" style="width: 96%;height: auto;margin: 0 auto;background-color: #FFFFFF;">
 				<div style="width: 100%;height: 20px;"></div>
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">17. Have you been bothered by worrying about any of the following?</div>
@@ -2303,7 +2270,7 @@
 				</form>
 				<div class="scroll-bar" style="width: 100%;height: auto;"></div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- <div class="submit" style="width: 100%;height: 30px;">
 			<button type="button" style="width: 90%;height: 40px;margin-left: 18px;border: 0px; display: block; margin: 0 auto; text-align:center;border-radius: 10px; font-size: 18px;line-height:28px; vertical-align:middle;background-color:#9650F4; color:#FFFFFF ;">Submit</button>

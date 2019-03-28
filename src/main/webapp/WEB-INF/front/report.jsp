@@ -51,6 +51,7 @@ div[name=subc]:before {
 	<div style="width: 100%;height: 100%;background-color: white;">
 		<div style="width: 90%;height: 1500px;margin:0 auto;text-align: center">
 			<div style="width: 100%;height: 300px;"></div>
+			<div style="width: 100%;height: auto;"><span style="color:#ffd65a;font-size: 60px;">epi</span><span style="color:#808080;font-size: 60px;">AGING</span></div>
 			<div style="font-size: 30px;">Harnessing the power of the epigenome for healthy aging</div>
 			<img src="static/images/alevel.png" style="width: 100%;height: auto;">
 			<div style="width: 100%;height: 50px;">
@@ -79,7 +80,7 @@ div[name=subc]:before {
 				var data = "{\"uuid\" : \"${tid}\"}"
 				$.ajax({
 					type : "post",
-					url : "http://192.168.1.126:8080/report/getDataForOne.jhtml",
+					url : "http://192.168.1.117:8080/report/getDataForOne.jhtml",
 					dataType : "json",
 					contentType : "application/json",
 					data : data,
@@ -197,7 +198,7 @@ div[name=subc]:before {
 
 		<div style="width: 100%;height: 50px;"></div>
 		<div style="width: 100%;height: 1450px;">
-			<div style="width: 100%;height: 300px;"></div>
+			<div style="width: 100%;height: 400px;"></div>
 			<div style="width: 70%;height: auto;margin:0 auto;text-align: center;">
 				<div style="width: 100%;height: 40px;border-top: 1px solid #5b9bd5;">
 					<div style="float: left;font-weight: bold;font-size: 18px;width: 50%;height: 40px;line-height: 40px;">Your chronological age</div>
@@ -243,7 +244,7 @@ div[name=subc]:before {
 										$
 												.ajax({
 													type : "post",
-													url : "http://192.168.1.126:8080/report/getData.jhtml",
+													url : "http://192.168.1.117:8080/report/getData.jhtml",
 													dataType : "json",
 													contentType : "application/json",
 													data : data,
@@ -764,7 +765,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 1 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -786,7 +787,7 @@ div[name=subc]:before {
 										name:"level",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -858,7 +859,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 2 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -877,7 +878,7 @@ div[name=subc]:before {
 										name:"level",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -893,6 +894,7 @@ div[name=subc]:before {
 					});
 				});
 			</script>
+			<div style="width: 100%;height: 340px;"></div>
 			<div class="ques2" style="width: 70%;height: auto;margin: 0 auto; background-color: #FFFFFF;">
 				<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;font-weight: 600;padding: 10px;">2.spatial</div>
 				<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
@@ -939,7 +941,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 3 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.126:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -956,7 +958,7 @@ div[name=subc]:before {
 										name:"level",
 										type : 'value',
 										axisLabel : {
-											formatter : '{value} level'
+											formatter : '{value}'
 										}
 									} ],
 									series : [ {
@@ -1022,7 +1024,7 @@ div[name=subc]:before {
 							var data = '{"type" :"Pain","number" : 4 ,"uuid":"' + uuid + '"}';
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.126:8080/Questionnaire/GetData.jhtml",
+								url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
 								data : data,
 								dataType : "json",
 								contentType : "application/json",
@@ -1039,7 +1041,7 @@ div[name=subc]:before {
 											name:"level",
 											type : 'value',
 											axisLabel : {
-												formatter : '{value} level'
+												formatter : '{value}'
 											}
 										} ],
 										series : [ {
@@ -1055,6 +1057,7 @@ div[name=subc]:before {
 						});
 					});
 				</script>
+				<div style="width: 100%;height: 340px;border: 1px sold grey;"></div>
 				<div class="ques4" style="width: 70%;height: auto;margin: 0 auto; background-color: #FFFFFF;font-weight: 600;">
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">4.incisive pressure</div>
 					<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
