@@ -7,17 +7,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
+	<base href="<%=basePath%>">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-		<title>User Centre</title>
+		<title>User Center</title>
 	</head>
 	<body style="padding: 0;margin: 0;">
 		<div id="container" style="width: 100%;height: auto;">
+		<jsp:include page="header.jsp"></jsp:include>
 			<div style="width: 100%;height: auto;background-color: #0071BC;overflow: hidden;">
 				<div style="width: 100%;height: 30px;"></div>
 				<div style="width: 100%;height: auto;">
 					<div style="width: 8%;height: 100px;float: left;"></div>
-					<div style="width: 15%;height: auto;float: left;"><img src="img/bio/bio-6.png"style="width: 100%;height: auto;"/></div>
+					<div style="width: 15%;height: auto;float: left;"><img src="static/images/user_logo.png"style="width: 100%;height: auto;"/></div>
 					<div style="width: 30%;height: auto;float:left;margin: 20px 0 0 20px;">Una</div>
 					
 				</div>

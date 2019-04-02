@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div style="width: 100%;height: 136px;">
 				<div style="width: 37%;height: 100px;float: left;"></div>
 				<div style="width: 22%;height: 100px;float: left;">
-					<img src="img/CallCenter.png"style="width: 100%;height: auto;"/>
+					<img src="static/images/CallCenter.png"style="width: 100%;height: auto;"/>
 				</div>
 				<div style="width: 30%;height: 100px;float: left;"></div>
 			</div>

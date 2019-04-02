@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class UsercenterController {
-	@RequestMapping("/usercenter/index")
-	public ModelAndView mycenter(){
+public class LoginController {
+	@RequestMapping("/login/index")
+	public ModelAndView login(){
 		ModelAndView modelView=new ModelAndView();
-		modelView.setViewName("/WEB-INF/front/usercenter.jsp");
-		modelView.addObject("title","User Center");
+		modelView.setViewName("/WEB-INF/front/login.jsp");
+		modelView.addObject("title","Login");
 		modelView.addObject("canback",true);
 		return modelView;
 	}
