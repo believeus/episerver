@@ -51,7 +51,7 @@ div[name=subc]:before {
 	<div style="width: 100%;height: 100%;background-color: white;">
 		<div style="width: 90%;height: 1500px;margin:0 auto;text-align: center">
 			<div style="width: 100%;height: 300px;"></div>
-			<div style="width: 100%;height: auto;"><span style="color:#ffd65a;font-size: 60px;">epi</span><span style="color:#808080;font-size: 60px;">AGING</span></div>
+			<div style="width: 100%;height: auto;"><span style="color:#ffd65a;font-size: 60px;"><i>epi</i></span><span style="color:#808080;font-size: 60px;">AGING</span></div>
 			<div style="font-size: 30px;">Harnessing the power of the epigenome for healthy aging</div>
 			<img src="static/images/alevel.png" style="width: 100%;height: auto;">
 			<div style="width: 100%;height: 50px;">
@@ -80,7 +80,7 @@ div[name=subc]:before {
 				var data = "{\"uuid\" : \"${tid}\"}"
 				$.ajax({
 					type : "post",
-					url : "http://192.168.1.117:8080/report/getDataForOne.jhtml",
+					url : "http://192.168.1.115:8080/report/getDataForOne.jhtml",
 					dataType : "json",
 					contentType : "application/json",
 					data : data,
@@ -123,7 +123,7 @@ div[name=subc]:before {
 				<div name='subc' style="width: 70%;margin: 0 auto;">However in some people the “epigenetic age” is different from the “chronological age”. Sometimes the “epigenetic clock” moves faster than the “chronological clock”. We consider a difference that is larger than the standard deviation (or the normal distribution in the population) as a significant change.</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">
-					Studies suggest that accelerated “epigenetic clock” might be associated with increased risks for several age-related chronic diseases such as cardiovascular disease and cancer.<i style="text-decoration: underline;"> (https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease)</i> This is however still an open field and more studies are needed.
+					Studies suggest that accelerated “epigenetic clock” might be associated with increased risks for several age-related chronic diseases such as cardiovascular disease and cancer. (<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease"><i style="text-decoration: underline;">https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</i></a>) This is however still an open field and more studies are needed.
 				</div>
 			</div>
 		</div>
@@ -144,6 +144,7 @@ div[name=subc]:before {
 				<div name='subc' style="width: 70%;margin: 0 auto;">We consider it as a “red flag” when your “epigenetic age” deviates from your “chronological age” by one standard deviation. Standard deviation provides an idea about the distribution of difference from the mean in the normal population, which at this point of analysis is around 5 years. At this stage, if your “epigenetic age” is 5 years older than your “chronological age” you might consider the result as a “red flag”. As more tests are accumulated we will get a more accurate value of the “normal distribution”.</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">Although it is still not clear how one can decelerate his “epigenetic clock”, lifestyle changes recommended by most national medical associations are perhaps a starting point. An older “epigenetic age” is a “red flag” which hints that it is time to make some lifestyle changes.</div>
+				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">A “red flag” might prompt you to act on your lifestyle or consult your physician for a check up.</div>
 			</div>
 		</div>
@@ -157,15 +158,16 @@ div[name=subc]:before {
 			<div style="width: 100%;height: auto;font-size: 24px;">
 				<div name='subc' style="width: 70%;margin: 0 auto;">“Epigenetics” is different from “genetics” in a substantial way that epigenetics is potentially reversible by dietary interventions and life style changes. So, it might be possible to reverse the “epigenetic clock”.</div>
 				<div style="width: 70%;height: 20px;"></div>
-				<div name='subc' style="width: 70%;margin: 0 auto;">Preliminary studies show that dietary changes can cause deceleration of epigenetic clock in certain people, however this is still an open question. ( https://www.ncbi.nlm.nih.gov/pubmed/30350398)</div>
+				<div name='subc' style="width: 70%;margin: 0 auto;">Preliminary studies show that dietary changes can cause deceleration of epigenetic clock in certain people, however this is still an open question. (<a href=" https://www.ncbi.nlm.nih.gov/pubmed/30350398"><i style="text-decoration: underline;">https://www.ncbi.nlm.nih.gov/pubmed/30350398</i></a>)</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">Lifestyle changes including exercise and dietary habits have been recommended by national medical associations for some time, however, we need more data about the most advisable changes and they should be personalized.</div>
 				<div style="width: 70%;height: 20px;"></div>
-				<div name='subc' style="width: 70%;margin: 0 auto;">A way for us to learn about advisable lifestyle changes is sharing our experiences with others and analyzing the impact of differences in lifestyle in a large population. This is now possible using sharing technologies such as Apps as well as artificial intelligence that could determine how different inputs such as “lifestyle” habits affect an outcome--the “epigenetic clock”.</div>
+				<div name='subc' style="width: 70%;margin: 0 auto;">A way for us to learn about advisable lifestyle changes is sharing our experiences with others and analyzing the impact of differences in lifestyle in a large population. This is now possible using sharing technologies such as Apps as well as artificial intelligence that could determine how different inputs such as “lifestyle” habits affect an outcome—the “epigenetic clock”.</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">Our App links you to information on recommended lifestyle behaviors by important US national medical association as well as possible nutritional supplements such as SAMe, vitamin A, D and C.</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">These links are updated regularly and we suggest that you keep updating by examining the links periodically. These recommendations are based on what “science” knows today, they are not perfect. With more data and more analysis science is improving.</div>
+				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">Our first report is based on the lifestyle data that you have entered which shows how far your lifestyle parameters deviate from consensus recommendations. You might decide to make changes based on this first report.</div>
 			</div>
 		</div>
@@ -190,6 +192,7 @@ div[name=subc]:before {
 				<div name='subc' style="width: 70%;margin: 0 auto;">We will analyze your “epigenetic age” and report on the progress and the lifestyle changes that you have made.</div>
 				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">Possible routes for change will be offered based on our “model” and your data.</div>
+				<div style="width: 70%;height: 20px;"></div>
 				<div name='subc' style="width: 70%;margin: 0 auto;">
 					We hope that together we will be able to coevolve your well being and our “<i>epi</i>Aging” learning environment.
 				</div>
@@ -209,6 +212,7 @@ div[name=subc]:before {
 					<div style="float: left; line-height: 40px;width: 50%;height: 40px;color: red;font-weight: bold;" id="bioage"></div>
 				</div>
 			</div>
+			<div style="width:100%;height: 10px;"></div>
 			<div style="width: 900px;height: 600px;position: relative;">
 				<div style="width: 100%;height: 580px;">
 					<div style="width: 5%;height: 100%;float: left;text-align: center;position: relative;left:120px;font-weight: bold;">
@@ -244,7 +248,7 @@ div[name=subc]:before {
 										$
 												.ajax({
 													type : "post",
-													url : "http://192.168.1.117:8080/report/getData.jhtml",
+													url : "http://192.168.1.115:8080/report/getData.jhtml",
 													dataType : "json",
 													contentType : "application/json",
 													data : data,
@@ -303,14 +307,18 @@ div[name=subc]:before {
 										type : 'scatter',
 										 itemStyle : {  
 				                                normal : {  
-				                                    color:'red'
+				                                    color:'red',
+				                                    label:{
+														textStyle:{fontWeight:'bolder'}
+													}
 				                                }  
 				                          },  
 										data :data[0],
 										markPoint : {
+											symbolSize:20,
 											itemStyle: {
 				                                normal : {  
-				                                    color:'blue'
+				                                    color:'red'
 				                                }  
 				                          }, 
 											data : [{name: 'Biological Age', value: data[2][3], xAxis: data[2][2], yAxis: data[2][3]} ] //x:自然年龄,y生物学年龄
@@ -325,14 +333,19 @@ div[name=subc]:before {
 																data : data[1],
 																itemStyle : {
 																	normal : {
-																		color : 'green'
+																		color : 'green',
+																		
 																	}
 																},
 																markPoint : {
 																	data : [ {
+																		symbolSize:20,
 																		itemStyle : {
 																			normal : {
-																				color : 'blue'
+																				color : 'red',
+																				label:{
+																					textStyle:{fontWeight:'bolder'}
+																				}
 																			}
 																		},
 																		name : 'Biological Age',
@@ -592,7 +605,7 @@ div[name=subc]:before {
 			</div>
 			<div style="width: 100%;height: 20px;"></div>
 			<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
-				<strong> Recommendation: </strong> All adults age 20 or older should have their cholesterol (and other risk factors) checked every four to six years.
+				<strong> Recommendation: </strong> All adults age 20 or older should have their cholesterol (and other risk factors) checked every 4 to 6 years.
 			</div>
 			<div style="width: 100%;height: 20px; "></div>
 			<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
@@ -625,7 +638,7 @@ div[name=subc]:before {
 
 			<div style="width: 100%;height: 20px;"></div>
 			<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
-				<strong> Recommendation: </strong> The recommended daily amount of vitamin A is 900 micrograms (mg) for adult men and 700 mg for adult women.
+				<strong> Recommendation: </strong> The recommended daily amount of vitamin A is 900 μg for adult men and 700 μg for adult women.
 			</div>
 			<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
 				<div style="width: 100%;height: 20px;"></div>
@@ -660,7 +673,7 @@ div[name=subc]:before {
 
 			<div style="width: 100%;height: 20px;"></div>
 			<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;">
-				<strong> Recommendation: </strong> The recommended daily amount of vitamin C for adult men is 90 milligrams and for adult women is 75 milligrams.
+				<strong> Recommendation: </strong> The recommended daily amount of vitamin C for adult men is 90 mg and for adult women is 75 mg.
 
 			</div>
 			<div class="scroll-bar" style="width: 90%;height: auto;margin: 0 auto;">
@@ -719,6 +732,7 @@ div[name=subc]:before {
 				new Slider(".ex11");
 			});
 		</script>
+		<div style="width: 100%;height: 150px;"></div>
 		<div class="food" style="width: 70%;margin: 0 auto;height: auto;background-color: #FFFFFF;">
 			<div style="width: 100%;height: 50px;"></div>
 			<div style="width: 100%;height: auto;font-weight: 700;color: #666666; font-size: 18px;font-family: arial; ">Food consumption (calories/day)</div>
@@ -765,7 +779,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 1 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.115:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -813,12 +827,12 @@ div[name=subc]:before {
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex1SliderVal" style="font-size: 16px;font-family: arial;line-height: 40px; font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px"></div>
 					<div style="width: 100%;height: 20px;">
-						<div style="width: 14%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
-						<div style="width:  14%;float: left;height: 100%;text-align: left;font-weight: bold;">mild</div>
-						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">discomforting</div>
-						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">distressing</div>
-						<div style="width:  15%;float: left;height: 100%;text-align: left;font-weight: bold;">horrible</div>
-						<div style="width:  15%;float: left;height: 100%;text-align: left;font-weight: bold;">excruciating</div>
+						<div style="width: 11%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
+						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">fickering</div>
+						<div style="width:  18%;float: left;height: 100%;text-align: left;font-weight: bold;">quivering</div>
+						<div style="width:  16%;float: left;height: 100%;text-align: left;font-weight: bold;">pulsing</div>
+						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">throbbing</div>
+						<div style="width:  11%;float: left;height: 100%;text-align: left;font-weight: bold;">beating</div>
 						<div style="width:  5%;float: left;height: 100%;text-align: left;font-weight: bold;">pounding</div>
 					</div>
 					<div style="width: 100%;height: 5px;"></div>
@@ -829,19 +843,19 @@ div[name=subc]:before {
 						<div style="width: 15.5%;float: left;height: 100%;text-align: left;font-weight: bold;">0</div>
 						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">1</div>
 						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">2</div>
-						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">3</div>
-						<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">4</div>
-						<div style="width:  5%;float: left;height: 100%;text-align: left;font-weight: bold;">5</div>
-						<div style="width:  11%;float: left;height: 100%;text-align: right;font-weight: bold;">6</div>
+						<div style="width:  16.5%;float: left;height: 100%;text-align: left;font-weight: bold;">3</div>
+						<div style="width:  16.5%;float: left;height: 100%;text-align: left;font-weight: bold;">4</div>
+						<div style="width:  7%;float: left;height: 100%;text-align: left;font-weight: bold;">5</div>
+						<div style="width:  10.5%;float: left;height: 100%;text-align: right;font-weight: bold;">6</div>
 					</div>
 					<div class="ex1CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					<div style="width: 100%;height: 20px;"></div>
 				</div>
 				<div style="width: 100%;height: auto;">
 					<div style="margin: 0 auto;text-align: center;width: 95%;">
-						<div><span style="color: #92D050;">none(level 0)</span>&nbsp; <span style="color: #92D050;">flickering(level 1)</span></div>
-						<div><span style="color: #FFC000;">quivering (level 2)</span>&nbsp; <span style="color: #FFC000;">pulsing(level 3)</span>&nbsp;<span style="color: #FFC000;">throbbing(level 4) </div>
-						<div></span>&nbsp; <span style="color: red;">beating(level 5)</span>&nbsp; <span style="color: red;">pounding(level 6)</span></div>
+						<div><span style="color: #92D050;">none&nbsp;(level 0),</span>&nbsp; <span style="color: #92D050;">flickering&nbsp;(level 1)</span></div>
+						<div><span style="color: #FFC000;">quivering&nbsp;(level 2),</span>&nbsp; <span style="color: #FFC000;">pulsing&nbsp;(level 3),</span>&nbsp;<span style="color: #FFC000;">throbbing&nbsp;(level 4) </div>
+						<div></span>&nbsp; <span style="color: red;">beating&nbsp;(level 5),</span>&nbsp; <span style="color: red;">pounding&nbsp;(level 6)</span></div>
 					</div>
 					<div style="width: 100%;height: 20px;text-align: center;font-weight: bold;font-size: 30px;">Weekly data</div>
 					<div>
@@ -859,7 +873,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 2 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.115:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -902,10 +916,10 @@ div[name=subc]:before {
 					<div style="width: 100%;height: 20px;"></div>
 					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px"></div>
 						<div style="width: 100%;height: 20px;">
-						<div style="width: 25%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
-						<div style="width:  15%;float: left;height: 100%;text-align: center;font-weight: bold;">jumping</div>
+						<div style="width: 25.3%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
+						<div style="width:  15.5%;float: left;height: 100%;text-align: center;font-weight: bold;">jumping</div>
 						<div style="width:  30%;float: left;height: 100%;text-align: right;font-weight: bold;">flashing</div>
-						<div style="width:  30%;float: left;height: 100%;text-align: right;font-weight: bold;">shooting</div>
+						<div style="width:  29%;float: left;height: 100%;text-align: right;font-weight: bold;">shooting</div>
 					</div>
 					<div style="width: 100%;height: 5px;"></div>
 					<div>
@@ -913,8 +927,8 @@ div[name=subc]:before {
 					</div>
 					<div class="ex2SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px"></div>
 						<div style="width: 100%;height: 20px;">
-						<div style="width: 25%;float: left;height: 100%;text-align: left;font-weight: bold;">0</div>
-						<div style="width:  15%;float: left;height: 100%;text-align: center;font-weight: bold;">1</div>
+						<div style="width: 26%;float: left;height: 100%;text-align: left;font-weight: bold;">0</div>
+						<div style="width:  14%;float: left;height: 100%;text-align: center;font-weight: bold;">1</div>
 						<div style="width:  28%;float: left;height: 100%;text-align: right;font-weight: bold;">2</div>
 						<div style="width:  32%;float: left;height: 100%;text-align: right;font-weight: bold;">3</div>
 					</div>
@@ -923,7 +937,7 @@ div[name=subc]:before {
 				</div>
 				<div style="width: 100%;height: auto;">
 					<div style="margin: 0 auto;text-align: center;width: 95%;">
-						<span style="color: #92D050;">none (0 level)</span>&nbsp; <span style="color: #92D050;">jumping(1 level)</span>&nbsp; <span style="color: #FFC000;">flashing(2 level)</span>&nbsp; <span style="color: #FFC000;">shooting(3 level)</span>&nbsp;
+						<span style="color: #92D050;">none&nbsp; (0 level),</span>&nbsp; <span style="color: #92D050;">jumping&nbsp;(1 level),</span>&nbsp; <span style="color: #FFC000;">flashing&nbsp;(2 level),</span>&nbsp; <span style="color: red;">shooting&nbsp;(3 level)</span>&nbsp;
 					</div>
 					<div style="width: 100%;height: 20px;text-align: center;font-weight: bold;font-size: 30px;">Weekly data</div>
 					<div style="width: 800;height: 350px;" id='pain-report-2'></div>
@@ -941,7 +955,7 @@ div[name=subc]:before {
 						var data = '{"type" :"Pain","number" : 3 ,"uuid":"' + uuid + '"}';
 						$.ajax({
 							type : "post",
-							url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
+							url : "http://192.168.1.115:8080/Questionnaire/GetData.jhtml",
 							data : data,
 							dataType : "json",
 							contentType : "application/json",
@@ -984,9 +998,9 @@ div[name=subc]:before {
 							<div style="width: 16%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
 							<div style="width:  20%;float: left;height: 100%;text-align: left;font-weight: bold;">pricking</div>
 							<div style="width:  20%;float: left;height: 100%;text-align: left;font-weight: bold;">boring</div>
-							<div style="width:  17%;float: left;height: 100%;text-align: left;font-weight: bold;">drilling</div>
-							<div style="width:  15%;float: left;height: 100%;text-align: left;font-weight: bold;">stabbing</div>
-							<div style="width:  10%;float: left;height: 100%;text-align: left;font-weight: bold;">lancinating</div>
+							<div style="width:  19%;float: left;height: 100%;text-align: left;font-weight: bold;">drilling</div>
+							<div style="width:  10%;float: left;height: 100%;text-align: left;font-weight: bold;">stabbing</div>
+							<div style="width:  15%;float: left;height: 100%;text-align: right;font-weight: bold;">lancinating</div>
 						</div>
 						<div style="width: 100%;height: 5px;"></div>
 						<div>
@@ -1003,9 +1017,9 @@ div[name=subc]:before {
 						<div class="ex3CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
 					<div style="margin: 0 auto;text-align: center;width: 95%;">
-						<div><span style="color: #92D050;">none(level 0)</span>&nbsp; <span style="color: #92D050;">pricking(1 level)</span></div>
-						<div><span style="color: #FFC000;">boring(2 level)</span>&nbsp; <span style="color: #FFC000;">drilling(3 level)</span>&nbsp;<span style="color: #FFC000;">throbbing(level 4) </div>
-						<div></span>&nbsp; <span style="color: red;">stabbing(4 level)</span>&nbsp; <span style="color: red;">lancinating(5 level)</span></div>
+						<div><span style="color: #92D050;">none&nbsp;(level 0),</span>&nbsp; <span style="color: #92D050;">pricking&nbsp;(1 level)</span></div>
+						<div><span style="color: #FFC000;">boring&nbsp;(2 level),</span>&nbsp; <span style="color: #FFC000;">drilling&nbsp;(3 level),</span>&nbsp;<span style="color: #FFC000;">throbbing&nbsp;(level 4) </div>
+						<div></span>&nbsp; <span style="color: red;">stabbing&nbsp;(4 level),</span>&nbsp; <span style="color: red;">lancinating&nbsp;(5 level)</span></div>
 					</div>
 					<div style="width: 100%;height: 20px;text-align: center;font-weight: bold;font-size: 30px;">Weekly data</div>
 					<div>
@@ -1024,7 +1038,7 @@ div[name=subc]:before {
 							var data = '{"type" :"Pain","number" : 4 ,"uuid":"' + uuid + '"}';
 							$.ajax({
 								type : "post",
-								url : "http://192.168.1.117:8080/Questionnaire/GetData.jhtml",
+								url : "http://192.168.1.115:8080/Questionnaire/GetData.jhtml",
 								data : data,
 								dataType : "json",
 								contentType : "application/json",
@@ -1057,7 +1071,7 @@ div[name=subc]:before {
 						});
 					});
 				</script>
-				<div style="width: 100%;height: 340px;border: 1px sold grey;"></div>
+				<div style="width: 100%;height: 340px;"></div>
 				<div class="ques4" style="width: 70%;height: auto;margin: 0 auto; background-color: #FFFFFF;font-weight: 600;">
 					<div style="width: 100%;height: auto;font-size: 16px; font-family: airal;color: #666666;padding: 10px;">4.incisive pressure</div>
 					<div class="scroll-bar" style="width: 96%;height: auto;margin: 0 auto;">
@@ -1066,42 +1080,28 @@ div[name=subc]:before {
 						<div class="ex4SliderVal" style="font-size: 16px;font-family: arial;font-weight: 700; margin: 0 auto;color: #C1272D;line-height: 40px;"></div>
 							<div style="width: 100%;height: 20px;">
 							<div style="width: 30%;float: left;height: 100%;text-align: left;font-weight: bold;">none</div>
-							<div style="width:  32%;float: left;height: 100%;text-align: left;font-weight: bold;">sharp</div>
-							<div style="width:  28%;float: left;height: 100%;text-align: left;font-weight: bold;">cutting</div>
-							<div style="width:  10%;float: left;height: 100%;text-align: right;font-weight: bold;">lacerating</div>
+							<div style="width:  32.5%;float: left;height: 100%;text-align: left;font-weight: bold;">sharp</div>
+							<div style="width:  20%;float: left;height: 100%;text-align: left;font-weight: bold;">cutting</div>
+							<div style="width:  17.5%;float: left;height: 100%;text-align: right;font-weight: bold;">lacerating</div>
 						</div>
+						<div style="width: 100%;height: 5px;"></div>
 						<div>
 							<input class="pain-ex4"    style-gradient="-webkit-linear-gradient(left, #92D050 0%, #FFC000 60%,  red 100%)"   type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="0">
 						</div>
 						<div style="width: 100%;height: 20px;">
-							<div style="width: 32%;float: left;height: 100%;text-align: left;font-weight: bold;">0</div>
-							<div style="width:  33%;float: left;height: 100%;text-align: left;font-weight: bold;">1</div>
+							<div style="width: 32.5%;float: left;height: 100%;text-align: left;font-weight: bold;">0</div>
+							<div style="width:  33.5%;float: left;height: 100%;text-align: left;font-weight: bold;">1</div>
 							<div style="width:  25%;float: left;height: 100%;text-align: left;font-weight: bold;">2</div>
-							<div style="width:  10%;float: left;height: 100%;text-align: right;font-weight: bold;">3</div>
+							<div style="width:  8%;float: left;height: 100%;text-align: right;font-weight: bold;">3</div>
 						</div>
 						<div class="ex4CurrentSliderValLabel" style="font-size: 16px;font-family: arial;"></div>
 					</div>
 						<div style="margin: 0 auto;text-align: center;width: 95%;">
-						<div><span style="color: #92D050;">none(level 0)</span>&nbsp; <span style="color: #92D050;">sharp(1 level)</span></div>
-						<div><span style="color: #FFC000;">cutting(2 level)</span>&nbsp; <span style="color: red;">lacerating(3 level)</span> </div>
+						<div><span style="color: #92D050;">none&nbsp;(level 0),</span>&nbsp;<span style="color: #92D050;">sharp&nbsp;(1 level),&nbsp;<span style="color: #FFC000;">cutting&nbsp;(2 level),</span>&nbsp;<span style="color: red;">lacerating&nbsp;(3 level)</span></span></div>
 					</div>
 					<div style="width: 100%;height: 20px;text-align: center;font-weight: bold;font-size: 30px;">Weekly data</div>
 					<div style="width:800px;height: 350px;" id='pain-report-4'></div>
 				</div>
-
-				
-				
-				
-				
-				
-				
-				
-				
-				
-
-
-
-
 		</div>
 
 	</div>
