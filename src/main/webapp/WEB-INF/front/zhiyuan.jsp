@@ -113,6 +113,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				<span class="part" >
 					<a href="#" hidefocus="true">Conferences</a>
 				</span>
+				
 			</div>
 
 			<div class="swiper-container">
@@ -120,13 +121,27 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					<div class="swiper-slide swiper-slide-visible swiper-slide-active">
 						<div class="content-slide">
        							 <div id="career" >
-       							 <div style="width: 90%;height: auto;margin: 0 auto;">
-       							 <div style="width: 100%;height: 40px;"></div>
-						<div ><strong>2015.05</strong>  Excellent Topic Summary Award for the 2015 Annual Meeting of the American Society of Immunologists</div>
-							<div style="width: 100%;height: 20px;"></div>
-						<div  ><strong> 2010.09 </strong>State Overseas Studies Fund appointed joint doctoral scholarship</div>
-					</div>
-       							</div>
+										<div style="width: 90%;height: auto;margin: 0 auto;">
+											<div style="width: 100%;height: 40px;"></div>
+											<div>
+												<strong>2015.05</strong> Excellent Topic Summary Award for the 2015 Annual Meeting of the American Society of Immunologists
+											</div>
+											<div style="width: 100%;height: 20px;"></div>
+											<div>
+												<strong> 2010.09 </strong>State Overseas Studies Fund appointed joint doctoral scholarship
+											</div>
+											<div style="width: 100%;height: 20px;"></div>
+											<div style="font-weight: 800;line-height: 22px;">Ad Hoc Reviewer for Journals totally have reviewed more than 20 research articles</div>
+											<div style=" width: 100%;height:auto;text-align: left;">
+												<div>Molecular and Cellular Biochemistry</div>
+												<div>Annuals of Clinical Biochemistry</div>
+												<div>Cellular and Molecular Biology</div>
+												<div>Journal of Immunoassay and Immunochemistry</div>
+											</div>
+											<div style="font-weight: 800;line-height: 40px;">Editorial Board of Journal</div>
+											<div>Journal of Immunoassay and Immunochemistry</div>
+										</div>
+									</div>
        			
 						</div>
 					</div>

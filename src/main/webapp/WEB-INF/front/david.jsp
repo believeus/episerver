@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	*{margin:0;padding:0;font-family: "微软雅黑";}
 		.wrap{margin:0 auto;}
 		.tabs{height:32px;background: #F4F4F4;width: 100%;padding-top: 8px;text-align: center}
-		.tabs .part{display:block;float:left;width:33%;color:#666666;text-align:center;height: 20px;}
+		.tabs .part{display:block;float:left;width:45%;color:#666666;text-align:center;height: 20px;}
 		.tabs .part:first-child{border-right: 0px solid #000000;}
 		.tabs a{width:100px;display:block;color:#666666;text-align:center;margin:0 auto;font-size:16px;text-decoration:none;padding-bottom: 0px;}
 		.tabs span.active a{color:#666666;border-bottom: 2px solid #000000;}
@@ -108,9 +108,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				<a href="#patent" hidefocus="true" >Patents</a>
 				</span>
 				
-				<span class="part" style="border-right: 1px solid #666666">
-				<a href="#" hidefocus="true">Honors</a>
-				</span>
+				
 				
 				<span class="part">
 				<a href="#" hidefocus="true">Conference</a>
@@ -148,13 +146,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
        						 
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="content-slide">
-						<div id="honor" style="width: 100%;height: auto;">
-								<img  src="static/images/david-3.png"style="width: 100%;height: auto;">
-						</div>
-						</div>
-					</div>
+					
 					<div class="swiper-slide">
 						<div class="content-slide">
 							<div  style="width: 90%;height: auto;margin: 0 auto;line-height: 22px;">

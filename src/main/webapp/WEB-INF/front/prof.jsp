@@ -181,7 +181,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 10px;"></div>
 		<div style="width: 100%;height: 200px;">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted-vid-3.png" data-setup="{}">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/vid-3.png" data-setup="{}">
 					<source src="https://app.beijingepidial.com/What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4" type="video/mp4"></source>
 				</video>
 			</div>
