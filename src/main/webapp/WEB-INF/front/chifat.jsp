@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="static/css/swiper.min.css" />
-		<title>Dr. Chi Fat</title>
+		<title> Chi Fat Wong</title>
 		
 		<!--局部移动浏览-->
 		<style type="text/css">
@@ -85,7 +85,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					<strong>Chi Fat Wong PhD</strong><br />
+					<strong>Chi Fat Wong Ph.D.</strong><br />
 					Senior Scientist <br/> HKG Epitherapeutics, Hong Kong
 				</div>
 				<div style="width: 100%;height: 20px;"></div>

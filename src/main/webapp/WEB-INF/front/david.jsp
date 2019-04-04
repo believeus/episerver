@@ -85,7 +85,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					<strong>David Cheishvili PhD</strong><br />
+					<strong>David Cheishvili Ph.D.</strong><br />
 					Senior Scientific Consultant<br/>  HKG Epitherapeutics, Hong Kong
 				</div>
 				<div style="width: 100%;height: 20px;"></div>

@@ -120,7 +120,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div class="video"; style="width: 100%;height: auto;">
 		<div style="width: 100%;height: auto;background-color:#EDEEF0 ;overflow: hidden;">
 		<div style="width: 96%;height: auto;margin: 0 auto;">
-			<p style="line-height: 60px;font-weight: 600;">Related Video</p>
+			<p style="line-height: 60px;font-weight: 600;">Related Videos</p>
 				<div style="width: 100%;height: auto; font-size: 14px;font-family: arial;line-height: 20px ;color: #666666;">
 						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
 				</div>
@@ -130,7 +130,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 10px;"></div>
 		<div style="width: 100%;height: 200px;">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/vid-1.png" data-setup="{}">
 					<source src="https://app.beijingepidial.com/Healthtech_O2O_Summit_Dr_Moshe_Szyf_HKG_Epitherapeutics.mp4" type="video/mp4"></source>
 				</video>
 			</div>
@@ -145,7 +145,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 30px;"></div>
 		<div style="width: 96%;height: auto;margin: 0 auto;">	
 				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
-						Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4	
+						 Dr. Moshe Szyf , Science of Hope Conference 2017.mp4	
 				</div>
 			</div>
 			<div style="width: 100%;height: 10px;"></div>
@@ -155,7 +155,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 10px;"></div>
 		<div style="width: 100%;height: 200px;">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/vid-2.png" data-setup="{}">
 					<source src="https://app.beijingepidial.com/Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4" type="video/mp4"></source>
 				</video>
 			</div>
@@ -171,7 +171,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				
 				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
 					
-						What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4
+						Dr. Moshe Szyf, What is epigenetic and why knowing it will <br> change your life .mp4
 				
 					
 				</div>
@@ -181,7 +181,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 10px;"></div>
 		<div style="width: 100%;height: 200px;">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted-vid-3.png" data-setup="{}">
 					<source src="https://app.beijingepidial.com/What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4" type="video/mp4"></source>
 				</video>
 			</div>
@@ -198,7 +198,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 
 				<div style="width: 100%;height: auto;float: left; font-size: 14px;font-family: arial;color: #666666;">
 					
-						Moshe_Szyf_Behavioral_Epigenetics.mp4
+						Moshe Szyf, Behavioral Epigenetics.mp4
 				
 				</div>
 
@@ -209,7 +209,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div style="width: 100%;height: 10px;"></div>
 		<div style="width: 100%;height: 200px;">
 			<div style=" margin: 0 auto;width: 95%;height: 100%;background-color: :#EDEEF0;">
-				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/ted.png" data-setup="{}">
+				<video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;" poster="static/images/vid-4.png" data-setup="{}">
 					<source src="https://app.beijingepidial.com/Moshe_Szyf_Behavioral_Epigenetics.mp4" type="video/mp4"></source>
 				</video>
 			</div>

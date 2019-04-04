@@ -85,7 +85,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 				</div>
 				<div style="clear: both;"></div>
 				<div style="width: 100%;height: auto;text-align: center;font-family: arial;color: #666666;font-weight: 600;line-height: 29px;">
-					<strong>Hui Li PhD</strong><br />
+					<strong>Hui Li Ph.D.</strong><br />
 					Lab Manager <br/> HKG Epitherapeutics, Hong Kong
 				</div>
 				<div style="width: 100%;height: 20px;"></div>

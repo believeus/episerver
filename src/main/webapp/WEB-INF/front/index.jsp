@@ -42,11 +42,11 @@ div[id=blue-dot]:before {
 		<div id="header">
 			<div id="slide" class="slide" style="width: 100%;height:auto;">
 				<ul>
-					<li><a href="bioage/index.jhtml"> <img id="img1" src="static/images/home3.jpg">
+					<li><a href="bioage/index.jhtml"> <img id="img1" src="static/images/h1.jpg">
 					</a></li>
-					<li><a href="same/index.jhtml"> <img id="img1" src="static/images/home2.jpg">
+					<li><a href="same/index.jhtml"> <img id="img1" src="static/images/h2.jpg">
 					</a></li>
-					<li><a href="vitaminA/index.jhtml"> <img id="img1" src="static/images/home1.jpg">
+					<li><a href="vitaminA/index.jhtml"> <img id="img1" src="static/images/h3.jpg">
 					</a></li>
 					<li><img id="img1" src="static/images/home4.jpg"></li>
 					<li><img id="img1" src="static/images/home5.jpg"></li>
