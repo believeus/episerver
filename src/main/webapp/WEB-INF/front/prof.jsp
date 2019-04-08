@@ -120,9 +120,9 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 			<div class="video"; style="width: 100%;height: auto;">
 		<div style="width: 100%;height: auto;background-color:#EDEEF0 ;overflow: hidden;">
 		<div style="width: 96%;height: auto;margin: 0 auto;">
-			<p style="line-height: 60px;font-weight: 600;">Related Videos</p>
+			<p style="line-height: 60px;font-weight: 900;">Related Videos</p>
 				<div style="width: 100%;height: auto; font-size: 14px;font-family: arial;line-height: 20px ;color: #666666;">
-						Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4
+						健康科技O2O峰会-香港精准医学有限公司.mp4
 				</div>
 			</div>
 			</div>
@@ -271,7 +271,7 @@ border-image: linear-gradient( #666666 , #666666) 30 30;
 					<div class="swiper-slide">
 						<div class="content-slide">
 						<div style="width:100%;height: auto; ">
-							<img src="/static/images/prof3.png" style="width: 100%;height: auto;">
+							<img src="static/images/prof3.png" style="width: 100%;height: auto;">
 						</div>
 						
 						</div>
